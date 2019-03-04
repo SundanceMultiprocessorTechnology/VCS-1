@@ -39,7 +39,7 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 	-D PYTHON_EXECUTABLE=/usr/bin/python3 \
 	-D BUILD_EXAMPLES=ON ..
 echo "Compilation has started ..."
-make -j16
+make -j4
 echo "Installing OpenCV 4.0.1 ..."
 sudo make install
 sudo ldconfig
