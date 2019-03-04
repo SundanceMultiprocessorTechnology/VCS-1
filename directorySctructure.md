@@ -317,13 +317,7 @@
     │   │   └── test_uart.cpp
     │   ├── uart.cpp
     │   └── uart.hpp
-    ├── RealSense2
-    │   ├── readme.md
-    │   └── realsense_setup.sh
-    ├── VCS-1_emc2_ros
-    │   ├── LICENSE.txt
-    │   └── README.md
-    ├── VCS-1_FM191_SerialNumber
+    ├── getSerialNumber
     │   ├── BOOT.bin
     │   ├── README.md
     │   ├── SD
@@ -338,6 +332,11 @@
     │       ├── platform.c
     │       ├── platform_config.h
     │       └── platform.h
+    ├── RealSense2
+    │   ├── readme.md
+    │   └── realsense_setup.sh
+    ├── Scripts
+    │   └── install_opencv4-0-1.sh
     └── VCS-1_SDK
         ├── README.md
         └── src
@@ -346,5 +345,5 @@
             ├── FM191.hpp
             └── Makefile
 
-114 directories, 230 files
+114 directories, 229 files
 ```
