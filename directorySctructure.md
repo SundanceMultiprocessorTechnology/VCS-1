@@ -2,6 +2,7 @@
 ```
 ../VCS-1
 ├── directorySctructure.md
+├── Documentation
 ├── Documents
 │   ├── FM191_DESIGN_SPECIFICATION_(QCF51)_V1_3_1.pdf
 │   └── FM191_Schematics_v1-1.pdf
@@ -337,8 +338,16 @@
     │   └── realsense_setup.sh
     ├── Scripts
     │   ├── captuteImageOpenCV.sh
+    │   ├── classifyObjects.py
+    │   ├── d435.py
     │   ├── install_opencv4-0-1.sh
+    │   ├── parameters
+    │   │   ├── coco.names
+    │   │   ├── getWeights.sh
+    │   │   ├── yolov3.cfg
+    │   │   └── yolov3.weights
     │   └── README.md
+    ├── VCS-1_FM191_SerialNumber
     └── VCS-1_SDK
         ├── README.md
         └── src
@@ -347,5 +356,5 @@
             ├── FM191.hpp
             └── Makefile
 
-114 directories, 231 files
+117 directories, 237 files
 ```
