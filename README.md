@@ -2,7 +2,7 @@
 This repository stores the VCS-1 source code.
 
 # Directory structure
-
+```
 VCS-1
 ├── Documents
 │   ├── FM191_DESIGN_SPECIFICATION_(QCF51)_V1_3_1.pdf
@@ -344,6 +344,6 @@ VCS-1
             ├── FM191.cpp
             ├── FM191.hpp
             └── Makefile
-
+```
 
 2019 (c) GPLv3 - Sundance Multiprocessor Technology Ltd.
