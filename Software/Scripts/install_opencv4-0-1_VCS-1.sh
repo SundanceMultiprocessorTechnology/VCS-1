@@ -1,5 +1,5 @@
 #! /bin/bash
-echo "Script for installing the OpenCV 4.0.1 on Ubuntu 18.04 LTS"
+echo "Script for installing the OpenCV 4.0.1 on Ubuntu 18.04 LTS (VCS-1)"
 echo "Updating the OS..."
 sudo apt update 
 sudo apt upgrade -y
@@ -33,14 +33,15 @@ rm CMakeCache.txt
 hostname=$(sudo cat /etc/hostname)
 cmake -D CMAKE_BUILD_TYPE=RELEASE \
 	-D CMAKE_INSTALL_PREFIX=/usr/local \
-	-D INSTALL_PYTHON_EXAMPLES=ON \
-	-D INSTALL_C_EXAMPLES=OFF \
+	-D INSTALL_PYTHON_EXAMPLES=OFF \
+	-D BUILD_EXAMPLES=OFF \
+	-D BUILD_TESTS=OFF \
+	-D CPU_BASELINE="VFPV4" \
+	-D ENABLE_NEON=ON \
 	-D OPENCV_ENABLE_NONFREE=ON \
-	-D OPENCV_EXTRA_MODULES_PATH=~/repositories/opencv_contrib-4.0.1/modules \
-	-D PYTHON_EXECUTABLE=/usr/bin/python3 \
-	-D BUILD_EXAMPLES=ON ..
+	-D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib-4.0.1/modules ..
 echo "Compilation has started ..."
-make -j4
+make -j2
 echo "Installing OpenCV 4.0.1 ..."
 sudo make install
 sudo ldconfig
