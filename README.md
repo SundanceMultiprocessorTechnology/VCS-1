@@ -22,7 +22,7 @@ $ git clone https://github.com/SundanceMultiprocessorTechnology/VCS-1.git
 OR using ssh
 ```
 $ cd $HOME/Development
-$ git@github.com:SundanceMultiprocessorTechnology/VCS-1.git
+$ git clone git@github.com:SundanceMultiprocessorTechnology/VCS-1.git
 ```
 
 ## update
