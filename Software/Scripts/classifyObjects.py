@@ -8,6 +8,7 @@ import time
 import cv2
 import os
 import time
+from imutils.video import FPS
 
 
 #===============================================================================
@@ -52,6 +53,7 @@ def main():
 		pipeline, align, clipping_distance, NIR=camera.setup()
 	else:
 		camera = cv2.VideoCapture(0)
+		fps = FPS().start()
 
 	# load the COCO class labels our YOLO model was trained on
 	labelsPath = TRAIN_PATH + classes[classes_index]
@@ -113,7 +115,9 @@ def main():
 				depth_colormap = cv2.applyColorMap(cv2.convertScaleAbs(depth_image, alpha=0.03), cv2.COLORMAP_JET)
 			else:
 				# Capture frame-by-frame
-				ret, image = camera.read()
+				(grabbed, image) = camera.read()
+				if not grabbed:
+					break
 			(H, W) = image.shape[:2]
 			if invColor:
 				image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
@@ -210,6 +214,7 @@ def main():
 				cv2.imshow("Camera ", image)
 			if cv2.waitKey(1) == 27:
 				break  # esc to quit
+			fps.update()
 		cv2.destroyAllWindows()
 
 	finally:
