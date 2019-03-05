@@ -345,7 +345,8 @@
     │   │   ├── coco.names
     │   │   ├── getWeights.sh
     │   │   ├── yolov3.cfg
-    │   │   └── yolov3-tiny.cfg
+    │   │   ├── yolov3-tiny.cfg
+    │   │   └── yolov3.weights
     │   └── README.md
     └── VCS-1_SDK
         ├── README.md
@@ -355,5 +356,5 @@
             ├── FM191.hpp
             └── Makefile
 
-115 directories, 238 files
+115 directories, 239 files
 ```
