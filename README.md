@@ -4,7 +4,7 @@ This repository stores the VCS-1 source code.
 # Directory structure
 [DirectoryStructure](https://github.com/SundanceMultiprocessorTechnology/VCS-1/blob/master/directorySctructure.md)
 
-# Repository manipulation
+# Managing the Repository
 ## Meeting the requirements
 ```
 $ sudo apt update
@@ -30,7 +30,7 @@ $ cd $HOME/Development/VCS-1
 $ git pull
 ```
 
-## commit
+## commit (only available to authorised users)
 ```
 $ cd $HOME/Development/VCS-1
 $ ./push.sh
