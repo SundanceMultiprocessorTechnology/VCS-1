@@ -15,10 +15,11 @@ $ mkdir -p $HOME/Development
 ## Clone
 using https
 ```
+$ cd $HOME/Development
 $ git clone https://github.com/SundanceMultiprocessorTechnology/VCS-1.git
 ```
 
-using ssh
+OR using ssh
 ```
 $ cd $HOME/Development
 $ git@github.com:SundanceMultiprocessorTechnology/VCS-1.git
