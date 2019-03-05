@@ -23,12 +23,13 @@ rsFlag=False
 import socket
 if socket.gethostname()=='VCS-1':
 	invColor=True
+	classes_index = 1  # default 0
 else:
 	invColor=False
-classes=["coco.names"]
-weights=["yolov3.weights"]
-config=["yolov3.cfg"]
-classes_index=0 # default 0
+	classes_index = 1  # default 0
+classes=["coco.names","coco.names"]
+weights=["yolov3.weights","yolov3-tiny.weights"]
+config=["yolov3.cfg","yolov3-tiny.cfg"]
 if rsFlag:
 	import d435
 
