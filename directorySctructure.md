@@ -2,6 +2,7 @@
 ```
 ../VCS-1
 ├── directorySctructure.md
+├── Documentation
 ├── Documents
 │   ├── FM191_DESIGN_SPECIFICATION_(QCF51)_V1_3_1.pdf
 │   └── FM191_Schematics_v1-1.pdf
@@ -348,6 +349,7 @@
     │   │   ├── yolov3-tiny.cfg
     │   │   └── yolov3.weights
     │   └── README.md
+    ├── VCS-1_FM191_SerialNumber
     └── VCS-1_SDK
         ├── README.md
         └── src
@@ -356,5 +358,5 @@
             ├── FM191.hpp
             └── Makefile
 
-115 directories, 239 files
+117 directories, 239 files
 ```

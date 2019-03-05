@@ -222,7 +222,7 @@ def main():
 			pipeline.stop()
 			del camera
 		else:
-			camera.release()
+			camera.stop()
 
 #===============================================================================
 #  TESTING AREA
