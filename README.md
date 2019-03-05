@@ -2,7 +2,7 @@
 This repository stores the VCS-1 source code.
 
 # Directory structure
-[DirectoryStructure](https://github.com/SundanceMultiprocessorTechnology/VCS-1/blob/master/directorySctructure.md)
+![](https://github.com/SundanceMultiprocessorTechnology/VCS-1/blob/master/directorySctructure.md)
 
 # Managing the Repository
 ## Meeting the requirements
