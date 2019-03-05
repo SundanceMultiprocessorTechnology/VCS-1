@@ -5,12 +5,11 @@ This repository stores the VCS-1 source code.
 [DirectoryStructure](https://github.com/SundanceMultiprocessorTechnology/VCS-1/blob/master/directorySctructure.md)
 
 # Repository manipulation
-## Requirements
-Install tree before doing anything else
+## Meeting the requirements
 ```
 $ sudo apt update
 $ sudo apt upgrade -y
-$ sudo apt install tree -y
+$ sudo apt install tree git -y
 $ mkdir -p $HOME/Development
 ```
 ## Clone
