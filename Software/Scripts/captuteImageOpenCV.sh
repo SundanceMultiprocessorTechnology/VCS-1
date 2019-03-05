@@ -19,6 +19,6 @@ while(True):
 		break
 
 # When everything done, release the capture
-camera.release()
+camera.stop()
 cv2.destroyAllWindows()
 
