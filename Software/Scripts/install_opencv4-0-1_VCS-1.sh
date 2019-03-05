@@ -37,7 +37,7 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 	-D BUILD_EXAMPLES=OFF \
 	-D BUILD_TESTS=OFF \
 	-D CPU_BASELINE="VFPV4" \
-	-D ENABLE_NEON=ON \
+	-D ENABLE_NEON=OFF \
 	-D OPENCV_ENABLE_NONFREE=ON \
 	-D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib-4.0.1/modules ..
 echo "Compilation has started ..."
