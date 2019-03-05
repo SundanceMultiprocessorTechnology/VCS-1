@@ -26,7 +26,7 @@ if socket.gethostname()=='VCS-1':
 	classes_index = 1  # default 0
 else:
 	invColor=False
-	classes_index = 1  # default 0
+	classes_index = 0  # default 0
 classes=["coco.names","coco.names"]
 weights=["yolov3.weights","yolov3-tiny.weights"]
 config=["yolov3.cfg","yolov3-tiny.cfg"]
