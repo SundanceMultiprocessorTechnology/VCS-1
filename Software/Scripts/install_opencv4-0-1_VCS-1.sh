@@ -29,7 +29,7 @@ cd opencv-4.0.1
 mkdir -p build
 cd build
 
-echo "Fetching and unpacking OpenCV..."
+echo "Compiling OpenCV 4.0.1 ... this will take several minutes..."
 rm CMakeCache.txt
 hostname=$(sudo cat /etc/hostname)
 cmake -D CMAKE_BUILD_TYPE=RELEASE \
