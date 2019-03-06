@@ -11,6 +11,7 @@ sudo apt install libxvidcore-dev libx264-dev -y
 sudo apt install libgtk-3-dev -y
 sudo apt install libatlas-base-dev gfortran -y
 sudo apt install python3-dev -y
+sudo apt install libtbb-dev -y
 
 echo "Fetching and unpacking OpenCV 4.0.1..."
 mkdir -p $HOME/repositories
@@ -39,6 +40,8 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 	-D CPU_BASELINE="VFPV4" \
 	-D ENABLE_NEON=OFF \
 	-D OPENCV_ENABLE_NONFREE=ON \
+	-D WITH_OPENMP=ON \
+	-D WITH_TBB=ON BUILD_TBB=ON \
 	-D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib-4.0.1/modules ..
 echo "Compilation has started ..."
 make -j2
