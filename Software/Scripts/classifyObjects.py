@@ -8,7 +8,6 @@ from imutils.video import WebcamVideoStream
 import time
 import cv2
 import os
-from imutils.video import FPS
 
 
 #===============================================================================
