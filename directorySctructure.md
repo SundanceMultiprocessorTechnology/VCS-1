@@ -2,6 +2,7 @@
 ```
 ../VCS-1
 ├── directorySctructure.md
+├── Documentation
 ├── Documents
 │   ├── FM191_DESIGN_SPECIFICATION_(QCF51)_V1_3_1.pdf
 │   └── FM191_Schematics_v1-1.pdf
@@ -336,19 +337,24 @@
     │   ├── readme.md
     │   └── realsense_setup.sh
     ├── Scripts
-    │   ├── captuteImageOpenCV.sh
-    │   ├── classifyObjects.py
-    │   ├── d435.py
-    │   ├── install_opencv4-0-1.sh
-    │   ├── install_opencv4-0-1_VCS-1.sh
-    │   ├── parameters
-    │   │   ├── coco.names
-    │   │   ├── getWeights.sh
-    │   │   ├── yolov3.cfg
-    │   │   ├── yolov3-tiny.cfg
-    │   │   ├── yolov3-tiny.weights
-    │   │   └── yolov3.weights
-    │   └── README.md
+    │   ├── demos
+    │   │   └── YOLO3_OpenCV
+    │   │       ├── captuteImageOpenCV.sh
+    │   │       ├── classifyObjects.py
+    │   │       ├── d435.py
+    │   │       └── parameters
+    │   │           ├── coco.names
+    │   │           ├── getWeights.sh
+    │   │           ├── yolov3.cfg
+    │   │           ├── yolov3-tiny.cfg
+    │   │           └── yolov3-tiny.weights
+    │   ├── laptop
+    │   │   └── install_opencv4-0-1_laptop.sh
+    │   ├── README.md
+    │   └── VCS-1
+    │       ├── install_opencv4-0-1_VCS-1.sh
+    │       └── install_realsense2_VCS-1.sh
+    ├── VCS-1_FM191_SerialNumber
     └── VCS-1_SDK
         ├── README.md
         └── src
@@ -357,5 +363,5 @@
             ├── FM191.hpp
             └── Makefile
 
-115 directories, 240 files
+121 directories, 240 files
 ```
