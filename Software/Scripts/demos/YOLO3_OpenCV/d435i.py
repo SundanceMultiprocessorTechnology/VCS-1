@@ -36,7 +36,7 @@ class d435():
 					  [1280, 720],  # USB3 only
 					  [1280, 800]]  # USB3 only
         self.__fps_index__ = 3  # 3 - default
-        self.__resolution_index__ = 3  # 4 - default
+        self.__resolution_index__ = 4  # 4 - default
         self.__nir__ = False
 
     def getConfiguration(self):

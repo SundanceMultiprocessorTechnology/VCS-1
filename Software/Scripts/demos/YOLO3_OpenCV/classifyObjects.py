@@ -8,7 +8,7 @@ from imutils.video import WebcamVideoStream
 import time
 import cv2
 import os
-
+import d435
 
 #===============================================================================
 # GLOBAL VARIABLES DECLARATIONS
@@ -19,7 +19,7 @@ TRAIN_PATH="parameters/"
 conf=0.5
 threshold=0.3
 stackFlag=True
-rsFlag=False
+rsFlag=True # False #
 import socket
 if socket.gethostname()=='VCS-1':
 	invColor=True
@@ -30,10 +30,7 @@ else:
 classes=["coco.names","coco.names"]
 weights=["yolov3.weights","yolov3-tiny.weights"]
 config=["yolov3.cfg","yolov3-tiny.cfg"]
-if rsFlag:
-	import d435
-else:
-	camera_index=0
+camera_index=0
 
 
 #===============================================================================
@@ -232,4 +229,4 @@ def main():
 # MAIN METHOD
 #===============================================================================
 if __name__ == '__main__':
-    main()
+	main()

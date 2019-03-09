@@ -33,7 +33,13 @@ if [ -f CMakeCache.txt ]; then
 	echo "Removing CMakeCache.txt"
 	rm CMakeCache.txt
 fi
-cmake -DBUILD_PYTHON_BINDINGS=bool:true ..
+
+export CC=/usr/local/bin/gcc-6
+export CXX=/usr/local/bin/g++-6
+cmake -D CMAKE_BUILD_TYPE="Release"\
+      -D FORCE_LIBUVC=ON \
+      -D BUILD_PYTHON_BINDINGS=ON \
+      -D BUILD_EXAMPLES=OFF  ..
 
 echo "Compiling OpenCV 4.0.1 ... this will take several minutes..."
 make -j2
