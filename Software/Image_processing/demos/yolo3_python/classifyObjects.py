@@ -15,14 +15,14 @@ import d435
 #===============================================================================
 
 
-TRAIN_PATH="parameters/"
+PARAM_PATH="../YOLO3_parameters/"
 conf=0.5
 threshold=0.3
-stackFlag=True
-rsFlag=True # False #
+stackFlag=True # stack images
+rsFlag= False # True #   #choose the camera -> rsFlag selects the realsense D435
 import socket
 if socket.gethostname()=='VCS-1':
-	invColor=True
+	invColor=True # Convert BGR to RGB when running on the VCS-1
 	classes_index = 1  # default 0
 else:
 	invColor=False
@@ -30,7 +30,7 @@ else:
 classes=["coco.names","coco.names"]
 weights=["yolov3.weights","yolov3-tiny.weights"]
 config=["yolov3.cfg","yolov3-tiny.cfg"]
-camera_index=0
+camera_index=0 # default 0
 
 
 #===============================================================================
@@ -54,7 +54,7 @@ def main():
 		camera = WebcamVideoStream(camera_index).start()
 
 	# load the COCO class labels our YOLO model was trained on
-	labelsPath = TRAIN_PATH + classes[classes_index]
+	labelsPath = PARAM_PATH + classes[classes_index]
 	LABELS = open(labelsPath).read().strip().split("\n")
 
 	# initialize a list of colors to represent each possible class label
@@ -63,15 +63,15 @@ def main():
 							   dtype="uint8")
 
 	# derive the paths to the YOLO weights and model configuration
-	if not os.path.isfile(TRAIN_PATH + weights[classes_index]):
-		os.system(TRAIN_PATH + "getWeights.sh")
-	weightsPath = TRAIN_PATH + weights[classes_index]
-	configPath = TRAIN_PATH + config[classes_index]
+	if not os.path.isfile(PARAM_PATH + weights[classes_index]):
+		os.system(PARAM_PATH + "getWeights.sh")
+	weightsPath = PARAM_PATH + weights[classes_index]
+	configPath = PARAM_PATH + config[classes_index]
 
 	# load our YOLO object detector trained on COCO dataset (80 classes)
 	#print("[INFO] loading YOLO from disk...")
 	net = cv2.dnn.readNetFromDarknet(configPath, weightsPath)
-
+	print("Classify objects is now running...")
 	try:
 		while True:
 			if rsFlag:
@@ -214,6 +214,7 @@ def main():
 
 	finally:
 		# Stop streaming
+		print("Closing camera device.")
 		if rsFlag:
 			pipeline.stop()
 			del camera

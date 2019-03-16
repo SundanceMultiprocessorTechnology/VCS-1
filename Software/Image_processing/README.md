@@ -21,7 +21,7 @@ Please make sure that the VCS-1 have at least 2GB of swap memory. One can had a 
 $ install_openCV4-0-1.sh
 ```
 
-### demos/YOLO3_OpenCV
+### demos/yolo3_python
 * captureImageOpenCV.sh - script for capturing an image from camera and display it
 ```
 $ ./captureImageOpenCV.sh
@@ -30,3 +30,6 @@ $ ./captureImageOpenCV.sh
 ```
 $ ./classifyObjects.py
 ```
+
+### demos/yolo3_cpp
+* Follow the instructions in the folder to build and run the demo
