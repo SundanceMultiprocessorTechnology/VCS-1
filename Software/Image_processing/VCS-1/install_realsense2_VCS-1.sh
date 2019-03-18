@@ -22,7 +22,7 @@ echo "Installing udev rules ..."
 sudo cp config/99-realsense-libusb.rules /etc/udev/rules.d/
 sudo udevadm control --reload-rules && udevadm trigger
 
-echo "Configuring CMAKE with python support ... this will take a couple of minutes minutes..."
+echo "Configuring CMAKE with python support ... this will take a couple of minutes..."
 mkdir build
 cd build
 if [ -f install_manifest.txt ]; then
@@ -41,7 +41,7 @@ cmake -D CMAKE_BUILD_TYPE="Release"\
       -D BUILD_PYTHON_BINDINGS=ON \
       -D BUILD_EXAMPLES=OFF  ..
 
-echo "Compiling OpenCV 4.0.1 ... this will take several minutes..."
+echo "Compiling librealsense 2... this will take several minutes..."
 make -j2
 sudo make install
 sudo ldconfig
