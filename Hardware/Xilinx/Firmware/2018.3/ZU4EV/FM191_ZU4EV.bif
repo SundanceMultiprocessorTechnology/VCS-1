@@ -2,7 +2,7 @@
 the_ROM_image:
 {
 	[fsbl_config]a53_x64
-	[bootloader]/home/timin/Github_Rep/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU4EV/FM191_ZU4EV/FM191_ZU4EV.sdk/FSBL/Debug/FSBL.elf
-	[destination_device = pl]/home/timin/Github_Rep/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU4EV/FM191_ZU4EV/FM191_ZU4EV.sdk/HardwarePlatform/design_1_wrapper.bit
-	[destination_cpu = a53-0]/home/timin/Github_Rep/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU4EV/FM191_ZU4EV/FM191_ZU4EV.sdk/FM191_ZU4EV/Debug/FM191_ZU4EV.elf
+	[bootloader]<project_path>/FM191_ZU4EV/FM191_ZU4EV.sdk/FSBL/Debug/FSBL.elf
+	[destination_device = pl]<project_path>/FM191_ZU4EV/FM191_ZU4EV.sdk/HardwarePlatform/design_1_wrapper.bit
+	[destination_cpu = a53-0]<project_path>/FM191_ZU4EV/FM191_ZU4EV.sdk/FM191_ZU4EV/Debug/FM191_ZU4EV.elf
 }
