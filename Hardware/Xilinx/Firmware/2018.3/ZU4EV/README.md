@@ -1,11 +1,12 @@
-# VCS-1 FM191-ZU4EV Firmware
+# VCS-1 FM191 Firmware
 This repository contains the required files to generate a hardware design for EMC2-DP using TE0820-4EV + FM191, and generate a linux kernel.
 
 Software used:
-* Vivado 17.4
-* Petalinux 17.4 (Running on Ubuntu 18.04)
+* Vivado 18.3
+* SDK 18.3
+* Petalinux 18.3 (Running on Ubuntu 18.04)
 
-The instructions can be found [here](https://github.com/SundanceMultiprocessorTechnology/VCS-1_FM191-ZU4EV_FW/wiki).
+The instructions can be found [here](https://github.com/SundanceMultiprocessorTechnology/VCS-1/wiki/Build-Firmware).
 
 Sundance contact: 
 * Timoteo Garcia Bertoa timoteo.gb@sundance.com
