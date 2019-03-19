@@ -10,7 +10,7 @@
 <board schema_version="2.1" vendor="sundance.com" name="EMC2-DP_TE0715_30_1C" display_name="EMC2-DP-V2 + TE0715-30-04" url="https://www.sundance.technology/som-cariers/pc104-boards/emc2-z7030/" preset_file="preset.xml">
   
 	<images>
-		<image name="EMC2-DP_TE0715-30-1C.png" display_name="EMC2-DP + TE0715-30-04 (ZYNQ-UltraScale+)" sub_type="board">
+		<image name="EMC2-DP_TE0715-30-1C.png" display_name="EMC2-DP + TE0715-30-04 (ZYNQ-7-Series)" sub_type="board">
       		<description>EMC2-DP + TE0715-30 Board File Image</description>
     	</image>
   	</images>
@@ -24,7 +24,7 @@
 	<description>The EMC2-DP is a PCIe/104 OneBank™ Carrier for a Trenz compatible SoC Module and has expansion for a VITA57.1 FMC™ LPC I/O board and also I/O pins. The add-on board, called “Sundance External Interface Connector – SEIC”  contains LEDs, RS232, USB2.0, HDMI, 1Gb Ethernet and SATA . </description>
   	
 	<components>
-		<component name="part0" display_name="EMC2-DP + TE0715-30 (ZYNQ-UltraScale+)" type="fpga" part_name="xc7z030sbg485-1" pin_map_file="part0_pins.xml" vendor="xilinx.com" spec_url="www.xilinx.com">
+		<component name="part0" display_name="EMC2-DP + TE0715-30 (ZYNQ-7-Series)" type="fpga" part_name="xc7z030sbg485-1" pin_map_file="part0_pins.xml" vendor="xilinx.com" spec_url="www.xilinx.com">
 			<description>FPGA part on the board</description>
 			<interfaces>
 				
