@@ -1,10 +1,5 @@
 # Script to generate HW Platform, FSBL, and App standalone based on .hdf file. 
 
-###!/usr/bin/bash
-##script_path="$( cd "$( script_pathname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
-##source /home/Xilinx/SDK/2018.3/settings64.sh
-##xsdk -batch
-
 #!/usr/bin/tclsh
 #Use script's path as project's path
 set script_path [file dirname [file normalize [info script]]]
