@@ -1,8 +1,0 @@
-//arch = zynqmp; split = false; format = BIN
-the_ROM_image:
-{
-	[fsbl_config]a53_x64
-	[bootloader]<project_path>/FM191_ZU4CG/FM191_ZU4CG.sdk/FSBL/Debug/FSBL.elf
-	[destination_device = pl]<project_path>/FM191_ZU4CG/FM191_ZU4CG.sdk/HardwarePlatform/design_1_wrapper.bit
-	[destination_cpu = a53-0]<project_path>/FM191_ZU4CG/FM191_ZU4CG.sdk/FM191_ZU4CG/Debug/FM191_ZU4CG.elf
-}
