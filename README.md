@@ -4,6 +4,9 @@ This repository stores the VCS-1 source code.
 # Directory structure
 [See the repository structure](https://github.com/SundanceMultiprocessorTechnology/VCS-1/blob/master/directorySctructure.md)
 
+## VCS-1 documentation
+All the pdf documents can be found in the [Documentation](https://github.com/SundanceMultiprocessorTechnology/VCS-1/tree/master/Documents) folder. There is also relevant information inside each one of the repository folder and in the [wiki](https://github.com/SundanceMultiprocessorTechnology/VCS-1/wiki).
+
 # Managing the Repository
 ## Meeting the requirements
 ```
