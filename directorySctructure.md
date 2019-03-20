@@ -2,14 +2,18 @@
 ```
 ../VCS-1
 ├── directorySctructure.md
-├── Documentation
 ├── Documents
-│   ├── FM191_DESIGN_SPECIFICATION_(QCF51)_V1_3_1.pdf
-│   └── FM191_Schematics_v1-1.pdf
+│   ├── EMC2-DP Design Specification (QCF51) v3-4.pdf
+│   ├── EMC2-DP Starter's Guide v3.1 (QCF32).pdf
+│   ├── FM191_DESIGN_SPECIFICATION_(QCF51)_V1_3_2.pdf
+│   ├── FM191_Schematics_v1-1.pdf
+│   ├── README.md
+│   └── TRM-TE0820-03.pdf
 ├── Figures
 │   ├── Power_dif.jpg
 │   └── VS2.png
 ├── Hardware
+│   ├── README.md
 │   ├── SD_BOOT
 │   │   ├── README.md
 │   │   ├── TE820_3EG
@@ -31,32 +35,42 @@
 │   │       └── image.ub
 │   └── Xilinx
 │       ├── BoardFiles
-│       │   ├── 2017.4
-│       │   │   ├── EMC2-DP_TE0715_30_1C
-│       │   │   │   └── 1.0
-│       │   │   │       ├── board.xml
-│       │   │   │       ├── EMC2-DP_TE0715-30-1C.png
-│       │   │   │       ├── part0_pins.xml
-│       │   │   │       └── preset.xml
-│       │   │   ├── EMC2-DP_TE0820_3EG_1E
-│       │   │   │   └── 1.0
-│       │   │   │       ├── board.xml
-│       │   │   │       ├── EMC2_DP_TE0820_3EG_1E.png
-│       │   │   │       ├── part0_pins.xml
-│       │   │   │       └── preset.xml
-│       │   │   ├── EMC2-DP_TE0820_4EV_1E
-│       │   │   │   └── 1.0
-│       │   │   │       ├── board.xml
-│       │   │   │       ├── EMC2-DP_TE0820_4EV_1E.png
-│       │   │   │       ├── part0_pins.xml
-│       │   │   │       └── preset.xml
-│       │   │   ├── FM191-RU
-│       │   │   │   └── 1.0
-│       │   │   │       ├── board.xml
-│       │   │   │       └── preset.xml
-│       │   │   └── README.md
-│       │   └── 2018.3
-│       │       └── placeholder
+│       │   ├── EMC2-DP_TE0715_30_1C
+│       │   │   └── 1.0
+│       │   │       ├── board.xml
+│       │   │       ├── EMC2-DP_TE0715-30-1C.png
+│       │   │       ├── part0_pins.xml
+│       │   │       └── preset.xml
+│       │   ├── EMC2-DP_TE0820_3EG_1E
+│       │   │   └── 1.0
+│       │   │       ├── board.xml
+│       │   │       ├── EMC2_DP_TE0820_3EG_1E.png
+│       │   │       ├── part0_pins.xml
+│       │   │       └── preset.xml
+│       │   ├── EMC2-DP_TE0820_4CG_1EA
+│       │   │   └── 1.0
+│       │   │       ├── board.xml
+│       │   │       ├── EMC2_DP_TE0820_4CG_1EA.png
+│       │   │       ├── part0_pins.xml
+│       │   │       └── preset.xml
+│       │   ├── EMC2-DP_TE0820_4EV_1E
+│       │   │   └── 1.0
+│       │   │       ├── board.xml
+│       │   │       ├── EMC2-DP_TE0820_4EV_1E.png
+│       │   │       ├── part0_pins.xml
+│       │   │       └── preset.xml
+│       │   ├── FM191-RU
+│       │   │   ├── 1.0
+│       │   │   │   ├── board.xml
+│       │   │   │   └── preset.xml
+│       │   │   └── 2.0
+│       │   │       ├── board.xml
+│       │   │       └── preset.xml
+│       │   ├── FM191-RU_REVB
+│       │   │   └── 1.0
+│       │   │       ├── board.xml
+│       │   │       └── preset.xml
+│       │   └── README.md
 │       ├── Firmware
 │       │   ├── 2017.4
 │       │   │   ├── Z7030
@@ -212,23 +226,103 @@
 │       │   │       │           └── xgui
 │       │   │       │               └── video_io_to_hdmi_v1_0.tcl
 │       │   │       └── README.md
-│       │   └── 2018.3
+│       │   ├── 2018.3
+│       │   │   ├── README.md
+│       │   │   ├── Z7030
+│       │   │   │   ├── FM191_Z7030.bif
+│       │   │   │   ├── FM191_Z7030.c
+│       │   │   │   ├── FM191_Z7030.sh
+│       │   │   │   ├── FM191_Z7030.tcl
+│       │   │   │   ├── FM191_Z7030.xdc
+│       │   │   │   ├── IP_Repo
+│       │   │   │   │   ├── SPI_Buffering
+│       │   │   │   │   │   ├── component.xml
+│       │   │   │   │   │   ├── constrs_1
+│       │   │   │   │   │   │   └── new
+│       │   │   │   │   │   │       └── SMT-FMC-R_Constraints.xdc
+│       │   │   │   │   │   ├── sources_1
+│       │   │   │   │   │   │   └── new
+│       │   │   │   │   │   │       └── SPI_Buffering.vhd
+│       │   │   │   │   │   ├── SPI_rtl.xml
+│       │   │   │   │   │   ├── SPI.xml
+│       │   │   │   │   │   └── xgui
+│       │   │   │   │   │       └── SPI_Buffering_v1_0.tcl
+│       │   │   │   │   └── sundance.com_user_SPI_Buffering_1.0.zip
+│       │   │   │   └── README.md
+│       │   │   ├── ZU3EG
+│       │   │   │   ├── eeprom.h
+│       │   │   │   ├── FM191_ZU3EG.bif
+│       │   │   │   ├── FM191_ZU3EG.c
+│       │   │   │   ├── FM191_ZU3EG.sh
+│       │   │   │   ├── FM191_ZU3EG.tcl
+│       │   │   │   ├── FM191_ZU3EG.xdc
+│       │   │   │   ├── IP_Repo
+│       │   │   │   │   ├── Interfaces
+│       │   │   │   │   │   └── spi_custom
+│       │   │   │   │   │       ├── SPI_rtl.xml
+│       │   │   │   │   │       └── SPI.xml
+│       │   │   │   │   └── ip
+│       │   │   │   │       └── SPI_US_Buffering
+│       │   │   │   │           ├── component.xml
+│       │   │   │   │           ├── SPI_US_Buffering.vhd
+│       │   │   │   │           └── xgui
+│       │   │   │   │               └── SPI_US_Buffering_v1_0.tcl
+│       │   │   │   └── README.md
+│       │   │   ├── ZU4CG
+│       │   │   │   ├── eeprom.h
+│       │   │   │   ├── FM191_ZU4CG.bif
+│       │   │   │   ├── FM191_ZU4CG.c
+│       │   │   │   ├── FM191_ZU4CG.sh
+│       │   │   │   ├── FM191_ZU4CG.tcl
+│       │   │   │   ├── FM191_ZU4CG.xdc
+│       │   │   │   ├── IP_Repo
+│       │   │   │   │   ├── Interfaces
+│       │   │   │   │   │   └── spi_custom
+│       │   │   │   │   │       ├── SPI_rtl.xml
+│       │   │   │   │   │       └── SPI.xml
+│       │   │   │   │   └── ip
+│       │   │   │   │       └── SPI_US_Buffering
+│       │   │   │   │           ├── component.xml
+│       │   │   │   │           ├── SPI_US_Buffering.vhd
+│       │   │   │   │           └── xgui
+│       │   │   │   │               └── SPI_US_Buffering_v1_0.tcl
+│       │   │   │   └── README.md
+│       │   │   └── ZU4EV
+│       │   │       ├── eeprom.h
+│       │   │       ├── FM191_ZU4EV.bif
+│       │   │       ├── FM191_ZU4EV.c
+│       │   │       ├── FM191_ZU4EV.sh
+│       │   │       ├── FM191_ZU4EV.tcl
+│       │   │       ├── FM191_ZU4EV.xdc
+│       │   │       ├── IP_Repo
+│       │   │       │   ├── Interfaces
+│       │   │       │   │   └── spi_custom
+│       │   │       │   │       ├── SPI_rtl.xml
+│       │   │       │   │       └── SPI.xml
+│       │   │       │   └── ip
+│       │   │       │       └── SPI_US_Buffering
+│       │   │       │           ├── component.xml
+│       │   │       │           ├── SPI_US_Buffering.vhd
+│       │   │       │           └── xgui
+│       │   │       │               └── SPI_US_Buffering_v1_0.tcl
+│       │   │       └── README.md
+│       │   └── README.md
+│       ├── Petalinux
+│       │   ├── 2017.4
+│       │   │   ├── FM191_4EV
+│       │   │   │   └── zynqmp_fsbl.elf
+│       │   │   ├── FM191_4EV.bsp
+│       │   │   ├── FM191_7030.bsp
+│       │   │   ├── FM191B_4CG
+│       │   │   │   └── zynqmp_fsbl.elf
+│       │   │   ├── FM191B_4CG.bsp
+│       │   │   ├── FM191_HDMI_4EV
+│       │   │   │   └── zynqmp_fsbl.elf
+│       │   │   ├── FM191_HDMI_4EV.bsp
+│       │   │   └── README.md
+│       │   └── 2018.4
 │       │       └── placeholder
-│       └── Petalinux
-│           ├── 2017.4
-│           │   ├── FM191_4EV
-│           │   │   └── zynqmp_fsbl.elf
-│           │   ├── FM191_4EV.bsp
-│           │   ├── FM191_7030.bsp
-│           │   ├── FM191B_4CG
-│           │   │   └── zynqmp_fsbl.elf
-│           │   ├── FM191B_4CG.bsp
-│           │   ├── FM191_HDMI_4EV
-│           │   │   └── zynqmp_fsbl.elf
-│           │   ├── FM191_HDMI_4EV.bsp
-│           │   └── README.md
-│           └── 2018.4
-│               └── placeholder
+│       └── README.md
 ├── LICENSE.md
 ├── push.sh
 ├── README.md
@@ -346,8 +440,7 @@
     │   │   │   ├── getWeights.sh
     │   │   │   ├── yolov3.cfg
     │   │   │   ├── yolov3-tiny.cfg
-    │   │   │   ├── yolov3-tiny.weights
-    │   │   │   └── yolov3.weights
+    │   │   │   └── yolov3-tiny.weights
     │   │   └── yolo3_python
     │   │       ├── captureCameraImage.py
     │   │       ├── classifyObjects.py
@@ -355,8 +448,6 @@
     │   │       ├── d435.py
     │   │       ├── IMU_capture_D435i.py
     │   │       ├── __init__.py
-    │   │       ├── parameters
-    │   │       │   └── yolov3.weights
     │   │       ├── __pycache__
     │   │       │   └── d435.cpython-36.pyc
     │   │       └── README.md
@@ -369,7 +460,6 @@
     ├── RealSense2
     │   ├── readme.md
     │   └── realsense_setup.sh
-    ├── VCS-1_FM191_SerialNumber
     └── VCS-1_SDK
         ├── README.md
         └── src
@@ -378,5 +468,5 @@
             ├── FM191.hpp
             └── Makefile
 
-125 directories, 251 files
+154 directories, 312 files
 ```
