@@ -1,18 +1,18 @@
 ################################################################################################
 # Company:        Sundance Multiprocessor Technology LTD
 # Engineer:       Timoteo Garcia Bertoa
-# Design Name:    FM191_ZU4EV
+# Design Name:    FM191_ZU4CG
 # Tool Versions:  Vivado 17.4
 ################################################################################################
 
 #Use script's path as project's path
 set script_path [file dirname [file normalize [info script]]]
 
-#Create project for FM191_ZU4EV
-create_project FM191_ZU4EV $script_path/FM191_ZU4EV -part xczu4ev-sfvc784-1-e
+#Create project for FM191_ZU4CG 
+create_project FM191_ZU4CG $script_path/FM191_ZU4CG -part xcZU4CG-sfvc784-1-e
 
 #Board part selection
-set_property board_part sundance.com:emc2-dp_te0820_4ev_1e:part0:1.0 [current_project]
+set_property board_part sundance.com:emc2-dp_te0820_3eg_1e:part0:1.0 [current_project]
 set_property board_connections {fmc_lpc_connector sundance:fm191-ru:fmc_lpc_connector:1.0} [current_project]
 
 #Add repositories at IP Catalog
@@ -143,17 +143,17 @@ regenerate_bd_layout
 regenerate_bd_layout -routing
 
 #Create VHDL wrapper
-make_wrapper -files [get_files $script_path/FM191_ZU4EV/FM191_ZU4EV.srcs/sources_1/bd/design_1/design_1.bd] -top
-add_files -norecurse $script_path/FM191_ZU4EV/FM191_ZU4EV.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+make_wrapper -files [get_files $script_path/FM191_ZU4CG/FM191_ZU4CG.srcs/sources_1/bd/design_1/design_1.bd] -top
+add_files -norecurse $script_path/FM191_ZU4CG/FM191_ZU4CG.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
 
 #Add constraints file
-add_files -fileset constrs_1 -norecurse $script_path/FM191_ZU4EV.xdc
+add_files -fileset constrs_1 -norecurse $script_path/FM191_ZU4CG.xdc
 
 #Build project and generate bitstream
 launch_runs impl_1 -to_step write_bitstream -jobs 2
 wait_on_run impl_1
 
 #Export .hdf and .bit
-file mkdir $script_path/FM191_ZU4EV/FM191_ZU4EV.sdk
-file copy -force $script_path/FM191_ZU4EV/FM191_ZU4EV.runs/impl_1/design_1_wrapper.sysdef $script_path/FM191_ZU4EV/FM191_ZU4EV.sdk/design_1_wrapper.hdf
+file mkdir $script_path/FM191_ZU4CG/FM191_ZU4CG.sdk
+file copy -force $script_path/FM191_ZU4CG/FM191_ZU4CG.runs/impl_1/design_1_wrapper.sysdef $script_path/FM191_ZU4CG/FM191_ZU4CG.sdk/design_1_wrapper.hdf
 

@@ -1,17 +1,22 @@
 ################################################################################################
-# Change <path> along this file for the desired path where IP_Repo should be placed, and the project will be created
-# Board files must be added to <installation_path>/Xilinx/Vivado/201X.X/data/boards/board_files
+# Company:        Sundance Multiprocessor Technology LTD
+# Engineer:       Timoteo Garcia Bertoa
+# Design Name:    FM191_ZU3EG
+# Tool Versions:  Vivado 17.4
 ################################################################################################
 
+#Use script's path as project's path
+set script_path [file dirname [file normalize [info script]]]
+
 #Create project for Firmware FM191. 
-create_project FM191_ZU3EG <path>/FM191_ZU3EG -part xczu3eg-sfvc784-1-e
+create_project FM191_ZU3EG $script_path/FM191_ZU3EG -part xczu3eg-sfvc784-1-e
 
 #Board part selection
 set_property board_part sundance.com:emc2-dp_te0820_3eg_1e:part0:1.0 [current_project]
 set_property board_connections {fmc_lpc_connector sundance:fm191-ru:fmc_lpc_connector:1.0} [current_project]
 
 #Add repositories at IP Catalog
-set_property  ip_repo_paths  <path>/IP_Repo [current_project]
+set_property  ip_repo_paths  $script_path/IP_Repo [current_project]
 update_ip_catalog
 
 #Set target to VHDL
@@ -138,17 +143,17 @@ regenerate_bd_layout
 regenerate_bd_layout -routing
 
 #Create VHDL wrapper
-make_wrapper -files [get_files <path>/FM191_ZU3EG/FM191_ZU3EG.srcs/sources_1/bd/design_1/design_1.bd] -top
-add_files -norecurse <path>/FM191_ZU3EG/FM191_ZU3EG.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+make_wrapper -files [get_files $script_path/FM191_ZU3EG/FM191_ZU3EG.srcs/sources_1/bd/design_1/design_1.bd] -top
+add_files -norecurse $script_path/FM191_ZU3EG/FM191_ZU3EG.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
 
 #Add constraints file
-add_files -fileset constrs_1 -norecurse <path>/FM191_ZU3EG.xdc
+add_files -fileset constrs_1 -norecurse $script_path/FM191_ZU3EG.xdc
 
 #Build project and generate bitstream
 launch_runs impl_1 -to_step write_bitstream -jobs 2
 wait_on_run impl_1
 
 #Export .hdf and .bit
-file mkdir <path>/FM191_ZU3EG/FM191_ZU3EG.sdk
-file copy -force <path>/FM191_ZU3EG/FM191_ZU3EG.runs/impl_1/design_1_wrapper.sysdef <path>/FM191_ZU3EG/FM191_ZU3EG.sdk/design_1_wrapper.hdf
+file mkdir $script_path/FM191_ZU3EG/FM191_ZU3EG.sdk
+file copy -force $script_path/FM191_ZU3EG/FM191_ZU3EG.runs/impl_1/design_1_wrapper.sysdef $script_path/FM191_ZU3EG/FM191_ZU3EG.sdk/design_1_wrapper.hdf
 

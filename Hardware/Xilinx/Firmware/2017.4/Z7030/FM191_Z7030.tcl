@@ -1,18 +1,18 @@
 ################################################################################################
 # Company:        Sundance Multiprocessor Technology LTD
 # Engineer:       Timoteo Garcia Bertoa
-# Design Name:    FM191_ZU4EV
+# Design Name:    FM191_Z7030
 # Tool Versions:  Vivado 17.4
 ################################################################################################
 
 #Use script's path as project's path
 set script_path [file dirname [file normalize [info script]]]
 
-#Create project for FM191_ZU4EV
-create_project FM191_ZU4EV $script_path/FM191_ZU4EV -part xczu4ev-sfvc784-1-e
+#Create project for FM191_Z7030
+create_project FM191_Z7030 $script_path/FM191_Z7030 -part xc7z030sbg485-1
 
 #Board part selection
-set_property board_part sundance.com:emc2-dp_te0820_4ev_1e:part0:1.0 [current_project]
+set_property board_part sundance.com:emc2-dp_te0715_30_1c:part0:1.0 [current_project]
 set_property board_connections {fmc_lpc_connector sundance:fm191-ru:fmc_lpc_connector:1.0} [current_project]
 
 #Add repositories at IP Catalog
@@ -25,23 +25,24 @@ set_property target_language VHDL [current_project]
 #Create block design in IP Integrator
 create_bd_design "design_1"
 
-#Add Zynq IP. Enable interrupts. Set SPI0 clk to 20MHz
+#Add Zynq IP. Activate SPI_0 through EMIO, add interrupts and M_AXI_GP0
 startgroup
-create_bd_cell -type ip -vlnv xilinx.com:ip:zynq_ultra_ps_e:3.1 zynq_ultra_ps_e_0
+create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0
 endgroup
-apply_bd_automation -rule xilinx.com:bd_rule:zynq_ultra_ps_e -config {apply_board_preset "1" }  [get_bd_cells zynq_ultra_ps_e_0]
-set_property -dict [list CONFIG.PSU__USE__IRQ0 {1} CONFIG.PSU__CRL_APB__SPI0_REF_CTRL__FREQMHZ {20}] [get_bd_cells zynq_ultra_ps_e_0]
+apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" apply_board_preset "1" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_0]
+startgroup
+set_property -dict [list CONFIG.PCW_USE_M_AXI_GP0 {1} CONFIG.PCW_USE_FABRIC_INTERRUPT {1} CONFIG.PCW_IRQ_F2P_INTR {1} CONFIG.PCW_QSPI_GRP_SINGLE_SS_ENABLE {1} CONFIG.PCW_SPI0_PERIPHERAL_ENABLE {1}] [get_bd_cells processing_system7_0]
+endgroup
 
 #Add SPI_Buffering IP. Connect to Zynq PS. Make output external
 startgroup
-create_bd_cell -type ip -vlnv sundance.com:user:SPI_US_Buffering:1.0 SPI_US_Buffering_0
+create_bd_cell -type ip -vlnv sundance.com:user:SPI_Buffering:1.0 SPI_Buffering_0
 endgroup
-connect_bd_intf_net [get_bd_intf_pins zynq_ultra_ps_e_0/SPI_0] [get_bd_intf_pins SPI_US_Buffering_0/SPI_S]
+connect_bd_intf_net [get_bd_intf_pins SPI_Buffering_0/EMIO_SPI] [get_bd_intf_pins processing_system7_0/SPI_0]
 startgroup
-make_bd_intf_pins_external  [get_bd_intf_pins SPI_US_Buffering_0/SPI]
+make_bd_intf_pins_external  [get_bd_intf_pins SPI_Buffering_0/SPI]
 endgroup
 set_property name SPI [get_bd_intf_ports SPI_0]
-set_property name SPI_US_Buffering [get_bd_cells SPI_US_Buffering_0]
 
 #Add GPIO Controller for DIOs and GPIOs
 startgroup
@@ -115,14 +116,14 @@ set_property -dict [list CONFIG.C_GPO_WIDTH {1} CONFIG.IIC_FREQ_KHZ {400}] [get_
 
 #Apply AXI connections
 startgroup
-apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/zynq_ultra_ps_e_0/M_AXI_HPM0_LPD" intc_ip "New AXI Interconnect" Clk_xbar "Auto" Clk_master "Auto" Clk_slave "Auto" }  [get_bd_intf_pins IOs/S_AXI]
-apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/zynq_ultra_ps_e_0/M_AXI_HPM0_LPD" intc_ip "New AXI Interconnect" Clk_xbar "Auto" Clk_master "Auto" Clk_slave "Auto" }  [get_bd_intf_pins M_LEDs/S_AXI]
-apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/zynq_ultra_ps_e_0/M_AXI_HPM0_LPD" intc_ip "New AXI Interconnect" Clk_xbar "Auto" Clk_master "Auto" Clk_slave "Auto" }  [get_bd_intf_pins C_LEDs/S_AXI]
-apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/zynq_ultra_ps_e_0/M_AXI_HPM0_LPD" intc_ip "New AXI Interconnect" Clk_xbar "Auto" Clk_master "Auto" Clk_slave "Auto" }  [get_bd_intf_pins ADC_UART_RQs/S_AXI]
-apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/zynq_ultra_ps_e_0/M_AXI_HPM0_LPD" intc_ip "New AXI Interconnect" Clk_xbar "Auto" Clk_master "Auto" Clk_slave "Auto" }  [get_bd_intf_pins ADC_UART_1/S_AXI]
-apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/zynq_ultra_ps_e_0/M_AXI_HPM0_LPD" intc_ip "New AXI Interconnect" Clk_xbar "Auto" Clk_master "Auto" Clk_slave "Auto" }  [get_bd_intf_pins ADC_UART_2/S_AXI]
-apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/zynq_ultra_ps_e_0/M_AXI_HPM0_LPD" intc_ip "New AXI Interconnect" Clk_xbar "Auto" Clk_master "Auto" Clk_slave "Auto" }  [get_bd_intf_pins ADC_UART_3/S_AXI]
-apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/zynq_ultra_ps_e_0/M_AXI_HPM0_LPD" intc_ip "/ps8_0_axi_periph" Clk_xbar "Auto" Clk_master "Auto" Clk_slave "Auto" }  [get_bd_intf_pins FMC_I2C/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/IOs/S_AXI} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins IOs/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/M_LEDs/S_AXI} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins M_LEDs/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/C_LEDs/S_AXI} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins C_LEDs/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/ADC_UART_RQs/S_AXI} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins ADC_UART_RQs/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/ADC_UART_1/S_AXI} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins ADC_UART_1/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/ADC_UART_2/S_AXI} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins ADC_UART_2/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/ADC_UART_3/S_AXI} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins ADC_UART_3/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/FMC_I2C/S_AXI} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins FMC_I2C/S_AXI]
 endgroup
 
 #Connect interrupts to PS
@@ -136,24 +137,24 @@ connect_bd_net [get_bd_pins ADC_UART_1/interrupt] [get_bd_pins PLPS_INT/In0]
 connect_bd_net [get_bd_pins ADC_UART_2/interrupt] [get_bd_pins PLPS_INT/In1]
 connect_bd_net [get_bd_pins ADC_UART_3/interrupt] [get_bd_pins PLPS_INT/In2]
 connect_bd_net [get_bd_pins FMC_I2C/iic2intc_irpt] [get_bd_pins PLPS_INT/In3]
-connect_bd_net [get_bd_pins PLPS_INT/dout] [get_bd_pins zynq_ultra_ps_e_0/pl_ps_irq0]
+connect_bd_net [get_bd_pins PLPS_INT/dout] [get_bd_pins processing_system7_0/IRQ_F2P]
 
 #Regenerate layout
 regenerate_bd_layout
 regenerate_bd_layout -routing
 
 #Create VHDL wrapper
-make_wrapper -files [get_files $script_path/FM191_ZU4EV/FM191_ZU4EV.srcs/sources_1/bd/design_1/design_1.bd] -top
-add_files -norecurse $script_path/FM191_ZU4EV/FM191_ZU4EV.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+make_wrapper -files [get_files $script_path/FM191_Z7030/FM191_Z7030.srcs/sources_1/bd/design_1/design_1.bd] -top
+add_files -norecurse $script_path/FM191_Z7030/FM191_Z7030.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
 
 #Add constraints file
-add_files -fileset constrs_1 -norecurse $script_path/FM191_ZU4EV.xdc
+add_files -fileset constrs_1 -norecurse $script_path/FM191_Z7030.xdc
 
 #Build project and generate bitstream
 launch_runs impl_1 -to_step write_bitstream -jobs 2
 wait_on_run impl_1
 
 #Export .hdf and .bit
-file mkdir $script_path/FM191_ZU4EV/FM191_ZU4EV.sdk
-file copy -force $script_path/FM191_ZU4EV/FM191_ZU4EV.runs/impl_1/design_1_wrapper.sysdef $script_path/FM191_ZU4EV/FM191_ZU4EV.sdk/design_1_wrapper.hdf
+file mkdir $script_path/FM191_Z7030/FM191_Z7030.sdk
+file copy -force $script_path/FM191_Z7030/FM191_Z7030.runs/impl_1/design_1_wrapper.sysdef $script_path/FM191_Z7030/FM191_Z7030.sdk/design_1_wrapper.hdf
 
