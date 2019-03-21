@@ -13,3 +13,4 @@ The VCS-1 system is composed of:
 3. [FM191 Design specification](https://github.com/SundanceMultiprocessorTechnology/VCS-1/blob/master/Documents/FM191_DESIGN_SPECIFICATION_(QCF51)_V1_3_2.pdf)
 4. [FM191 Design Schematics](https://github.com/SundanceMultiprocessorTechnology/VCS-1/blob/master/Documents/FM191_Schematics_v1-1.pdf)
 5. [Trenz TE0820 documentation](https://github.com/SundanceMultiprocessorTechnology/VCS-1/blob/master/Documents/TRM-TE0820-03.pdf)
+6. [VCS-1 presentation](https://github.com/SundanceMultiprocessorTechnology/VCS-1/blob/master/Documents/VCS-1.pdf)
