@@ -1,2 +1,6 @@
-# VCS-1_FM191_ZU3EG_SD
-Files for the FM191 SD card
+# Boot files 
+## Supported devices:
+* Z7030
+* ZU3CG
+* ZU4CG
+* ZU4EV
