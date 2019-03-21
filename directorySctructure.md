@@ -8,7 +8,8 @@
 │   ├── FM191_DESIGN_SPECIFICATION_(QCF51)_V1_3_2.pdf
 │   ├── FM191_Schematics_v1-1.pdf
 │   ├── README.md
-│   └── TRM-TE0820-03.pdf
+│   ├── TRM-TE0820-03.pdf
+│   └── VCS-1.pdf
 ├── Figures
 │   ├── Power_dif.jpg
 │   └── VS2.png
@@ -229,7 +230,7 @@
 │       │   ├── 2018.3
 │       │   │   ├── README.md
 │       │   │   ├── Z7030
-│       │   │   │   ├── FM191_Z7030.bif
+│       │   │   │   ├── FM191_Z7030_BIF.sh
 │       │   │   │   ├── FM191_Z7030.c
 │       │   │   │   ├── FM191_Z7030.sh
 │       │   │   │   ├── FM191_Z7030.tcl
@@ -251,7 +252,7 @@
 │       │   │   │   └── README.md
 │       │   │   ├── ZU3EG
 │       │   │   │   ├── eeprom.h
-│       │   │   │   ├── FM191_ZU3EG.bif
+│       │   │   │   ├── FM191_ZU3EG_BIF.sh
 │       │   │   │   ├── FM191_ZU3EG.c
 │       │   │   │   ├── FM191_ZU3EG.sh
 │       │   │   │   ├── FM191_ZU3EG.tcl
@@ -270,7 +271,7 @@
 │       │   │   │   └── README.md
 │       │   │   ├── ZU4CG
 │       │   │   │   ├── eeprom.h
-│       │   │   │   ├── FM191_ZU4CG.bif
+│       │   │   │   ├── FM191_ZU4CG_BIF.sh
 │       │   │   │   ├── FM191_ZU4CG.c
 │       │   │   │   ├── FM191_ZU4CG.sh
 │       │   │   │   ├── FM191_ZU4CG.tcl
@@ -289,7 +290,7 @@
 │       │   │   │   └── README.md
 │       │   │   └── ZU4EV
 │       │   │       ├── eeprom.h
-│       │   │       ├── FM191_ZU4EV.bif
+│       │   │       ├── FM191_ZU4EV_BIF.sh
 │       │   │       ├── FM191_ZU4EV.c
 │       │   │       ├── FM191_ZU4EV.sh
 │       │   │       ├── FM191_ZU4EV.tcl
@@ -468,5 +469,5 @@
             ├── FM191.hpp
             └── Makefile
 
-154 directories, 312 files
+154 directories, 313 files
 ```
