@@ -2,6 +2,7 @@
 ```
 ../VCS-1
 ├── directorySctructure.md
+├── Documentation
 ├── Documents
 │   ├── EMC2-DP Design Specification (QCF51) v3-4.pdf
 │   ├── EMC2-DP Starter's Guide v3.1 (QCF32).pdf
@@ -410,6 +411,7 @@
     │       └── platform.h
     ├── Image_processing
     │   ├── demos
+    │   │   ├── README.md
     │   │   ├── yolo3_cpp
     │   │   │   ├── CMakeLists.txt
     │   │   │   ├── README.md
@@ -421,7 +423,8 @@
     │   │   │   ├── getWeights.sh
     │   │   │   ├── yolov3.cfg
     │   │   │   ├── yolov3-tiny.cfg
-    │   │   │   └── yolov3-tiny.weights
+    │   │   │   ├── yolov3-tiny.weights
+    │   │   │   └── yolov3.weights
     │   │   └── yolo3_python
     │   │       ├── captureCameraImage.py
     │   │       ├── classifyObjects.py
@@ -429,6 +432,8 @@
     │   │       ├── d435.py
     │   │       ├── IMU_capture_D435i.py
     │   │       ├── __init__.py
+    │   │       ├── parameters
+    │   │       │   └── yolov3.weights
     │   │       ├── __pycache__
     │   │       │   └── d435.cpython-36.pyc
     │   │       └── README.md
@@ -441,6 +446,7 @@
     ├── RealSense2
     │   ├── readme.md
     │   └── realsense_setup.sh
+    ├── VCS-1_FM191_SerialNumber
     └── VCS-1_SDK
         ├── README.md
         └── src
@@ -449,5 +455,5 @@
             ├── FM191.hpp
             └── Makefile
 
-147 directories, 300 files
+150 directories, 303 files
 ```
