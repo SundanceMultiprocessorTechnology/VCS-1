@@ -39,7 +39,8 @@ export CXX=/usr/local/bin/g++-6
 cmake -D CMAKE_BUILD_TYPE="Release"\
       -D FORCE_LIBUVC=ON \
       -D BUILD_PYTHON_BINDINGS=ON \
-      -D BUILD_EXAMPLES=OFF  ..
+      -D PYTHON_EXECUTABLE=/usr/bin/python3 \
+      -D BUILD_EXAMPLES=ON  ..
 
 echo "Compiling librealsense 2... this will take several minutes..."
 make -j2
