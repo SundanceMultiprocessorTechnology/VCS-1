@@ -30,7 +30,9 @@ startgroup
 create_bd_cell -type ip -vlnv xilinx.com:ip:zynq_ultra_ps_e:3.2 zynq_ultra_ps_e_0
 endgroup
 apply_bd_automation -rule xilinx.com:bd_rule:zynq_ultra_ps_e -config {apply_board_preset "1" }  [get_bd_cells zynq_ultra_ps_e_0]
-set_property -dict [list CONFIG.PSU__USE__IRQ0 {1} CONFIG.PSU__CRL_APB__SPI0_REF_CTRL__FREQMHZ {20}] [get_bd_cells zynq_ultra_ps_e_0]
+
+#Enable IRQ, SPI and SATA. Set I2C0 to 38..39
+set_property -dict [list CONFIG.PSU__USE__IRQ0 {1} CONFIG.PSU__CRL_APB__SPI0_REF_CTRL__FREQMHZ {20} CONFIG.PSU__SATA__PERIPHERAL__ENABLE {1} CONFIG.PSU__I2C0__PERIPHERAL__IO {MIO 38 .. 39}] [get_bd_cells zynq_ultra_ps_e_0]
 
 #Add SPI_Buffering IP. Connect to Zynq PS. Make output external
 startgroup
@@ -137,6 +139,177 @@ connect_bd_net [get_bd_pins ADC_UART_2/interrupt] [get_bd_pins PLPS_INT/In1]
 connect_bd_net [get_bd_pins ADC_UART_3/interrupt] [get_bd_pins PLPS_INT/In2]
 connect_bd_net [get_bd_pins FMC_I2C/iic2intc_irpt] [get_bd_pins PLPS_INT/In3]
 connect_bd_net [get_bd_pins PLPS_INT/dout] [get_bd_pins zynq_ultra_ps_e_0/pl_ps_irq0]
+
+#----------------------------------------------------------------------------------#
+# Adding HDMI support. Comment out this part of the script if not required # BEGIN #
+#----------------------------------------------------------------------------------#
+
+#Adding Test Pattern Generator
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:v_tpg:8.0 v_tpg_0
+endgroup
+set_property -dict [list CONFIG.MAX_COLS {1280} CONFIG.MAX_ROWS {720} CONFIG.HAS_AXI4S_SLAVE {1} CONFIG.FOREGROUND {1}] [get_bd_cells v_tpg_0]
+
+#Adding AXI4 Stream to Video Out
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:v_axi4s_vid_out:4.0 v_axi4s_vid_out_0
+endgroup
+set_property -dict [list CONFIG.C_HAS_ASYNC_CLK {1} CONFIG.C_VTG_MASTER_SLAVE {0}] [get_bd_cells v_axi4s_vid_out_0]
+
+#Adding Video I/O to HDMI
+startgroup
+create_bd_cell -type ip -vlnv trenz.biz:user:video_io_to_hdmi:1.0 video_io_to_hdmi_0
+endgroup
+
+#Adding Video Timing Controller
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:v_tc:6.1 v_tc_0
+endgroup
+set_property -dict [list CONFIG.max_clocks_per_line {2048} CONFIG.max_lines_per_frame {2048} CONFIG.enable_detection {false}] [get_bd_cells v_tc_0]
+
+#Adding Axis FB Conv
+startgroup
+create_bd_cell -type ip -vlnv trenz.biz:user:axis_fb_conv:1.0 axis_fb_conv_0
+endgroup
+
+#Adding VDMA
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_vdma:6.3 axi_vdma_0
+endgroup
+set_property -dict [list CONFIG.c_num_fstores {1} CONFIG.c_mm2s_genlock_mode {0} CONFIG.c_s2mm_genlock_mode {0} CONFIG.c_mm2s_linebuffer_depth {2048} CONFIG.c_include_s2mm {0} CONFIG.c_include_mm2s_dre {1}] [get_bd_cells axi_vdma_0]
+
+#Adding Zynq MP IP AXI ports
+startgroup
+set_property -dict [list CONFIG.PSU__USE__M_AXI_GP0 {1} CONFIG.PSU__USE__S_AXI_GP2 {1}] [get_bd_cells zynq_ultra_ps_e_0]
+endgroup
+
+#Setting second clock to 75MHz
+startgroup
+set_property -dict [list CONFIG.PSU__CRL_APB__PL1_REF_CTRL__FREQMHZ {75}] [get_bd_cells zynq_ultra_ps_e_0]
+endgroup
+
+#Adding secondary AXI Interconnect
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 axi_interconnect_0
+endgroup
+set_property name axi_interconnect_mem [get_bd_cells axi_interconnect_0]
+set_property -dict [list CONFIG.NUM_MI {1}] [get_bd_cells axi_interconnect_mem]
+
+#Adding secondary Reset block
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 proc_sys_reset_0
+endgroup
+set_property name rst_ps8_0_75M [get_bd_cells proc_sys_reset_0]
+set_property -dict [list CONFIG.C_AUX_RESET_HIGH.VALUE_SRC USER] [get_bd_cells rst_ps8_0_75M]
+set_property -dict [list CONFIG.C_AUX_RESET_HIGH {0}] [get_bd_cells rst_ps8_0_75M]
+
+#Adding GND and VCC constants
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0
+endgroup
+set_property -dict [list CONFIG.CONST_VAL {0}] [get_bd_cells xlconstant_0]
+set_property name GND [get_bd_cells xlconstant_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0
+endgroup
+set_property name VCC [get_bd_cells xlconstant_0]
+
+#Creating ports
+create_bd_port -dir O -from 0 -to 0 ct_hpd
+create_bd_port -dir O -from 0 -to 0 cec_clk
+create_bd_port -dir O -from 0 -to 0 ls_oe
+
+#Adding AXI Interconnect ports
+startgroup
+set_property -dict [list CONFIG.NUM_SI {2} CONFIG.NUM_MI {11} CONFIG.NUM_MI {11}] [get_bd_cells ps8_0_axi_periph]
+endgroup
+
+#Adding Interrupt ports
+startgroup
+set_property -dict [list CONFIG.NUM_PORTS {7}] [get_bd_cells PLPS_INT]
+endgroup
+
+#Making connections
+startgroup
+make_bd_intf_pins_external  [get_bd_intf_pins video_io_to_hdmi_0/hdmi_out]
+endgroup
+set_property name hdmi_out [get_bd_intf_ports hdmi_out_0]
+connect_bd_intf_net [get_bd_intf_pins axis_fb_conv_0/video_out] [get_bd_intf_pins v_tpg_0/s_axis_video]
+connect_bd_intf_net [get_bd_intf_pins axi_vdma_0/M_AXIS_MM2S] [get_bd_intf_pins axis_fb_conv_0/S_AXIS]
+connect_bd_intf_net [get_bd_intf_pins video_io_to_hdmi_0/vid_io_in] [get_bd_intf_pins v_axi4s_vid_out_0/vid_io_out]
+connect_bd_intf_net [get_bd_intf_pins v_tc_0/vtiming_out] [get_bd_intf_pins v_axi4s_vid_out_0/vtiming_in]
+connect_bd_intf_net [get_bd_intf_pins v_tpg_0/m_axis_video] [get_bd_intf_pins v_axi4s_vid_out_0/video_in]
+connect_bd_intf_net -boundary_type upper [get_bd_intf_pins ps8_0_axi_periph/M08_AXI] [get_bd_intf_pins axi_vdma_0/S_AXI_LITE]
+connect_bd_intf_net -boundary_type upper [get_bd_intf_pins ps8_0_axi_periph/M09_AXI] [get_bd_intf_pins v_tc_0/ctrl]
+connect_bd_intf_net -boundary_type upper [get_bd_intf_pins ps8_0_axi_periph/M10_AXI] [get_bd_intf_pins v_tpg_0/s_axi_CTRL]
+connect_bd_intf_net [get_bd_intf_pins zynq_ultra_ps_e_0/M_AXI_HPM0_FPD] -boundary_type upper [get_bd_intf_pins ps8_0_axi_periph/S01_AXI]
+connect_bd_intf_net -boundary_type upper [get_bd_intf_pins axi_interconnect_mem/M00_AXI] [get_bd_intf_pins zynq_ultra_ps_e_0/S_AXI_HP0_FPD]
+connect_bd_intf_net [get_bd_intf_pins axi_vdma_0/M_AXI_MM2S] -boundary_type upper [get_bd_intf_pins axi_interconnect_mem/S00_AXI]
+connect_bd_net [get_bd_pins v_axi4s_vid_out_0/vtg_ce] [get_bd_pins v_tc_0/gen_clken]
+connect_bd_net [get_bd_ports cec_clk] [get_bd_pins GND/dout]
+connect_bd_net [get_bd_pins GND/dout] [get_bd_pins v_axi4s_vid_out_0/fid]
+connect_bd_net [get_bd_ports ls_oe] [get_bd_pins VCC/dout]
+connect_bd_net [get_bd_ports ct_hpd] [get_bd_pins VCC/dout]
+connect_bd_net [get_bd_pins VCC/dout] [get_bd_pins v_axi4s_vid_out_0/aclken]
+connect_bd_net [get_bd_pins VCC/dout] [get_bd_pins v_axi4s_vid_out_0/vid_io_out_ce]
+connect_bd_net [get_bd_pins VCC/dout] [get_bd_pins v_tc_0/clken]
+connect_bd_net [get_bd_pins VCC/dout] [get_bd_pins v_tc_0/s_axi_aclken]
+connect_bd_net [get_bd_pins PLPS_INT/In4] [get_bd_pins v_tc_0/irq]
+connect_bd_net [get_bd_pins PLPS_INT/In5] [get_bd_pins v_tpg_0/interrupt]
+connect_bd_net [get_bd_pins PLPS_INT/In6] [get_bd_pins axi_vdma_0/mm2s_introut]
+
+#Connecting clock 100MHz
+connect_bd_net [get_bd_pins zynq_ultra_ps_e_0/pl_clk0] [get_bd_pins ps8_0_axi_periph/S01_ACLK]
+connect_bd_net [get_bd_pins ps8_0_axi_periph/M08_ACLK] [get_bd_pins zynq_ultra_ps_e_0/pl_clk0]
+connect_bd_net [get_bd_pins ps8_0_axi_periph/M09_ACLK] [get_bd_pins zynq_ultra_ps_e_0/pl_clk0]
+connect_bd_net [get_bd_pins zynq_ultra_ps_e_0/pl_clk0] [get_bd_pins zynq_ultra_ps_e_0/saxihp0_fpd_aclk]
+connect_bd_net [get_bd_pins zynq_ultra_ps_e_0/pl_clk0] [get_bd_pins zynq_ultra_ps_e_0/maxihpm0_fpd_aclk]
+connect_bd_net [get_bd_pins zynq_ultra_ps_e_0/pl_clk0] [get_bd_pins axi_interconnect_mem/ACLK]
+connect_bd_net [get_bd_pins zynq_ultra_ps_e_0/pl_clk0] [get_bd_pins axi_interconnect_mem/S00_ACLK]
+connect_bd_net [get_bd_pins zynq_ultra_ps_e_0/pl_clk0] [get_bd_pins axi_interconnect_mem/M00_ACLK]
+connect_bd_net [get_bd_pins zynq_ultra_ps_e_0/pl_clk0] [get_bd_pins axi_vdma_0/s_axi_lite_aclk]
+connect_bd_net [get_bd_pins zynq_ultra_ps_e_0/pl_clk0] [get_bd_pins axi_vdma_0/m_axi_mm2s_aclk]
+connect_bd_net [get_bd_pins zynq_ultra_ps_e_0/pl_clk0] [get_bd_pins v_tc_0/s_axi_aclk]
+
+#Connecting clock 75MHz
+connect_bd_net [get_bd_pins zynq_ultra_ps_e_0/pl_clk1] [get_bd_pins ps8_0_axi_periph/M10_ACLK]
+connect_bd_net [get_bd_pins zynq_ultra_ps_e_0/pl_clk1] [get_bd_pins axis_fb_conv_0/s_axis_aclk]
+connect_bd_net [get_bd_pins zynq_ultra_ps_e_0/pl_clk1] [get_bd_pins v_tpg_0/ap_clk]
+connect_bd_net [get_bd_pins zynq_ultra_ps_e_0/pl_clk1] [get_bd_pins v_tc_0/clk]
+connect_bd_net [get_bd_pins zynq_ultra_ps_e_0/pl_clk1] [get_bd_pins v_axi4s_vid_out_0/aclk]
+connect_bd_net [get_bd_pins zynq_ultra_ps_e_0/pl_clk1] [get_bd_pins v_axi4s_vid_out_0/vid_io_out_clk]
+connect_bd_net [get_bd_pins zynq_ultra_ps_e_0/pl_clk1] [get_bd_pins video_io_to_hdmi_0/vid_io_in_clk]
+connect_bd_net [get_bd_pins zynq_ultra_ps_e_0/pl_clk1] [get_bd_pins rst_ps8_0_75M/slowest_sync_clk]
+connect_bd_net [get_bd_pins zynq_ultra_ps_e_0/pl_clk1] [get_bd_pins axi_vdma_0/m_axis_mm2s_aclk]
+
+#Connecting reset 100MHz domain
+connect_bd_net [get_bd_pins rst_ps8_0_99M/interconnect_aresetn] [get_bd_pins axi_interconnect_mem/ARESETN]
+disconnect_bd_net /rst_ps8_0_99M_peripheral_aresetn [get_bd_pins ps8_0_axi_periph/ARESETN]
+connect_bd_net [get_bd_pins ps8_0_axi_periph/ARESETN] [get_bd_pins rst_ps8_0_99M/interconnect_aresetn]
+connect_bd_net [get_bd_pins rst_ps8_0_99M/peripheral_aresetn] [get_bd_pins axi_vdma_0/axi_resetn]
+connect_bd_net [get_bd_pins rst_ps8_0_99M/peripheral_aresetn] [get_bd_pins axi_interconnect_mem/S00_ARESETN]
+connect_bd_net [get_bd_pins rst_ps8_0_99M/peripheral_aresetn] [get_bd_pins axi_interconnect_mem/M00_ARESETN]
+connect_bd_net [get_bd_pins rst_ps8_0_99M/peripheral_aresetn] [get_bd_pins ps8_0_axi_periph/S01_ARESETN]
+connect_bd_net [get_bd_pins rst_ps8_0_99M/peripheral_aresetn] [get_bd_pins ps8_0_axi_periph/M08_ARESETN]
+connect_bd_net [get_bd_pins rst_ps8_0_99M/peripheral_aresetn] [get_bd_pins ps8_0_axi_periph/M09_ARESETN]
+connect_bd_net [get_bd_pins rst_ps8_0_99M/peripheral_aresetn] [get_bd_pins v_tc_0/s_axi_aresetn]
+
+#Connecting reset 75MHz domain
+connect_bd_net [get_bd_pins zynq_ultra_ps_e_0/pl_resetn0] [get_bd_pins rst_ps8_0_75M/ext_reset_in]
+connect_bd_net [get_bd_pins rst_ps8_0_75M/peripheral_reset] [get_bd_pins v_axi4s_vid_out_0/vid_io_out_reset]
+connect_bd_net [get_bd_pins rst_ps8_0_75M/interconnect_aresetn] [get_bd_pins axis_fb_conv_0/s_axis_aresetn]
+connect_bd_net [get_bd_pins rst_ps8_0_75M/peripheral_aresetn] [get_bd_pins ps8_0_axi_periph/M10_ARESETN]
+connect_bd_net [get_bd_pins rst_ps8_0_75M/peripheral_aresetn] [get_bd_pins v_tpg_0/ap_rst_n]
+connect_bd_net [get_bd_pins rst_ps8_0_75M/peripheral_aresetn] [get_bd_pins v_axi4s_vid_out_0/aresetn]
+connect_bd_net [get_bd_pins rst_ps8_0_75M/peripheral_aresetn] [get_bd_pins v_tc_0/resetn]
+
+#Assigning addresses
+assign_bd_address
+include_bd_addr_seg [get_bd_addr_segs -excluded axi_vdma_0/Data_MM2S/SEG_zynq_ultra_ps_e_0_HP0_LPS_OCM]
+
+#----------------------------------------------------------------------------------#
+# Adding HDMI support. Comment out this part of the script if not required #  END  #
+#----------------------------------------------------------------------------------#
 
 #Regenerate layout
 regenerate_bd_layout
