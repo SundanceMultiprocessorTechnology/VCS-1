@@ -12,7 +12,7 @@ set script_path [file dirname [file normalize [info script]]]
 create_project FM191_ZU4CG $script_path/FM191_ZU4CG -part xcZU4CG-sfvc784-1-e
 
 #Board part selection
-set_property board_part sundance.com:emc2-dp_te0820_3eg_1e:part0:1.0 [current_project]
+set_property board_part sundance.com:emc2-dp_te0820_4cg_1e:part0:1.0 [current_project]
 set_property board_connections {fmc_lpc_connector sundance:fm191-ru:fmc_lpc_connector:1.0} [current_project]
 
 #Add repositories at IP Catalog
