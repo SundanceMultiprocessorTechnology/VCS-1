@@ -1,5 +1,5 @@
 # VCS-1 FM191 Firmware
-This repository contains the required files to generate a hardware design for EMC2-DP using TE0820-4EV + FM191, and generate a linux kernel.
+This repository contains the required files to generate a hardware design for EMC2-DP using TE0820-4EV + FM191 (RPI), and generate a linux kernel.
 
 Software used:
 * Vivado 18.3
