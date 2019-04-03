@@ -342,6 +342,8 @@
 │       │   │   └── README.md
 │       │   └── 2018.3
 │       │       └── placeholder
+│       ├── Pinout
+│       │   └── EMC2-DP+TE0820+FM191_Pinout.xlsx
 │       └── README.md
 ├── LICENSE.md
 ├── push.sh
@@ -489,5 +491,5 @@
             ├── FM191.hpp
             └── Makefile
 
-135 directories, 352 files
+136 directories, 353 files
 ```
