@@ -343,7 +343,8 @@
 │       │   └── 2018.3
 │       │       └── placeholder
 │       ├── Pinout
-│       │   └── EMC2-DP+TE0820+FM191_Pinout.xlsx
+│       │   ├── EMC2-DP+TE0820+FM191_Pinout.xlsx
+│       │   └── README.md
 │       └── README.md
 ├── LICENSE.md
 ├── push.sh
@@ -480,9 +481,6 @@
     │   └── VCS-1
     │       ├── install_opencv4-0-1_VCS-1.sh
     │       └── install_realsense2_VCS-1.sh
-    ├── RealSense2
-    │   ├── readme.md
-    │   └── realsense_setup.sh
     └── VCS-1_SDK
         ├── README.md
         └── src
@@ -491,5 +489,5 @@
             ├── FM191.hpp
             └── Makefile
 
-136 directories, 353 files
+135 directories, 352 files
 ```
