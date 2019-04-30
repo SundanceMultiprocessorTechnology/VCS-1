@@ -357,6 +357,94 @@ include_bd_addr_seg [get_bd_addr_segs -excluded axi_vdma_0/Data_MM2S/SEG_zynq_ul
 # Adding HDMI support. Comment out this part of the script if not required #  END  #
 #----------------------------------------------------------------------------------#
 
+#----------------------------------------------------------------------------------#
+# Adding DPU support. Comment out this part of the script if not required  # BEGIN #
+#----------------------------------------------------------------------------------#
+
+#Adding DPU IP
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:dpu_eu:0.0.53 dpu_eu_0
+endgroup
+set_property -dict [list CONFIG.PP {8} CONFIG.CP {16} CONFIG.ARCH {4096} CONFIG.CONV_DSP_NUM {640} CONFIG.DSP_NUM {641} CONFIG.BANK_IMG_N {16} CONFIG.BANK_WGT_N {16} CONFIG.BBANK_IMG_N {16} CONFIG.BBANK_WGT_N {16} CONFIG.URAM_N {0.0} CONFIG.BRAM_N {249.5}] [get_bd_cells dpu_eu_0]
+
+#Adding Clocking Wizard
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_0
+endgroup
+set_property -dict [list CONFIG.PRIMITIVE {Auto} CONFIG.CLKOUT2_USED {true} CONFIG.CLKOUT3_USED {true} CONFIG.CLK_OUT1_PORT {clk_666m} CONFIG.CLK_OUT2_PORT {clk_333m} CONFIG.CLK_OUT3_PORT {clk_100m} CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {666} CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {333} CONFIG.CLKOUT3_REQUESTED_OUT_FREQ {100} CONFIG.CLKOUT1_MATCHED_ROUTING {true} CONFIG.CLKOUT2_MATCHED_ROUTING {true} CONFIG.CLKOUT1_DRIVES {Buffer} CONFIG.CLKOUT2_DRIVES {Buffer} CONFIG.CLKOUT3_DRIVES {Buffer} CONFIG.CLKOUT4_DRIVES {Buffer} CONFIG.CLKOUT5_DRIVES {Buffer} CONFIG.CLKOUT6_DRIVES {Buffer} CONFIG.CLKOUT7_DRIVES {Buffer} CONFIG.FEEDBACK_SOURCE {FDBK_AUTO} CONFIG.USE_LOCKED {false} CONFIG.USE_RESET {false} CONFIG.MMCM_DIVCLK_DIVIDE {9} CONFIG.MMCM_CLKFBOUT_MULT_F {119.875} CONFIG.MMCM_COMPENSATION {AUTO} CONFIG.MMCM_CLKOUT0_DIVIDE_F {2.000} CONFIG.MMCM_CLKOUT1_DIVIDE {4} CONFIG.MMCM_CLKOUT2_DIVIDE {13} CONFIG.NUM_OUT_CLKS {3} CONFIG.CLKOUT1_JITTER {142.350} CONFIG.CLKOUT1_PHASE_ERROR {302.333} CONFIG.CLKOUT2_JITTER {154.737} CONFIG.CLKOUT2_PHASE_ERROR {302.333} CONFIG.CLKOUT3_JITTER {179.165} CONFIG.CLKOUT3_PHASE_ERROR {302.333} CONFIG.AUTO_PRIMITIVE {MMCM}] [get_bd_cells clk_wiz_0]
+set_property name clk_wiz_dpu [get_bd_cells clk_wiz_0]
+
+#Add ports ZynqMP IP
+startgroup
+set_property -dict [list CONFIG.PSU__USE__M_AXI_GP1 {1} CONFIG.PSU__MAXIGP1__DATA_WIDTH {32} CONFIG.PSU__USE__S_AXI_GP0 {0} CONFIG.PSU__USE__S_AXI_GP3 {1} CONFIG.PSU__USE__S_AXI_GP4 {1} CONFIG.PSU__USE__S_AXI_GP6 {1}] [get_bd_cells zynq_ultra_ps_e_0]
+endgroup
+
+#Add Interconnect
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 axi_interconnect_0
+endgroup
+set_property name axi_interconnect_dpu [get_bd_cells axi_interconnect_0]
+set_property -dict [list CONFIG.NUM_SI {1} CONFIG.NUM_MI {1}] [get_bd_cells axi_interconnect_dpu]
+
+#Add reset control
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 proc_sys_reset_0
+endgroup
+set_property name proc_sys_reset_dpu0 [get_bd_cells proc_sys_reset_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 proc_sys_reset_0
+endgroup
+set_property name proc_sys_reset_dpu1 [get_bd_cells proc_sys_reset_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 proc_sys_reset_0
+endgroup
+set_property name proc_sys_reset_dpu2 [get_bd_cells proc_sys_reset_0]
+
+#Modify Interrupts from HDMI concat, to add interrupts for DPU
+startgroup
+set_property -dict [list CONFIG.IN3_WIDTH.VALUE_SRC USER] [get_bd_cells PLPS_INT_HDMI]
+set_property -dict [list CONFIG.NUM_PORTS {4} CONFIG.IN3_WIDTH {2}] [get_bd_cells PLPS_INT_HDMI]
+endgroup
+set_property name PLPS_INT_HDMI_DPU [get_bd_cells PLPS_INT_HDMI]
+
+#Connections
+connect_bd_intf_net [get_bd_intf_pins dpu_eu_0/DPU0_M_AXI_DATA0] [get_bd_intf_pins zynq_ultra_ps_e_0/S_AXI_HP1_FPD]
+connect_bd_intf_net [get_bd_intf_pins dpu_eu_0/DPU0_M_AXI_DATA1] [get_bd_intf_pins zynq_ultra_ps_e_0/S_AXI_HP2_FPD]
+connect_bd_intf_net -boundary_type upper [get_bd_intf_pins axi_interconnect_dpu/M00_AXI] [get_bd_intf_pins zynq_ultra_ps_e_0/S_AXI_LPD]
+connect_bd_intf_net [get_bd_intf_pins zynq_ultra_ps_e_0/M_AXI_HPM1_FPD] [get_bd_intf_pins dpu_eu_0/S_AXI]
+connect_bd_net [get_bd_pins zynq_ultra_ps_e_0/pl_clk0] [get_bd_pins clk_wiz_dpu/clk_in1]
+connect_bd_net [get_bd_pins clk_wiz_dpu/clk_666m] [get_bd_pins proc_sys_reset_dpu1/slowest_sync_clk]
+connect_bd_net [get_bd_pins clk_wiz_dpu/clk_666m] [get_bd_pins dpu_eu_0/dpu_2x_clk]
+connect_bd_net [get_bd_pins clk_wiz_dpu/clk_333m] [get_bd_pins proc_sys_reset_dpu2/slowest_sync_clk]
+connect_bd_net [get_bd_pins clk_wiz_dpu/clk_333m] [get_bd_pins dpu_eu_0/m_axi_dpu_aclk]
+connect_bd_net [get_bd_pins clk_wiz_dpu/clk_100m] [get_bd_pins proc_sys_reset_dpu0/slowest_sync_clk]
+connect_bd_net [get_bd_pins clk_wiz_dpu/clk_100m] [get_bd_pins dpu_eu_0/s_axi_aclk]
+connect_bd_net [get_bd_pins proc_sys_reset_dpu0/peripheral_aresetn] [get_bd_pins dpu_eu_0/s_axi_aresetn]
+connect_bd_net [get_bd_pins proc_sys_reset_dpu1/peripheral_aresetn] [get_bd_pins dpu_eu_0/dpu_2x_resetn]
+connect_bd_net [get_bd_pins proc_sys_reset_dpu2/peripheral_aresetn] [get_bd_pins dpu_eu_0/m_axi_dpu_aresetn]
+connect_bd_net [get_bd_pins dpu_eu_0/dpu_interrupt] [get_bd_pins PLPS_INT_HDMI_DPU/In3]
+connect_bd_net [get_bd_pins zynq_ultra_ps_e_0/pl_resetn0] [get_bd_pins proc_sys_reset_dpu0/ext_reset_in]
+connect_bd_net [get_bd_pins zynq_ultra_ps_e_0/pl_resetn0] [get_bd_pins proc_sys_reset_dpu1/ext_reset_in]
+connect_bd_net [get_bd_pins zynq_ultra_ps_e_0/pl_resetn0] [get_bd_pins proc_sys_reset_dpu2/ext_reset_in]
+connect_bd_net [get_bd_pins proc_sys_reset_dpu0/peripheral_aresetn] [get_bd_pins axi_interconnect_dpu/M00_ARESETN]
+connect_bd_net [get_bd_pins proc_sys_reset_dpu2/peripheral_aresetn] [get_bd_pins axi_interconnect_dpu/S00_ARESETN]
+connect_bd_net [get_bd_pins proc_sys_reset_dpu2/interconnect_aresetn] [get_bd_pins axi_interconnect_dpu/ARESETN]
+connect_bd_net [get_bd_pins clk_wiz_dpu/clk_333m] [get_bd_pins axi_interconnect_dpu/ACLK]
+connect_bd_net [get_bd_pins clk_wiz_dpu/clk_333m] [get_bd_pins axi_interconnect_dpu/S00_ACLK]
+connect_bd_net [get_bd_pins clk_wiz_dpu/clk_100m] [get_bd_pins axi_interconnect_dpu/M00_ACLK]
+connect_bd_net [get_bd_pins clk_wiz_dpu/clk_100m] [get_bd_pins zynq_ultra_ps_e_0/maxihpm1_fpd_aclk]
+connect_bd_net [get_bd_pins clk_wiz_dpu/clk_333m] [get_bd_pins zynq_ultra_ps_e_0/saxihp1_fpd_aclk]
+connect_bd_net [get_bd_pins clk_wiz_dpu/clk_333m] [get_bd_pins zynq_ultra_ps_e_0/saxihp2_fpd_aclk]
+connect_bd_net [get_bd_pins clk_wiz_dpu/clk_100m] [get_bd_pins zynq_ultra_ps_e_0/saxi_lpd_aclk]
+connect_bd_intf_net -boundary_type upper [get_bd_intf_pins axi_interconnect_dpu/S00_AXI] [get_bd_intf_pins dpu_eu_0/DPU0_M_AXI_INSTR]
+
+#Assigning addresses
+assign_bd_address
+
+#----------------------------------------------------------------------------------#
+# Adding DPU support. Comment out this part of the script if not required  #  END  #
+#----------------------------------------------------------------------------------#
+
 #Regenerate layout
 regenerate_bd_layout
 regenerate_bd_layout -routing
