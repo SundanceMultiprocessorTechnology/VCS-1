@@ -365,7 +365,6 @@ include_bd_addr_seg [get_bd_addr_segs -excluded axi_vdma_0/Data_MM2S/SEG_zynq_ul
 startgroup
 create_bd_cell -type ip -vlnv xilinx.com:ip:dpu_eu:0.0.53 dpu_eu_0
 endgroup
-set_property -dict [list CONFIG.PP {8} CONFIG.CP {16} CONFIG.ARCH {4096} CONFIG.CONV_DSP_NUM {640} CONFIG.DSP_NUM {641} CONFIG.BANK_IMG_N {16} CONFIG.BANK_WGT_N {16} CONFIG.BBANK_IMG_N {16} CONFIG.BBANK_WGT_N {16} CONFIG.URAM_N {0.0} CONFIG.BRAM_N {249.5}] [get_bd_cells dpu_eu_0]
 
 #Adding Clocking Wizard
 startgroup
@@ -403,7 +402,7 @@ set_property name proc_sys_reset_dpu2 [get_bd_cells proc_sys_reset_0]
 #Modify Interrupts from HDMI concat, to add interrupts for DPU
 startgroup
 set_property -dict [list CONFIG.IN3_WIDTH.VALUE_SRC USER] [get_bd_cells PLPS_INT_HDMI]
-set_property -dict [list CONFIG.NUM_PORTS {4} CONFIG.IN3_WIDTH {2}] [get_bd_cells PLPS_INT_HDMI]
+set_property -dict [list CONFIG.NUM_PORTS {4} CONFIG.IN3_WIDTH {1}] [get_bd_cells PLPS_INT_HDMI]
 endgroup
 set_property name PLPS_INT_HDMI_DPU [get_bd_cells PLPS_INT_HDMI]
 
