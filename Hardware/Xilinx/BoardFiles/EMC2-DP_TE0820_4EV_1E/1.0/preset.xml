@@ -3,7 +3,7 @@
 <!-- ##Sundance Multiprocessor Technology LTD.-->
 <!-- ##EMC2-DP + TE0820-4EV-1E board files-->
 <!-- ##################################################################### -->
-<!-- ##Vivado Version:2017.4-->
+<!-- ##Vivado Version:2018.3-->
 <!-- ##################################################################### -->
 <!-- ##Author: Timoteo Garcia Bertoa (based on Trenz + Xilinx board files)-->
 <!-- ##################################################################### -->
@@ -37,13 +37,12 @@
 				<user_parameter  name="CONFIG.PSU__SWDT1__PERIPHERAL__ENABLE" value="1"/>
 				<user_parameter  name="CONFIG.PSU__UART0__PERIPHERAL__ENABLE" value="1"/>
 				<user_parameter  name="CONFIG.PSU__UART0__PERIPHERAL__IO" value="MIO 30 .. 31"/>
+        		<user_parameter  name="CONFIG.SUBPRESET1" value="DDR4_SAMSUNG_K4A8G165WB_BCRC"/>
+        		<user_parameter  name="CONFIG.PSU__DDRC__COMPONENTS" value="Components"/>
 				<user_parameter  name="CONFIG.PSU__DDRC__BUS_WIDTH" value="32 Bit"/>
-				<user_parameter  name="CONFIG.PSU__DDRC__BG_ADDR_COUNT" value="1"/>
-				<user_parameter  name="CONFIG.PSU__DDRC__DEVICE_CAPACITY" value="4096 MBits"/>
-				<user_parameter  name="CONFIG.PSU__DDRC__DRAM_WIDTH" value="16 Bits"/>
-				<user_parameter  name="CONFIG.PSU__DDRC__ROW_ADDR_COUNT" value="15"/>
-				<user_parameter  name="CONFIG.PSU__DDRC__SPEED_BIN" value="DDR4_2400R"/>
-				<user_parameter  name="CONFIG.PSU__DDRC__DDR4_T_REF_MODE" value="1"/>
+        		<user_parameter  name="CONFIG.PSU__DDRC__ROW_ADDR_COUNT" value="16"/>
+        		<user_parameter  name="CONFIG.PSU__DDRC__DEVICE_CAPACITY" value="8192 MBits"/>
+        		<user_parameter  name="CONFIG.PSU__DDRC__DDR4_T_REF_MODE" value="1"/>
 				<user_parameter  name="CONFIG.PSU__SD1__PERIPHERAL__ENABLE" value="1"/>
 				<user_parameter  name="CONFIG.PSU__SD1__SLOT_TYPE" value="SD 2.0"/>
 				<user_parameter  name="CONFIG.PSU__SD1__PERIPHERAL__IO" value="MIO 46 .. 51"/>
