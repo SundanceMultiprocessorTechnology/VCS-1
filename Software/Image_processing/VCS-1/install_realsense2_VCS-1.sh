@@ -34,8 +34,8 @@ if [ -f CMakeCache.txt ]; then
 	rm CMakeCache.txt
 fi
 
-export CC=/usr/local/bin/gcc-6
-export CXX=/usr/local/bin/g++-6
+export CC=/usr/bin/g++-6
+export CXX=/usr/bin/g++-6
 cmake -D CMAKE_BUILD_TYPE="Release"\
       -D FORCE_LIBUVC=ON \
       -D BUILD_PYTHON_BINDINGS=ON \
