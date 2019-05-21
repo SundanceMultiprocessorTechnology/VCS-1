@@ -35,6 +35,21 @@ apply_bd_automation -rule xilinx.com:bd_rule:zynq_ultra_ps_e -config {apply_boar
 #Enable IRQ, SPI and SATA. Set I2C0 to 38..39
 set_property -dict [list CONFIG.PSU__USE__IRQ0 {1} CONFIG.PSU__CRL_APB__SPI0_REF_CTRL__FREQMHZ {20} CONFIG.PSU__SATA__PERIPHERAL__ENABLE {1} CONFIG.PSU__I2C0__PERIPHERAL__IO {MIO 38 .. 39}] [get_bd_cells zynq_ultra_ps_e_0]
 
+#Add Ethernet LEDs
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:util_vector_logic:2.0 util_vector_logic_0
+endgroup
+set_property -dict [list CONFIG.C_SIZE {2} CONFIG.C_OPERATION {not} CONFIG.LOGO_FILE {data/sym_notgate.png}] [get_bd_cells util_vector_logic_0]
+startgroup
+make_bd_pins_external  [get_bd_pins util_vector_logic_0/Op1]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins util_vector_logic_0/Res]
+endgroup
+set_property name PHY_LED_TE [get_bd_ports Op1_0]
+set_property name PHY_LED [get_bd_ports Res_0]
+set_property name Ethernet_LEDs [get_bd_cells util_vector_logic_0]
+
 #Add SPI_Buffering IP. Connect to Zynq PS. Make output external
 startgroup
 create_bd_cell -type ip -vlnv sundance.com:user:SPI_US_Buffering:1.0 SPI_US_Buffering_0

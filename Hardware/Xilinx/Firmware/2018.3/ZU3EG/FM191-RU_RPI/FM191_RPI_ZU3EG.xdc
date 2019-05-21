@@ -35,6 +35,21 @@ set_property IOSTANDARD LVCMOS18 [get_ports GPIO_SPI_spi_miso]
 set_property IOSTANDARD LVCMOS18 [get_ports GPIO_SPI_spi_mosi]
 ##############################################################################################
 
+##############################################################################################               
+# Ethernet LEDs
+#Pins
+set_property PACKAGE_PIN K8 [get_ports {PHY_LED_TE[0]}]
+set_property SLEW FAST [get_ports {PHY_LED_TE[0]}]
+set_property PACKAGE_PIN J1 [get_ports {PHY_LED_TE[1]}]
+set_property SLEW FAST [get_ports {PHY_LED_TE[1]}]
+set_property PACKAGE_PIN A2 [get_ports {PHY_LED[0]}]
+set_property SLEW FAST [get_ports {PHY_LED[0]}]
+set_property PACKAGE_PIN A1 [get_ports {PHY_LED[1]}]
+set_property SLEW FAST [get_ports {PHY_LED[1]}]
+#IO Standards
+set_property IOSTANDARD LVCMOS18 [get_ports PHY_*]
+##############################################################################################
+
 ##############################################################################################
 # HDMI INTERFACE
 
