@@ -85,9 +85,7 @@ startgroup
 create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0
 apply_board_connection -board_interface "onboardleds" -ip_intf "axi_gpio_0/GPIO" -diagram "design_1" 
 endgroup
-apply_board_connection -board_interface "phyleds" -ip_intf "/axi_gpio_0/GPIO2" -diagram "design_1" 
 set_property name C_Board_LEDs [get_bd_intf_ports onboardleds]
-set_property name C_Eth_LEDs [get_bd_intf_ports phyleds]
 set_property name C_LEDs [get_bd_cells axi_gpio_0]
 
 #Add GPIO Controller for ADC_UART_RQs
