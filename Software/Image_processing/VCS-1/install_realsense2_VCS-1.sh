@@ -45,6 +45,7 @@ cmake -D CMAKE_BUILD_TYPE="Release"\
 echo "Compiling librealsense 2... this will take several minutes..."
 make -j2
 sudo make install
+echo 'export PYTHONPATH="$PYTHONPATH:/usr/local/lib"' >> ~/.bashrc
 sudo ldconfig
 echo "Done!"
 
