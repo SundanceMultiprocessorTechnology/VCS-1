@@ -3,7 +3,7 @@ OpenCV 4.0.1 is required for running the examples. In this folder a script for i
 
 # Requirements
 ## Dependencies
-# [librealsense](https://github.com/IntelRealSense/librealsense)
+* [librealsense](https://github.com/IntelRealSense/librealsense)
 
 ## Documentation
 TBC
