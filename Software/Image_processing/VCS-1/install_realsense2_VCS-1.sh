@@ -33,9 +33,12 @@ if [ -f CMakeCache.txt ]; then
 	echo "Removing CMakeCache.txt"
 	rm CMakeCache.txt
 fi
-
-export CC=/usr/bin/g++-6
-export CXX=/usr/bin/g++-6
+# Compile using gcc-6 by default
+export CC=/usr/bin/gcc-7
+export CXX=/usr/bin/g++-7
+# Cross-compile using gcc-6 by default
+# export CC=/usr/bin/arm-linux-gnueabi-gcc-7
+# export CXX=/usr/bin/arm-linux-gnueabi-g++-7
 cmake -D CMAKE_BUILD_TYPE="Release"\
       -D FORCE_LIBUVC=ON \
       -D BUILD_PYTHON_BINDINGS=ON \
