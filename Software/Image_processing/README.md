@@ -15,6 +15,8 @@ $ install_librealsense2_VCS-1.sh
 Please make sure that the VCS-1 have at least 2GB of swap memory. One can had a usb stick formated as swap and issue the command
 `sudo swapon /dev/sdXY`where X is the char corresponding to the device and Y is the number **e.g /dev/sdb1**. One can check the device using `lsblk`  
 
+#### NOTE: Use the [VCS-1 docker container](https://github.com/SundanceMultiprocessorTechnology/VCS-1/wiki/Run-the-VCS-1-environment-in-docker-container) and compile in a host pc.
+
 ### laptop
 * install_openCV4-0-1.sh - script for download, compile and install openCV 4.0.1 in Laptops/Workstations
 ```
