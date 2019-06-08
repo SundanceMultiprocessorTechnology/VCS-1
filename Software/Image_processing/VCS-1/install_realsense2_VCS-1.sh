@@ -34,9 +34,9 @@ if [ -f CMakeCache.txt ]; then
 	rm CMakeCache.txt
 fi
 # Compile using gcc-6 by default
-export CC=/usr/bin/gcc-7
-export CXX=/usr/bin/g++-7
-# Cross-compile using gcc-6 by default
+export CC=/usr/bin/gcc-6
+export CXX=/usr/bin/g++-6
+# Cross-compile using gcc-7 by default
 # export CC=/usr/bin/arm-linux-gnueabi-gcc-7
 # export CXX=/usr/bin/arm-linux-gnueabi-g++-7
 cmake -D CMAKE_BUILD_TYPE="Release"\
@@ -44,6 +44,7 @@ cmake -D CMAKE_BUILD_TYPE="Release"\
       -D BUILD_PYTHON_BINDINGS=ON \
       -D PYTHON_EXECUTABLE=/usr/bin/python3 \
       -D BUILD_EXAMPLES=ON  ..
+# Edit CMakeCache.txt and replace O3 flags by O2 when using gcc-7 and g++-7
 
 echo "Compiling librealsense 2... this will take several minutes..."
 make -j2
