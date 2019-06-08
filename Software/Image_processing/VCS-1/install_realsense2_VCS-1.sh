@@ -38,8 +38,8 @@ export CC=/usr/bin/gcc-6
 export CXX=/usr/bin/g++-6
 # Cross-compile using gcc-7 by default
 # sudo apt install gcc-arm-linux-gnueabihf g++-arm-linux-gnueabihf -y
-# export CC=/usr/bin/arm-linux-gnueabi-gcc-7
-# export CXX=/usr/bin/arm-linux-gnueabi-g++-7
+# export CC=/usr/bin/arm-linux-gnueabihf-gcc-7
+# export CXX=/usr/bin/arm-linux-gnueabihf-g++-7
 cmake -D CMAKE_BUILD_TYPE="Release"\
       -D FORCE_LIBUVC=ON \
       -D BUILD_PYTHON_BINDINGS=ON \
