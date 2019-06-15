@@ -46,7 +46,7 @@ cmake -D CMAKE_BUILD_TYPE="Release"\
       -D BUILD_PYTHON_BINDINGS=ON \
       -D PYTHON_EXECUTABLE=/usr/bin/python3 \
       -D BUILD_EXAMPLES=ON  ..
-# Edit CMakeCache.txt and replace O3 flags by O2 when using gcc-7 and g++-7
+echo "WARNING: Please edit CMakeCache.txt and replace O3 flags by O2 when using gcc-7 and g++-7!"
 
 echo "Compiling librealsense 2... this will take several minutes..."
 make -j2
