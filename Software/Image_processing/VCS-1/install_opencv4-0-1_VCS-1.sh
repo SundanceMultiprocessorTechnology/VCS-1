@@ -4,7 +4,7 @@ echo "Updating the OS..."
 sudo apt update 
 sudo apt upgrade -y
 echo "Installing dependencies..."
-sudo apt install build-essential cmake unzip pkg-config -y
+sudo apt install build-essential git cmake unzip pkg-config -y
 sudo apt install libjpeg-dev libpng-dev libtiff-dev -y
 sudo apt install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev -y
 sudo apt install libxvidcore-dev libx264-dev -y
@@ -30,8 +30,6 @@ mkdir -p build
 cd build
 
 echo "Compiling OpenCV 4.0.1 ... this will take several minutes..."
-rm CMakeCache.txt
-hostname=$(sudo cat /etc/hostname)
 cmake -D CMAKE_BUILD_TYPE=RELEASE \
 	-D CMAKE_INSTALL_PREFIX=/usr/local \
 	-D INSTALL_PYTHON_EXAMPLES=OFF \
