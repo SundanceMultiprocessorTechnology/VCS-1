@@ -1,4 +1,4 @@
-#!/usr/bin/tclsh
+#! /usr/bin/tclsh
 # Script to generate HW Platform, FSBL, and App standalone based on .hdf file. 
 
 #Use script's path as project's path
