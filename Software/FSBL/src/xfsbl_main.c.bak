@@ -361,10 +361,10 @@ void XFsbl_PrintFsblBanner(void )
 #if !defined(XFSBL_PERF) || defined(FSBL_DEBUG) || defined(FSBL_DEBUG_INFO) \
 			|| defined(FSBL_DEBUG_DETAILED)
 
-	// SUN Mod :
+	// TE Mod :
 					XFsbl_Printf(DEBUG_PRINT_ALWAYS,
 				                 "Xilinx Zynq MP First Stage Boot Loader (TE modified)\n\r");
-				// SUN Mod finished
+				// TE Mod finished
 	XFsbl_Printf(DEBUG_PRINT_ALWAYS,
                  "Xilinx Zynq MP First Stage Boot Loader \n\r");
 	XFsbl_Printf(DEBUG_PRINT_ALWAYS,

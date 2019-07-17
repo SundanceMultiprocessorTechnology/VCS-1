@@ -59,7 +59,7 @@ extern "C" {
 
 /***************************** Include Files *********************************/
 #include "xfsbl_hw.h"
-// SUN Mod :
+// TE Mod :
 #define GPIO_DATA_0    ( ( GPIO_BASEADDR ) + 0X00000040U )
 #define GPIO_DIRM_0    ( ( GPIO_BASEADDR ) + 0X00000204U )
 #define GPIO_OEN_0     ( ( GPIO_BASEADDR ) + 0X00000208U )
@@ -71,7 +71,7 @@ extern "C" {
 
 #define L1_TX_ANA_TM13 (0xFD404034)
 #define L1_TM_MISC1 (0xFD405898)
-// SUN Mod finished
+
 
 #if defined(XPS_BOARD_ZCU102) || defined(XPS_BOARD_ZCU106)		\
 		|| defined(XPS_BOARD_ZCU104) || defined(XPS_BOARD_ZCU111)
