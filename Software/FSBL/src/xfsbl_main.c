@@ -363,7 +363,7 @@ void XFsbl_PrintFsblBanner(void )
 
 	// SUN Mod :
 					XFsbl_Printf(DEBUG_PRINT_ALWAYS,
-				                 "Xilinx Zynq MP First Stage Boot Loader (TE modified)\n\r");
+				                 "Xilinx Zynq MP First Stage Boot Loader (SUN modified)\n\r");
 				// SUN Mod finished
 	XFsbl_Printf(DEBUG_PRINT_ALWAYS,
                  "Xilinx Zynq MP First Stage Boot Loader \n\r");

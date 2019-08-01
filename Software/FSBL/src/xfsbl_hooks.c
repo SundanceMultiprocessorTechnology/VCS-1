@@ -98,7 +98,7 @@ u32 XFsbl_HookBeforeHandoff(u32 EarlyHandoff)
 	u32 Status = XFSBL_SUCCESS;
 
 	// SUN Mod
-	Status = tpg_init(XPAR_TPG_DEVICE_ID);
+	Status = tpg_init(XPAR_V_TPG_0_DEVICE_ID);
 	if (Status != XST_SUCCESS) {
 		xil_printf("tpg_init failure\n");
 		return XST_FAILURE;
