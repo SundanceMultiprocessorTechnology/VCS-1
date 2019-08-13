@@ -13,6 +13,7 @@ The VCS-1 system is composed of:
 4. [FM191 Design Schematics](https://github.com/SundanceMultiprocessorTechnology/VCS-1/blob/master/Documents/FM191_Schematics_v1-1.pdf)
 5. [Trenz TE0820 documentation](https://github.com/SundanceMultiprocessorTechnology/VCS-1/blob/master/Documents/TRM-TE0820-03.pdf)
 6. [VCS-1 presentation](https://github.com/SundanceMultiprocessorTechnology/VCS-1/blob/master/Documents/VCS-1.pdf)
+7. [Precision Robotics using the VCS Platform.pdf](https://github.com/SundanceMultiprocessorTechnology/VCS-1/blob/master/Documents/Precision Robotics using the VCS Platform.pdf) 
 
 ## 3rd party tools
 [TULIPP project](https://github.com/tulipp-eu)
