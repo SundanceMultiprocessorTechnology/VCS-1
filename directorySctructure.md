@@ -7,12 +7,14 @@
 │   ├── EMC2-DP Starter's Guide v3.1 (QCF32).pdf
 │   ├── FM191_DESIGN_SPECIFICATION_(QCF51)_V1_3_2.pdf
 │   ├── FM191_Schematics_v1-1.pdf
+│   ├── Precision Robotics using the\012VCS Platform.pdf
 │   ├── README.md
 │   ├── TRM-TE0820-03.pdf
 │   └── VCS-1.pdf
 ├── Figures
 │   ├── Power_dif.jpg
 │   └── VS2.png
+├── git-lfs.exe
 ├── Hardware
 │   ├── README.md
 │   ├── SD_BOOT
@@ -36,6 +38,9 @@
 │   │   │       ├── BOOT.BIN
 │   │   │       └── image.ub
 │   │   └── 2018.3
+│   │       ├── TE820_4CG
+│   │       │   ├── BOOT.BIN
+│   │       │   └── image.ub
 │   │       └── TE820_4EV
 │   │           ├── BOOT.BIN
 │   │           └── image.ub
@@ -399,7 +404,9 @@
 │       │   │   ├── FM191_HDMI_4EV.bsp
 │       │   │   └── README.md
 │       │   └── 2018.3
-│       │       └── placeholder
+│       │       ├── placeholder
+│       │       └── ZU4EV
+│       │           └── ZU4EV.bsp
 │       ├── Pinout
 │       │   ├── EMC2-DP+TE0820+FM191_Pinout.xlsx
 │       │   └── README.md
@@ -499,7 +506,10 @@
     │   └── uart.hpp
     ├── FSBL
     │   ├── prebuilt
-    │   │   └── fsbl.elf
+    │   │   ├── TE820_4CG
+    │   │   │   └── fsbl.elf
+    │   │   └── TE820_4EV
+    │   │       └── fsbl.elf
     │   ├── readme.txt
     │   └── src
     │       ├── adv7511.c
@@ -595,11 +605,13 @@
     │   │       │   └── d435.cpython-36.pyc
     │   │       └── README.md
     │   ├── laptop
-    │   │   └── install_opencv4-0-1_laptop.sh
+    │   │   ├── install_opencv4-0-1_laptop.sh
+    │   │   └── README.md
     │   ├── README.md
     │   └── VCS-1
     │       ├── install_opencv4-0-1_VCS-1.sh
-    │       └── install_realsense2_VCS-1.sh
+    │       ├── install_realsense2_VCS-1.sh
+    │       └── README.md
     └── VCS-1_SDK
         ├── README.md
         └── src
@@ -608,5 +620,5 @@
             ├── FM191.hpp
             └── Makefile
 
-160 directories, 446 files
+164 directories, 454 files
 ```
