@@ -1,5 +1,5 @@
 #! /bin/bash
-echo "Script for installing the OpenCV 4.0.1 on Ubuntu 18.04 LTS"
+echo "Script for installing the OpenCV 4.1.0 on Ubuntu 18.04 LTS"
 echo "Updating the OS..."
 sudo apt update 
 sudo apt upgrade -y
@@ -12,11 +12,11 @@ sudo apt install libgtk-3-dev -y
 sudo apt install libatlas-base-dev gfortran -y
 sudo apt install python3-dev -y
 
-echo "Fetching and unpacking OpenCV 4.0.1..."
+echo "Fetching and unpacking OpenCV 4.1.0..."
 mkdir -p $HOME/repositories
 cd $HOME/repositories
-wget -O opencv.zip https://github.com/opencv/opencv/archive/4.0.1.zip
-wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/4.0.1.zip
+wget -O opencv.zip https://github.com/opencv/opencv/archive/4.1.0.zip
+wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/4.1.0.zip
 wget https://bootstrap.pypa.io/get-pip.py
 sudo python3 get-pip.py
 sudo -H pip3 install numpy matplotlib imutils -u
@@ -24,7 +24,7 @@ unzip opencv.zip
 unzip opencv_contrib.zip
 rm opencv.zip
 rm opencv_contrib.zip
-cd opencv-4.0.1
+cd opencv-4.1.0
 mkdir -p build
 cd build
 
@@ -36,12 +36,12 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 	-D INSTALL_PYTHON_EXAMPLES=ON \
 	-D INSTALL_C_EXAMPLES=OFF \
 	-D OPENCV_ENABLE_NONFREE=ON \
-	-D OPENCV_EXTRA_MODULES_PATH=~/repositories/opencv_contrib-4.0.1/modules \
+	-D OPENCV_EXTRA_MODULES_PATH=~/repositories/opencv_contrib-4.1.0/modules \
 	-D PYTHON_EXECUTABLE=/usr/bin/python3 \
 	-D BUILD_EXAMPLES=ON ..
 echo "Compilation has started ..."
 make -j4
-echo "Installing OpenCV 4.0.1 ..."
+echo "Installing OpenCV 4.1.0 ..."
 sudo make install
 sudo ldconfig
 source $HOME/.bashrc
