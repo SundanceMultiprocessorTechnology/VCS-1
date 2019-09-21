@@ -42,6 +42,7 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 	-D WITH_OPENMP=ON \
 	-D PYTHON_EXECUTABLE=/usr/bin/python3 \
 	-D WITH_TBB=ON BUILD_TBB=ON \
+	-D ENABLE_PRECOMPILED_HEADERS=OFF\
 	-D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib-${VERSION}/modules ..
 echo "Compilation has started ..."
 make -j4
