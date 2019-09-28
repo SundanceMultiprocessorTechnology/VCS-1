@@ -39,9 +39,11 @@
 │   │   │       └── image.ub
 │   │   └── 2018.3
 │   │       ├── TE820_4CG
-│   │       │   └── boot_files_zu4cg.zip
+│   │       │   ├── boot_files_zu4cg.zip
+│   │       │   └── README.md
 │   │       └── TE820_4EV
-│   │           └── boot_files_zu4ev.zip
+│   │           ├── boot_files_zu4ev.zip
+│   │           └── README.md
 │   └── Xilinx
 │       ├── BoardFiles
 │       │   ├── EMC2-DP_TE0715_30_1C
@@ -635,5 +637,5 @@
             ├── FM191.hpp
             └── Makefile
 
-188 directories, 445 files
+188 directories, 447 files
 ```
