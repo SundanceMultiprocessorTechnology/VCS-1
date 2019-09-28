@@ -566,7 +566,6 @@
     │   └── src
     │       ├── adv7511.c
     │       ├── adv7511.h
-    │       ├── lscript.ld
     │       ├── register_map_mod.h
     │       ├── si5338.c
     │       ├── si5338.h
@@ -576,46 +575,10 @@
     │       ├── vdma.h
     │       ├── vtc.c
     │       ├── vtc.h
-    │       ├── xfsbl_authentication.c
-    │       ├── xfsbl_authentication.h
     │       ├── xfsbl_board.c
     │       ├── xfsbl_board.h
-    │       ├── xfsbl_bs.c
-    │       ├── xfsbl_bs.h
-    │       ├── xfsbl_config.h
-    │       ├── xfsbl_csu_dma.c
-    │       ├── xfsbl_csu_dma.h
-    │       ├── xfsbl_ddr_init.c
-    │       ├── xfsbl_ddr_init.h
-    │       ├── xfsbl_debug.h
-    │       ├── xfsbl_dfu_util.c
-    │       ├── xfsbl_dfu_util.h
-    │       ├── xfsbl_error.h
-    │       ├── xfsbl_exit.S
-    │       ├── xfsbl_handoff.c
     │       ├── xfsbl_hooks.c
-    │       ├── xfsbl_hooks.h
-    │       ├── xfsbl_hw.h
-    │       ├── xfsbl_image_header.c
-    │       ├── xfsbl_image_header.h
-    │       ├── xfsbl_initialization.c
-    │       ├── xfsbl_main.c
-    │       ├── xfsbl_main.h
-    │       ├── xfsbl_misc.c
-    │       ├── xfsbl_misc_drivers.c
-    │       ├── xfsbl_misc_drivers.h
-    │       ├── xfsbl_misc.h
-    │       ├── xfsbl_nand.c
-    │       ├── xfsbl_partition_load.c
-    │       ├── xfsbl_plpartition_valid.c
-    │       ├── xfsbl_plpartition_valid.h
-    │       ├── xfsbl_qspi.c
-    │       ├── xfsbl_qspi.h
-    │       ├── xfsbl_rsa_sha.c
-    │       ├── xfsbl_sd.c
-    │       ├── xfsbl_translation_table.S
-    │       ├── xfsbl_usb.c
-    │       └── xfsbl_usb.h
+    │       └── xfsbl_main.c
     ├── getSerialNumber
     │   ├── BOOT.bin
     │   ├── README.md
@@ -672,5 +635,5 @@
             ├── FM191.hpp
             └── Makefile
 
-188 directories, 482 files
+188 directories, 445 files
 ```
