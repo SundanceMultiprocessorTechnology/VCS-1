@@ -39,11 +39,9 @@
 │   │   │       └── image.ub
 │   │   └── 2018.3
 │   │       ├── TE820_4CG
-│   │       │   ├── BOOT.BIN
-│   │       │   └── image.ub
+│   │       │   └── boot_files_zu4cg.zip
 │   │       └── TE820_4EV
-│   │           ├── BOOT.BIN
-│   │           └── image.ub
+│   │           └── boot_files_zu4ev.zip
 │   └── Xilinx
 │       ├── BoardFiles
 │       │   ├── EMC2-DP_TE0715_30_1C
@@ -390,20 +388,6 @@
 │       │   │       │   └── README.md
 │       │   │       └── README.md
 │       │   ├── 2019.1
-│       │   │   ├── IP_Repo_7S
-│       │   │   │   ├── SPI_Buffering
-│       │   │   │   │   ├── component.xml
-│       │   │   │   │   ├── constrs_1
-│       │   │   │   │   │   └── new
-│       │   │   │   │   │       └── SMT-FMC-R_Constraints.xdc
-│       │   │   │   │   ├── sources_1
-│       │   │   │   │   │   └── new
-│       │   │   │   │   │       └── SPI_Buffering.vhd
-│       │   │   │   │   ├── SPI_rtl.xml
-│       │   │   │   │   ├── SPI.xml
-│       │   │   │   │   └── xgui
-│       │   │   │   │       └── SPI_Buffering_v1_0.tcl
-│       │   │   │   └── sundance.com_user_SPI_Buffering_1.0.zip
 │       │   │   ├── IP_Repo_ZU
 │       │   │   │   ├── Interfaces
 │       │   │   │   │   └── spi_custom
@@ -448,15 +432,15 @@
 │       │   │   │           ├── video_io_to_hdmi.vhd
 │       │   │   │           └── xgui
 │       │   │   │               └── video_io_to_hdmi_v1_0.tcl
+│       │   │   ├── README.md
+│       │   │   ├── ZU4CG
+│       │   │   │   ├── FM191_ZU4CG.tcl
+│       │   │   │   ├── FM191_ZU4CG.xdc
+│       │   │   │   └── README.md
 │       │   │   └── ZU4EV
-│       │   │       └── FM191-RU
-│       │   │           ├── eeprom.h
-│       │   │           ├── FM191_ZU4EV_BIF.sh
-│       │   │           ├── FM191_ZU4EV.c
-│       │   │           ├── FM191_ZU4EV.sh
-│       │   │           ├── FM191_ZU4EV.tcl
-│       │   │           ├── FM191_ZU4EV.xdc
-│       │   │           └── README.md
+│       │   │       ├── FM191_ZU4EV.tcl
+│       │   │       ├── FM191_ZU4EV.xdc
+│       │   │       └── README.md
 │       │   └── README.md
 │       ├── Petalinux
 │       │   ├── 2017.4
@@ -673,11 +657,11 @@
     │   │       │   └── d435.cpython-36.pyc
     │   │       └── README.md
     │   ├── laptop
-    │   │   ├── install_opencv4-0-1_laptop.sh
+    │   │   ├── install_opencv_laptop.sh
     │   │   └── README.md
     │   ├── README.md
     │   └── VCS-1
-    │       ├── install_opencv4-0-1_VCS-1.sh
+    │       ├── install_opencv4_VCS-1.sh
     │       ├── install_realsense2_VCS-1.sh
     │       └── README.md
     └── VCS-1_SDK
@@ -688,5 +672,5 @@
             ├── FM191.hpp
             └── Makefile
 
-195 directories, 491 files
+188 directories, 482 files
 ```
