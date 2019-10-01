@@ -1,0 +1,28 @@
+xilinx rtfpga
+WARNING: [Synth 8-3936] Found unconnected internal register 's_4f309ad0_reg' and it is trimmed from '5' to '4' bits. [/home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.srcs/sources_1/bd/design_1/ipshared/a344/hdl/dpu_eu_v0_0_53_vl_rfs.v:20906]
+INFO: [Synth 8-5546] ROM "s_f3ea5279" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-3936] Found unconnected internal register 'u_4d85dbea/s_65a4b5a2_reg' and it is trimmed from '5' to '4' bits. [/home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.srcs/sources_1/bd/design_1/ipshared/a344/hdl/dpu_eu_v0_0_53_vl_rfs.v:20767]
+WARNING: [Synth 8-3331] design m_b4442423 has unconnected port s_5288f38e[3]
+WARNING: [Synth 8-3331] design m_b4442423 has unconnected port s_5288f38e[2]
+WARNING: [Synth 8-3331] design m_b4442423 has unconnected port s_5288f38e[1]
+WARNING: [Synth 8-3331] design m_b4442423 has unconnected port s_5288f38e[0]
+WARNING: [Synth 8-3331] design m_b4442423 has unconnected port s_3daab618[28]
+WARNING: [Synth 8-3331] design m_b4442423 has unconnected port s_3daab618[27]
+WARNING: [Synth 8-3331] design m_b4442423 has unconnected port s_3daab618[26]
+WARNING: [Synth 8-3331] design m_b4442423 has unconnected port s_3daab618[25]
+WARNING: [Synth 8-3331] design m_b4442423 has unconnected port s_3daab618[24]
+WARNING: [Synth 8-3331] design m_b4442423 has unconnected port s_3daab618[23]
+WARNING: [Synth 8-3331] design m_b4442423 has unconnected port s_3daab618[22]
+WARNING: [Synth 8-3331] design m_b4442423 has unconnected port s_3daab618[21]
+WARNING: [Synth 8-3331] design m_b4442423 has unconnected port s_3daab618[20]
+WARNING: [Synth 8-3331] design m_b4442423 has unconnected port s_3daab618[19]
+WARNING: [Synth 8-3331] design m_b4442423 has unconnected port s_3daab618[18]
+WARNING: [Synth 8-3331] design m_b4442423 has unconnected port s_3daab618[17]
+WARNING: [Synth 8-3331] design m_b4442423 has unconnected port s_3daab618[16]
+WARNING: [Synth 8-3331] design m_b4442423 has unconnected port s_3daab618[15]
+WARNING: [Synth 8-3331] design m_b4442423 has unconnected port s_3daab618[14]
+WARNING: [Synth 8-3331] design m_b4442423 has unconnected port s_3daab618[13]
+WARNING: [Synth 8-3331] design m_b4442423 has unconnected port s_3daab618[12]
+WARNING: [Synth 8-3331] design m_b4442423 has unconnected port s_4d1c8e62
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_4d85dbea/s_2e2a890a0_inferred /\u_4d85dbea/s_2e2a890a_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_4ede410c/s_aebd10d90_inferred/\s_aebd10d9_reg[0] )

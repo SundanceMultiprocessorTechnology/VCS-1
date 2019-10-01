@@ -1,0 +1,628 @@
+
+ [32;01m*[0m [35;01mkeychain [0m[36m2.8.1[0m ~ [32;01mhttp://www.funtoo.org[0m
+ [32;01m*[0m Found existing ssh-agent: [36m11769[0m
+ [32;01m*[0m Known ssh key: [36m/home/pedro/.ssh/id_rsa[0m
+
+[01;32mpedro@SUN-Lin01[00m:[01;34m~/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RRU[00m$ [KM[01;32mpedro@SUN-Lin01[00m:[01;34m~/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU[00m$ vivado -mode batch FM191_ZU3EG
+FM191_ZU3EG.bif     FM191_ZU3EG_BIF.sh  FM191_ZU3EG.c       FM191_ZU3EG.sh      FM191_ZU3EG.tcl     FM191_ZU3EG.xdc     
+[01;32mpedro@SUN-Lin01[00m:[01;34m~/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU[00m$ vivado -mode batch FM191_ZU3EG
+FM191_ZU3EG.bif     FM191_ZU3EG_BIF.sh  FM191_ZU3EG.c       FM191_ZU3EG.sh      FM191_ZU3EG.tcl     FM191_ZU3EG.xdc     
+[01;32mpedro@SUN-Lin01[00m:[01;34m~/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU[00m$ vivado -mode batch FM191_ZU3EG.tcl 
+
+****** Vivado v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+open_project FM191_ZU3EG.tcl
+ERROR: [Coretcl 2-155] Invalid project file name 'FM191_ZU3EG.tcl'. File must have a valid Vivado project extension (.xpr/.ppr).
+INFO: [Common 17-206] Exiting Vivado at Mon Jul  1 10:18:27 2019...
+[01;32mpedro@SUN-Lin01[00m:[01;34m~/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU[00m$ vivado -mode batch FM191_ZU3EG.tcl [1P[1P[1P[1P[1P[1@t[1@c[1@l
+
+
+****** Vivado v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+open_project FM191_ZU3EG.tcl
+ERROR: [Coretcl 2-155] Invalid project file name 'FM191_ZU3EG.tcl'. File must have a valid Vivado project extension (.xpr/.ppr).
+Vivado% 
+Vivado% source FM
+FM191_ZU3EG.bif FM191_ZU3EG.c FM191_ZU3EG.sh FM191_ZU3EG.tcl FM191_ZU3EG.xdc FM191_ZU3EG_BIF.sh 
+[KVivado% source FM191_ZU3EG.tcl 
+# set script_path [file dirname [file normalize [info script]]]
+# create_project FM191_ZU3EG $script_path/FM191_ZU3EG -part xczu3eg-sfvc784-1-e
+# set_property board_part sundance.com:emc2-dp_te0820_3eg_1e:part0:2.0 [current_project]
+# set_property board_connections {fmc_lpc_connector sundance:fm191-ru:fmc_lpc_connector:1.0} [current_project]
+# set_property  ip_repo_paths  $script_path/../../IP_Repo_ZU [current_project]
+# update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/IP_Repo_ZU'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/pedro/Xilinx/Vivado/2018.3/data/ip'.
+update_ip_catalog: Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 1377.055 ; gain = 0.000 ; free physical = 659 ; free virtual = 9586
+# set_property target_language VHDL [current_project]
+# create_bd_design "design_1"
+Wrote  : </home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.srcs/sources_1/bd/design_1/design_1.bd> 
+# startgroup
+# create_bd_cell -type ip -vlnv xilinx.com:ip:zynq_ultra_ps_e:3.2 zynq_ultra_ps_e_0
+# endgroup
+# apply_bd_automation -rule xilinx.com:bd_rule:zynq_ultra_ps_e -config {apply_board_preset "1" }  [get_bd_cells zynq_ultra_ps_e_0]
+# set_property -dict [list CONFIG.PSU__USE__IRQ0 {1} CONFIG.PSU__CRL_APB__SPI0_REF_CTRL__FREQMHZ {20} CONFIG.PSU__SATA__PERIPHERAL__ENABLE {1} CONFIG.PSU__I2C0__PERIPHERAL__IO {MIO 38 .. 39}] [get_bd_cells zynq_ultra_ps_e_0]
+# startgroup
+# create_bd_cell -type ip -vlnv xilinx.com:ip:util_vector_logic:2.0 util_vector_logic_0
+# endgroup
+# set_property -dict [list CONFIG.C_SIZE {2} CONFIG.C_OPERATION {not} CONFIG.LOGO_FILE {data/sym_notgate.png}] [get_bd_cells util_vector_logic_0]
+# startgroup
+# make_bd_pins_external  [get_bd_pins util_vector_logic_0/Op1]
+# endgroup
+# startgroup
+# make_bd_pins_external  [get_bd_pins util_vector_logic_0/Res]
+# endgroup
+# set_property name PHY_LED_TE [get_bd_ports Op1_0]
+# set_property name PHY_LED [get_bd_ports Res_0]
+# set_property name Ethernet_LEDs [get_bd_cells util_vector_logic_0]
+# startgroup
+# create_bd_cell -type ip -vlnv sundance.com:user:SPI_US_Buffering:1.0 SPI_US_Buffering_0
+# endgroup
+# connect_bd_intf_net [get_bd_intf_pins zynq_ultra_ps_e_0/SPI_0] [get_bd_intf_pins SPI_US_Buffering_0/SPI_S]
+# startgroup
+# make_bd_intf_pins_external  [get_bd_intf_pins SPI_US_Buffering_0/SPI]
+# endgroup
+# set_property name SPI [get_bd_intf_ports SPI_0]
+# set_property name SPI_US_Buffering [get_bd_cells SPI_US_Buffering_0]
+# startgroup
+# create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0
+# apply_board_connection -board_interface "fmc_lpc_connector_dios" -ip_intf "axi_gpio_0/GPIO" -diagram "design_1" 
+INFO: [board_interface 100-100] set_property CONFIG.USE_BOARD_FLOW true [get_bd_cells -quiet /axi_gpio_0]
+INFO: [board_interface 100-100] set_property CONFIG.GPIO_BOARD_INTERFACE fmc_lpc_connector_dios [get_bd_cells -quiet /axi_gpio_0]
+INFO: [board_interface 100-100] create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 fmc_lpc_connector_dios
+INFO: [board_interface 100-100] connect_bd_intf_net /fmc_lpc_connector_dios /axi_gpio_0/GPIO
+# endgroup
+# set_property name DIOs [get_bd_intf_ports fmc_lpc_connector_dios]
+# set_property name DIO [get_bd_intf_ports DIOs]
+# apply_board_connection -board_interface "fmc_lpc_connector_onboardgpios" -ip_intf "/axi_gpio_0/GPIO2" -diagram "design_1" 
+INFO: [board_interface 100-100] set_property CONFIG.GPIO2_BOARD_INTERFACE fmc_lpc_connector_onboardgpios [get_bd_cells -quiet /axi_gpio_0]
+INFO: [board_interface 100-100] create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 fmc_lpc_connector_onboardgpios
+INFO: [board_interface 100-100] connect_bd_intf_net /fmc_lpc_connector_onboardgpios /axi_gpio_0/GPIO2
+# set_property name GPIO [get_bd_intf_ports fmc_lpc_connector_onboardgpios]
+# set_property name IOs [get_bd_cells axi_gpio_0]
+# startgroup
+# create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0
+# apply_board_connection -board_interface "fmc_lpc_connector_onboardleds" -ip_intf "axi_gpio_0/GPIO" -diagram "design_1" 
+INFO: [board_interface 100-100] set_property CONFIG.USE_BOARD_FLOW true [get_bd_cells -quiet /axi_gpio_0]
+INFO: [board_interface 100-100] set_property CONFIG.GPIO_BOARD_INTERFACE fmc_lpc_connector_onboardleds [get_bd_cells -quiet /axi_gpio_0]
+INFO: [board_interface 100-100] create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 fmc_lpc_connector_onboardleds
+INFO: [board_interface 100-100] connect_bd_intf_net /fmc_lpc_connector_onboardleds /axi_gpio_0/GPIO
+# endgroup
+# set_property name M_Board_LEDs [get_bd_intf_ports fmc_lpc_connector_onboardleds]
+# set_property name M_LEDs [get_bd_cells axi_gpio_0]
+# startgroup
+# create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0
+# apply_board_connection -board_interface "onboardleds" -ip_intf "axi_gpio_0/GPIO" -diagram "design_1" 
+INFO: [board_interface 100-100] set_property CONFIG.USE_BOARD_FLOW true [get_bd_cells -quiet /axi_gpio_0]
+INFO: [board_interface 100-100] set_property CONFIG.GPIO_BOARD_INTERFACE onboardleds [get_bd_cells -quiet /axi_gpio_0]
+INFO: [board_interface 100-100] create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 onboardleds
+INFO: [board_interface 100-100] connect_bd_intf_net /onboardleds /axi_gpio_0/GPIO
+# endgroup
+# set_property name C_Board_LEDs [get_bd_intf_ports onboardleds]
+# set_property name C_LEDs [get_bd_cells axi_gpio_0]
+# startgroup
+# create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0
+# apply_board_connection -board_interface "fmc_lpc_connector_adc_uart_rq" -ip_intf "axi_gpio_0/GPIO" -diagram "design_1" 
+INFO: [board_interface 100-100] set_property CONFIG.USE_BOARD_FLOW true [get_bd_cells -quiet /axi_gpio_0]
+INFO: [board_interface 100-100] set_property CONFIG.GPIO_BOARD_INTERFACE fmc_lpc_connector_adc_uart_rq [get_bd_cells -quiet /axi_gpio_0]
+INFO: [board_interface 100-100] create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 fmc_lpc_connector_adc_uart_rq
+INFO: [board_interface 100-100] connect_bd_intf_net /fmc_lpc_connector_adc_uart_rq /axi_gpio_0/GPIO
+# endgroup
+# set_property name UART_RQ [get_bd_intf_ports fmc_lpc_connector_adc_uart_rq]
+# set_property name ADC_UART_RQs [get_bd_cells axi_gpio_0]
+# startgroup
+# create_bd_cell -type ip -vlnv xilinx.com:ip:axi_uartlite:2.0 axi_uartlite_0
+# apply_board_connection -board_interface "fmc_lpc_connector_adc_uart_1" -ip_intf "axi_uartlite_0/UART" -diagram "design_1" 
+INFO: [board_interface 100-100] set_property CONFIG.USE_BOARD_FLOW true [get_bd_cells -quiet /axi_uartlite_0]
+INFO: [board_interface 100-100] set_property CONFIG.UARTLITE_BOARD_INTERFACE fmc_lpc_connector_adc_uart_1 [get_bd_cells -quiet /axi_uartlite_0]
+INFO: [board_interface 100-100] create_bd_intf_port -mode Master -vlnv xilinx.com:interface:uart_rtl:1.0 fmc_lpc_connector_adc_uart_1
+INFO: [board_interface 100-100] connect_bd_intf_net /fmc_lpc_connector_adc_uart_1 /axi_uartlite_0/UART
+# endgroup
+# set_property name UART_1 [get_bd_intf_ports fmc_lpc_connector_adc_uart_1]
+# set_property name ADC_UART_1 [get_bd_cells axi_uartlite_0]
+# startgroup
+# create_bd_cell -type ip -vlnv xilinx.com:ip:axi_uartlite:2.0 axi_uartlite_0
+# apply_board_connection -board_interface "fmc_lpc_connector_adc_uart_2" -ip_intf "axi_uartlite_0/UART" -diagram "design_1" 
+INFO: [board_interface 100-100] set_property CONFIG.USE_BOARD_FLOW true [get_bd_cells -quiet /axi_uartlite_0]
+INFO: [board_interface 100-100] set_property CONFIG.UARTLITE_BOARD_INTERFACE fmc_lpc_connector_adc_uart_2 [get_bd_cells -quiet /axi_uartlite_0]
+INFO: [board_interface 100-100] create_bd_intf_port -mode Master -vlnv xilinx.com:interface:uart_rtl:1.0 fmc_lpc_connector_adc_uart_2
+INFO: [board_interface 100-100] connect_bd_intf_net /fmc_lpc_connector_adc_uart_2 /axi_uartlite_0/UART
+# endgroup
+# set_property name UART_2 [get_bd_intf_ports fmc_lpc_connector_adc_uart_2]
+# set_property name ADC_UART_2 [get_bd_cells axi_uartlite_0]
+# startgroup
+# create_bd_cell -type ip -vlnv xilinx.com:ip:axi_uartlite:2.0 axi_uartlite_0
+# apply_board_connection -board_interface "fmc_lpc_connector_adc_uart_3" -ip_intf "axi_uartlite_0/UART" -diagram "design_1" 
+INFO: [board_interface 100-100] set_property CONFIG.USE_BOARD_FLOW true [get_bd_cells -quiet /axi_uartlite_0]
+INFO: [board_interface 100-100] set_property CONFIG.UARTLITE_BOARD_INTERFACE fmc_lpc_connector_adc_uart_3 [get_bd_cells -quiet /axi_uartlite_0]
+INFO: [board_interface 100-100] create_bd_intf_port -mode Master -vlnv xilinx.com:interface:uart_rtl:1.0 fmc_lpc_connector_adc_uart_3
+INFO: [board_interface 100-100] connect_bd_intf_net /fmc_lpc_connector_adc_uart_3 /axi_uartlite_0/UART
+# endgroup
+# set_property name UART_3 [get_bd_intf_ports fmc_lpc_connector_adc_uart_3]
+# set_property name ADC_UART_3 [get_bd_cells axi_uartlite_0]
+# startgroup
+# create_bd_cell -type ip -vlnv xilinx.com:ip:axi_iic:2.0 axi_iic_0
+# apply_board_connection -board_interface "fmc_lpc_connector_i2c_fmcbus" -ip_intf "axi_iic_0/IIC" -diagram "design_1" 
+INFO: [board_interface 100-100] set_property CONFIG.USE_BOARD_FLOW true [get_bd_cells -quiet /axi_iic_0]
+INFO: [board_interface 100-100] set_property CONFIG.IIC_BOARD_INTERFACE fmc_lpc_connector_i2c_fmcbus [get_bd_cells -quiet /axi_iic_0]
+INFO: [board_interface 100-100] create_bd_intf_port -mode Master -vlnv xilinx.com:interface:iic_rtl:1.0 fmc_lpc_connector_i2c_fmcbus
+INFO: [board_interface 100-100] connect_bd_intf_net /fmc_lpc_connector_i2c_fmcbus /axi_iic_0/IIC
+# endgroup
+# set_property name I2C [get_bd_intf_ports fmc_lpc_connector_i2c_fmcbus]
+# set_property name FMC_I2C [get_bd_cells axi_iic_0]
+# set_property -dict [list CONFIG.C_GPO_WIDTH {1} CONFIG.IIC_FREQ_KHZ {400}] [get_bd_cells FMC_I2C]
+# startgroup
+# apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/zynq_ultra_ps_e_0/M_AXI_HPM0_LPD" intc_ip "New AXI Interconnect" Clk_xbar "Auto" Clk_master "Auto" Clk_slave "Auto" }  [get_bd_intf_pins IOs/S_AXI]
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+</IOs/S_AXI/Reg> is being mapped into </zynq_ultra_ps_e_0/Data> at <0x80000000 [ 4K ]>
+# apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/zynq_ultra_ps_e_0/M_AXI_HPM0_LPD" intc_ip "New AXI Interconnect" Clk_xbar "Auto" Clk_master "Auto" Clk_slave "Auto" }  [get_bd_intf_pins M_LEDs/S_AXI]
+</M_LEDs/S_AXI/Reg> is being mapped into </zynq_ultra_ps_e_0/Data> at <0x80001000 [ 4K ]>
+# apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/zynq_ultra_ps_e_0/M_AXI_HPM0_LPD" intc_ip "New AXI Interconnect" Clk_xbar "Auto" Clk_master "Auto" Clk_slave "Auto" }  [get_bd_intf_pins C_LEDs/S_AXI]
+</C_LEDs/S_AXI/Reg> is being mapped into </zynq_ultra_ps_e_0/Data> at <0x80002000 [ 4K ]>
+# apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/zynq_ultra_ps_e_0/M_AXI_HPM0_LPD" intc_ip "New AXI Interconnect" Clk_xbar "Auto" Clk_master "Auto" Clk_slave "Auto" }  [get_bd_intf_pins ADC_UART_RQs/S_AXI]
+</ADC_UART_RQs/S_AXI/Reg> is being mapped into </zynq_ultra_ps_e_0/Data> at <0x80003000 [ 4K ]>
+# apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/zynq_ultra_ps_e_0/M_AXI_HPM0_LPD" intc_ip "New AXI Interconnect" Clk_xbar "Auto" Clk_master "Auto" Clk_slave "Auto" }  [get_bd_intf_pins ADC_UART_1/S_AXI]
+</ADC_UART_1/S_AXI/Reg> is being mapped into </zynq_ultra_ps_e_0/Data> at <0x80004000 [ 4K ]>
+# apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/zynq_ultra_ps_e_0/M_AXI_HPM0_LPD" intc_ip "New AXI Interconnect" Clk_xbar "Auto" Clk_master "Auto" Clk_slave "Auto" }  [get_bd_intf_pins ADC_UART_2/S_AXI]
+</ADC_UART_2/S_AXI/Reg> is being mapped into </zynq_ultra_ps_e_0/Data> at <0x80005000 [ 4K ]>
+# apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/zynq_ultra_ps_e_0/M_AXI_HPM0_LPD" intc_ip "New AXI Interconnect" Clk_xbar "Auto" Clk_master "Auto" Clk_slave "Auto" }  [get_bd_intf_pins ADC_UART_3/S_AXI]
+</ADC_UART_3/S_AXI/Reg> is being mapped into </zynq_ultra_ps_e_0/Data> at <0x80006000 [ 4K ]>
+# apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/zynq_ultra_ps_e_0/M_AXI_HPM0_LPD" intc_ip "/ps8_0_axi_periph" Clk_xbar "Auto" Clk_master "Auto" Clk_slave "Auto" }  [get_bd_intf_pins FMC_I2C/S_AXI]
+</FMC_I2C/S_AXI/Reg> is being mapped into </zynq_ultra_ps_e_0/Data> at <0x80007000 [ 4K ]>
+# endgroup
+# startgroup
+# create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 xlconcat_0
+# endgroup
+# set_property name PLPS_INT [get_bd_cells xlconcat_0]
+# set_property -dict [list CONFIG.IN0_WIDTH.VALUE_SRC USER CONFIG.IN2_WIDTH.VALUE_SRC USER CONFIG.IN1_WIDTH.VALUE_SRC USER] [get_bd_cells PLPS_INT]
+# set_property -dict [list CONFIG.NUM_PORTS {4}] [get_bd_cells PLPS_INT]
+# connect_bd_net [get_bd_pins ADC_UART_1/interrupt] [get_bd_pins PLPS_INT/In0]
+# connect_bd_net [get_bd_pins ADC_UART_2/interrupt] [get_bd_pins PLPS_INT/In1]
+# connect_bd_net [get_bd_pins ADC_UART_3/interrupt] [get_bd_pins PLPS_INT/In2]
+# connect_bd_net [get_bd_pins FMC_I2C/iic2intc_irpt] [get_bd_pins PLPS_INT/In3]
+# connect_bd_net [get_bd_pins PLPS_INT/dout] [get_bd_pins zynq_ultra_ps_e_0/pl_ps_irq0]
+# startgroup
+# create_bd_cell -type ip -vlnv xilinx.com:ip:v_tpg:8.0 v_tpg_0
+# endgroup
+# set_property -dict [list CONFIG.MAX_COLS {1280} CONFIG.MAX_ROWS {720} CONFIG.HAS_AXI4S_SLAVE {1} CONFIG.FOREGROUND {1}] [get_bd_cells v_tpg_0]
+# startgroup
+# create_bd_cell -type ip -vlnv xilinx.com:ip:v_axi4s_vid_out:4.0 v_axi4s_vid_out_0
+# endgroup
+# set_property -dict [list CONFIG.C_HAS_ASYNC_CLK {1} CONFIG.C_VTG_MASTER_SLAVE {0}] [get_bd_cells v_axi4s_vid_out_0]
+# startgroup
+# create_bd_cell -type ip -vlnv trenz.biz:user:video_io_to_hdmi:1.0 video_io_to_hdmi_0
+# endgroup
+# startgroup
+# create_bd_cell -type ip -vlnv xilinx.com:ip:v_tc:6.1 v_tc_0
+# endgroup
+# set_property -dict [list CONFIG.max_clocks_per_line {2048} CONFIG.max_lines_per_frame {2048} CONFIG.enable_detection {false}] [get_bd_cells v_tc_0]
+# startgroup
+# create_bd_cell -type ip -vlnv trenz.biz:user:axis_fb_conv:1.0 axis_fb_conv_0
+# endgroup
+# startgroup
+# create_bd_cell -type ip -vlnv xilinx.com:ip:axi_vdma:6.3 axi_vdma_0
+# endgroup
+# set_property -dict [list CONFIG.c_num_fstores {1} CONFIG.c_mm2s_genlock_mode {0} CONFIG.c_s2mm_genlock_mode {0} CONFIG.c_mm2s_linebuffer_depth {2048} CONFIG.c_include_s2mm {0} CONFIG.c_include_mm2s_dre {1}] [get_bd_cells axi_vdma_0]
+# startgroup
+# set_property -dict [list CONFIG.PSU__USE__M_AXI_GP0 {1} CONFIG.PSU__USE__S_AXI_GP2 {1}] [get_bd_cells zynq_ultra_ps_e_0]
+# endgroup
+# startgroup
+# set_property -dict [list CONFIG.PSU__CRL_APB__PL1_REF_CTRL__FREQMHZ {75}] [get_bd_cells zynq_ultra_ps_e_0]
+# endgroup
+# startgroup
+# create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 axi_interconnect_0
+# endgroup
+# set_property name axi_interconnect_mem [get_bd_cells axi_interconnect_0]
+# set_property -dict [list CONFIG.NUM_MI {1}] [get_bd_cells axi_interconnect_mem]
+# startgroup
+# create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 proc_sys_reset_0
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+# endgroup
+# set_property name rst_ps8_0_75M [get_bd_cells proc_sys_reset_0]
+# set_property -dict [list CONFIG.C_AUX_RESET_HIGH.VALUE_SRC USER] [get_bd_cells rst_ps8_0_75M]
+# set_property -dict [list CONFIG.C_AUX_RESET_HIGH {0}] [get_bd_cells rst_ps8_0_75M]
+# startgroup
+# create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0
+# endgroup
+# set_property -dict [list CONFIG.CONST_VAL {0}] [get_bd_cells xlconstant_0]
+# set_property name GND [get_bd_cells xlconstant_0]
+# startgroup
+# create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0
+# endgroup
+# set_property name VCC [get_bd_cells xlconstant_0]
+# create_bd_port -dir O -from 0 -to 0 ct_hpd
+# create_bd_port -dir O -from 0 -to 0 cec_clk
+# create_bd_port -dir O -from 0 -to 0 ls_oe
+# startgroup
+# set_property -dict [list CONFIG.NUM_SI {2} CONFIG.NUM_MI {11} CONFIG.NUM_MI {11}] [get_bd_cells ps8_0_axi_periph]
+# endgroup
+# startgroup
+# make_bd_intf_pins_external  [get_bd_intf_pins video_io_to_hdmi_0/hdmi_out]
+# endgroup
+# set_property name hdmi_out [get_bd_intf_ports hdmi_out_0]
+# connect_bd_intf_net [get_bd_intf_pins axis_fb_conv_0/video_out] [get_bd_intf_pins v_tpg_0/s_axis_video]
+# connect_bd_intf_net [get_bd_intf_pins axi_vdma_0/M_AXIS_MM2S] [get_bd_intf_pins axis_fb_conv_0/S_AXIS]
+# connect_bd_intf_net [get_bd_intf_pins video_io_to_hdmi_0/vid_io_in] [get_bd_intf_pins v_axi4s_vid_out_0/vid_io_out]
+# connect_bd_intf_net [get_bd_intf_pins v_tc_0/vtiming_out] [get_bd_intf_pins v_axi4s_vid_out_0/vtiming_in]
+# connect_bd_intf_net [get_bd_intf_pins v_tpg_0/m_axis_video] [get_bd_intf_pins v_axi4s_vid_out_0/video_in]
+# connect_bd_intf_net -boundary_type upper [get_bd_intf_pins ps8_0_axi_periph/M08_AXI] [get_bd_intf_pins axi_vdma_0/S_AXI_LITE]
+# connect_bd_intf_net -boundary_type upper [get_bd_intf_pins ps8_0_axi_periph/M09_AXI] [get_bd_intf_pins v_tc_0/ctrl]
+# connect_bd_intf_net -boundary_type upper [get_bd_intf_pins ps8_0_axi_periph/M10_AXI] [get_bd_intf_pins v_tpg_0/s_axi_CTRL]
+# connect_bd_intf_net [get_bd_intf_pins zynq_ultra_ps_e_0/M_AXI_HPM0_FPD] -boundary_type upper [get_bd_intf_pins ps8_0_axi_periph/S01_AXI]
+# connect_bd_intf_net -boundary_type upper [get_bd_intf_pins axi_interconnect_mem/M00_AXI] [get_bd_intf_pins zynq_ultra_ps_e_0/S_AXI_HP0_FPD]
+# connect_bd_intf_net [get_bd_intf_pins axi_vdma_0/M_AXI_MM2S] -boundary_type upper [get_bd_intf_pins axi_interconnect_mem/S00_AXI]
+# connect_bd_net [get_bd_pins v_axi4s_vid_out_0/vtg_ce] [get_bd_pins v_tc_0/gen_clken]
+# connect_bd_net [get_bd_ports cec_clk] [get_bd_pins GND/dout]
+# connect_bd_net [get_bd_pins GND/dout] [get_bd_pins v_axi4s_vid_out_0/fid]
+# connect_bd_net [get_bd_ports ls_oe] [get_bd_pins VCC/dout]
+# connect_bd_net [get_bd_ports ct_hpd] [get_bd_pins VCC/dout]
+# connect_bd_net [get_bd_pins VCC/dout] [get_bd_pins v_axi4s_vid_out_0/aclken]
+# connect_bd_net [get_bd_pins VCC/dout] [get_bd_pins v_axi4s_vid_out_0/vid_io_out_ce]
+# connect_bd_net [get_bd_pins VCC/dout] [get_bd_pins v_tc_0/clken]
+# connect_bd_net [get_bd_pins VCC/dout] [get_bd_pins v_tc_0/s_axi_aclken]
+# connect_bd_net [get_bd_pins zynq_ultra_ps_e_0/pl_clk0] [get_bd_pins ps8_0_axi_periph/S01_ACLK]
+# connect_bd_net [get_bd_pins ps8_0_axi_periph/M08_ACLK] [get_bd_pins zynq_ultra_ps_e_0/pl_clk0]
+# connect_bd_net [get_bd_pins ps8_0_axi_periph/M09_ACLK] [get_bd_pins zynq_ultra_ps_e_0/pl_clk0]
+# connect_bd_net [get_bd_pins zynq_ultra_ps_e_0/pl_clk0] [get_bd_pins zynq_ultra_ps_e_0/saxihp0_fpd_aclk]
+# connect_bd_net [get_bd_pins zynq_ultra_ps_e_0/pl_clk0] [get_bd_pins zynq_ultra_ps_e_0/maxihpm0_fpd_aclk]
+# connect_bd_net [get_bd_pins zynq_ultra_ps_e_0/pl_clk0] [get_bd_pins axi_interconnect_mem/ACLK]
+# connect_bd_net [get_bd_pins zynq_ultra_ps_e_0/pl_clk0] [get_bd_pins axi_interconnect_mem/S00_ACLK]
+# connect_bd_net [get_bd_pins zynq_ultra_ps_e_0/pl_clk0] [get_bd_pins axi_interconnect_mem/M00_ACLK]
+# connect_bd_net [get_bd_pins zynq_ultra_ps_e_0/pl_clk0] [get_bd_pins axi_vdma_0/s_axi_lite_aclk]
+# connect_bd_net [get_bd_pins zynq_ultra_ps_e_0/pl_clk0] [get_bd_pins axi_vdma_0/m_axi_mm2s_aclk]
+# connect_bd_net [get_bd_pins zynq_ultra_ps_e_0/pl_clk0] [get_bd_pins v_tc_0/s_axi_aclk]
+# connect_bd_net [get_bd_pins zynq_ultra_ps_e_0/pl_clk1] [get_bd_pins ps8_0_axi_periph/M10_ACLK]
+# connect_bd_net [get_bd_pins zynq_ultra_ps_e_0/pl_clk1] [get_bd_pins axis_fb_conv_0/s_axis_aclk]
+# connect_bd_net [get_bd_pins zynq_ultra_ps_e_0/pl_clk1] [get_bd_pins v_tpg_0/ap_clk]
+# connect_bd_net [get_bd_pins zynq_ultra_ps_e_0/pl_clk1] [get_bd_pins v_tc_0/clk]
+# connect_bd_net [get_bd_pins zynq_ultra_ps_e_0/pl_clk1] [get_bd_pins v_axi4s_vid_out_0/aclk]
+# connect_bd_net [get_bd_pins zynq_ultra_ps_e_0/pl_clk1] [get_bd_pins v_axi4s_vid_out_0/vid_io_out_clk]
+# connect_bd_net [get_bd_pins zynq_ultra_ps_e_0/pl_clk1] [get_bd_pins video_io_to_hdmi_0/vid_io_in_clk]
+# connect_bd_net [get_bd_pins zynq_ultra_ps_e_0/pl_clk1] [get_bd_pins rst_ps8_0_75M/slowest_sync_clk]
+# connect_bd_net [get_bd_pins zynq_ultra_ps_e_0/pl_clk1] [get_bd_pins axi_vdma_0/m_axis_mm2s_aclk]
+# connect_bd_net [get_bd_pins rst_ps8_0_99M/interconnect_aresetn] [get_bd_pins axi_interconnect_mem/ARESETN]
+# disconnect_bd_net /rst_ps8_0_99M_peripheral_aresetn [get_bd_pins ps8_0_axi_periph/ARESETN]
+# connect_bd_net [get_bd_pins ps8_0_axi_periph/ARESETN] [get_bd_pins rst_ps8_0_99M/interconnect_aresetn]
+# connect_bd_net [get_bd_pins rst_ps8_0_99M/peripheral_aresetn] [get_bd_pins axi_vdma_0/axi_resetn]
+# connect_bd_net [get_bd_pins rst_ps8_0_99M/peripheral_aresetn] [get_bd_pins axi_interconnect_mem/S00_ARESETN]
+# connect_bd_net [get_bd_pins rst_ps8_0_99M/peripheral_aresetn] [get_bd_pins axi_interconnect_mem/M00_ARESETN]
+# connect_bd_net [get_bd_pins rst_ps8_0_99M/peripheral_aresetn] [get_bd_pins ps8_0_axi_periph/S01_ARESETN]
+# connect_bd_net [get_bd_pins rst_ps8_0_99M/peripheral_aresetn] [get_bd_pins ps8_0_axi_periph/M08_ARESETN]
+# connect_bd_net [get_bd_pins rst_ps8_0_99M/peripheral_aresetn] [get_bd_pins ps8_0_axi_periph/M09_ARESETN]
+# connect_bd_net [get_bd_pins rst_ps8_0_99M/peripheral_aresetn] [get_bd_pins v_tc_0/s_axi_aresetn]
+# connect_bd_net [get_bd_pins zynq_ultra_ps_e_0/pl_resetn0] [get_bd_pins rst_ps8_0_75M/ext_reset_in]
+# connect_bd_net [get_bd_pins rst_ps8_0_75M/peripheral_reset] [get_bd_pins v_axi4s_vid_out_0/vid_io_out_reset]
+# connect_bd_net [get_bd_pins rst_ps8_0_75M/interconnect_aresetn] [get_bd_pins axis_fb_conv_0/s_axis_aresetn]
+# connect_bd_net [get_bd_pins rst_ps8_0_75M/peripheral_aresetn] [get_bd_pins ps8_0_axi_periph/M10_ARESETN]
+# connect_bd_net [get_bd_pins rst_ps8_0_75M/peripheral_aresetn] [get_bd_pins v_tpg_0/ap_rst_n]
+# connect_bd_net [get_bd_pins rst_ps8_0_75M/peripheral_aresetn] [get_bd_pins v_axi4s_vid_out_0/aresetn]
+# connect_bd_net [get_bd_pins rst_ps8_0_75M/peripheral_aresetn] [get_bd_pins v_tc_0/resetn]
+# startgroup
+# create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 xlconcat_0
+# endgroup
+# set_property -dict [list CONFIG.PSU__USE__IRQ1 {1}] [get_bd_cells zynq_ultra_ps_e_0]
+# set_property name PLPS_INT_HDMI [get_bd_cells xlconcat_0]
+# set_property -dict [list CONFIG.IN0_WIDTH.VALUE_SRC USER CONFIG.IN2_WIDTH.VALUE_SRC USER CONFIG.IN1_WIDTH.VALUE_SRC USER] [get_bd_cells PLPS_INT_HDMI]
+# set_property -dict [list CONFIG.NUM_PORTS {3}] [get_bd_cells PLPS_INT_HDMI]
+# connect_bd_net [get_bd_pins PLPS_INT_HDMI/dout] [get_bd_pins zynq_ultra_ps_e_0/pl_ps_irq1]
+# connect_bd_net [get_bd_pins PLPS_INT_HDMI/In0] [get_bd_pins v_tc_0/irq]
+# connect_bd_net [get_bd_pins PLPS_INT_HDMI/In1] [get_bd_pins v_tpg_0/interrupt]
+# connect_bd_net [get_bd_pins PLPS_INT_HDMI/In2] [get_bd_pins axi_vdma_0/mm2s_introut]
+# assign_bd_address
+</zynq_ultra_ps_e_0/SAXIGP2/HP0_DDR_LOW> is being mapped into </axi_vdma_0/Data_MM2S> at <0x00000000 [ 2G ]>
+</zynq_ultra_ps_e_0/SAXIGP2/HP0_QSPI> is being mapped into </axi_vdma_0/Data_MM2S> at <0xC0000000 [ 512M ]>
+</zynq_ultra_ps_e_0/SAXIGP2/HP0_LPS_OCM> is being mapped into </axi_vdma_0/Data_MM2S> at <0xFF000000 [ 16M ]>
+INFO: [BD 41-1051] The usage <register> of peripheral </zynq_ultra_ps_e_0/SAXIGP2/HP0_LPS_OCM> does not match the usage <memory> of master </axi_vdma_0/Data_MM2S> and will be excluded using sparse connectivity from its address space. Use the include_bd_addr_seg command to override this precaution and make this peripheral visible within this masters address space.
+Excluding </zynq_ultra_ps_e_0/SAXIGP2/HP0_LPS_OCM> from </axi_vdma_0/Data_MM2S>
+</axi_vdma_0/S_AXI_LITE/Reg> is being mapped into </zynq_ultra_ps_e_0/Data> at <0xA0000000 [ 4K ]>
+</v_tc_0/ctrl/Reg> is being mapped into </zynq_ultra_ps_e_0/Data> at <0xA0010000 [ 64K ]>
+</v_tpg_0/s_axi_CTRL/Reg> is being mapped into </zynq_ultra_ps_e_0/Data> at <0xA0020000 [ 64K ]>
+# include_bd_addr_seg [get_bd_addr_segs -excluded axi_vdma_0/Data_MM2S/SEG_zynq_ultra_ps_e_0_HP0_LPS_OCM]
+Including </zynq_ultra_ps_e_0/SAXIGP2/HP0_LPS_OCM> into </axi_vdma_0/Data_MM2S>
+# startgroup
+# create_bd_cell -type ip -vlnv xilinx.com:ip:dpu_eu:0.0.53 dpu_eu_0
+# endgroup
+# startgroup
+# create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_0
+^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A                                                        create_bd_cell: Time (s): cpu = 00:00:29 ; elapsed = 00:01:11 . Memory (MB): peak = 2470.273 ; gain = 882.484 ; free physical = 118 ; free virtual = 8500
+# endgroup
+# set_property -dict [list CONFIG.PRIMITIVE {Auto} CONFIG.CLKOUT2_USED {true} CONFIG.CLKOUT3_USED {true} CONFIG.CLK_OUT1_PORT {clk_666m} CONFIG.CLK_OUT2_PORT {clk_333m} CONFIG.CLK_OUT3_PORT {clk_100m} CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {666} CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {333} CONFIG.CLKOUT3_REQUESTED_OUT_FREQ {100} CONFIG.CLKOUT1_MATCHED_ROUTING {true} CONFIG.CLKOUT2_MATCHED_ROUTING {true} CONFIG.CLKOUT1_DRIVES {Buffer} CONFIG.CLKOUT2_DRIVES {Buffer} CONFIG.CLKOUT3_DRIVES {Buffer} CONFIG.CLKOUT4_DRIVES {Buffer} CONFIG.CLKOUT5_DRIVES {Buffer} CONFIG.CLKOUT6_DRIVES {Buffer} CONFIG.CLKOUT7_DRIVES {Buffer} CONFIG.FEEDBACK_SOURCE {FDBK_AUTO} CONFIG.USE_LOCKED {false} CONFIG.USE_RESET {false} CONFIG.MMCM_DIVCLK_DIVIDE {9} CONFIG.MMCM_CLKFBOUT_MULT_F {119.875} CONFIG.MMCM_COMPENSATION {AUTO} CONFIG.MMCM_CLKOUT0_DIVIDE_F {2.000} CONFIG.MMCM_CLKOUT1_DIVIDE {4} CONFIG.MMCM_CLKOUT2_DIVIDE {13} CONFIG.NUM_OUT_CLKS {3} CONFIG.CLKOUT1_JITTER {142.350} CONFIG.CLKOUT1_PHASE_ERROR {302.333} CONFIG.CLKOUT2_JITTER {154.737} CONFIG.CLKOUT2_PHASE_ERROR {302.333} CONFIG.CLKOUT3_JITTER {179.165} CONFIG.CLKOUT3_PHASE_ERROR {302.333} CONFIG.AUTO_PRIMITIVE {MMCM}] [get_bd_cells clk_wiz_0]
+# set_property name clk_wiz_dpu [get_bd_cells clk_wiz_0]
+# startgroup
+# set_property -dict [list CONFIG.PSU__USE__M_AXI_GP1 {1} CONFIG.PSU__MAXIGP1__DATA_WIDTH {32} CONFIG.PSU__USE__S_AXI_GP0 {0} CONFIG.PSU__USE__S_AXI_GP3 {1} CONFIG.PSU__USE__S_AXI_GP4 {1} CONFIG.PSU__USE__S_AXI_GP6 {1}] [get_bd_cells zynq_ultra_ps_e_0]
+# endgroup
+# startgroup
+# create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 axi_interconnect_0
+# endgroup
+# set_property name axi_interconnect_dpu [get_bd_cells axi_interconnect_0]
+# set_property -dict [list CONFIG.NUM_SI {1} CONFIG.NUM_MI {1}] [get_bd_cells axi_interconnect_dpu]
+# startgroup
+# create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 proc_sys_reset_0
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+# endgroup
+# set_property name proc_sys_reset_dpu0 [get_bd_cells proc_sys_reset_0]
+# startgroup
+# create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 proc_sys_reset_0
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+# endgroup
+# set_property name proc_sys_reset_dpu1 [get_bd_cells proc_sys_reset_0]
+# startgroup
+# create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 proc_sys_reset_0
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+# endgroup
+# set_property name proc_sys_reset_dpu2 [get_bd_cells proc_sys_reset_0]
+# startgroup
+# set_property -dict [list CONFIG.IN3_WIDTH.VALUE_SRC USER] [get_bd_cells PLPS_INT_HDMI]
+# set_property -dict [list CONFIG.NUM_PORTS {4} CONFIG.IN3_WIDTH {1}] [get_bd_cells PLPS_INT_HDMI]
+# endgroup
+# set_property name PLPS_INT_HDMI_DPU [get_bd_cells PLPS_INT_HDMI]
+# connect_bd_intf_net [get_bd_intf_pins dpu_eu_0/DPU0_M_AXI_DATA0] [get_bd_intf_pins zynq_ultra_ps_e_0/S_AXI_HP1_FPD]
+# connect_bd_intf_net [get_bd_intf_pins dpu_eu_0/DPU0_M_AXI_DATA1] [get_bd_intf_pins zynq_ultra_ps_e_0/S_AXI_HP2_FPD]
+# connect_bd_intf_net -boundary_type upper [get_bd_intf_pins axi_interconnect_dpu/M00_AXI] [get_bd_intf_pins zynq_ultra_ps_e_0/S_AXI_LPD]
+# connect_bd_intf_net [get_bd_intf_pins zynq_ultra_ps_e_0/M_AXI_HPM1_FPD] [get_bd_intf_pins dpu_eu_0/S_AXI]
+# connect_bd_net [get_bd_pins zynq_ultra_ps_e_0/pl_clk0] [get_bd_pins clk_wiz_dpu/clk_in1]
+# connect_bd_net [get_bd_pins clk_wiz_dpu/clk_666m] [get_bd_pins proc_sys_reset_dpu1/slowest_sync_clk]
+# connect_bd_net [get_bd_pins clk_wiz_dpu/clk_666m] [get_bd_pins dpu_eu_0/dpu_2x_clk]
+# connect_bd_net [get_bd_pins clk_wiz_dpu/clk_333m] [get_bd_pins proc_sys_reset_dpu2/slowest_sync_clk]
+# connect_bd_net [get_bd_pins clk_wiz_dpu/clk_333m] [get_bd_pins dpu_eu_0/m_axi_dpu_aclk]
+# connect_bd_net [get_bd_pins clk_wiz_dpu/clk_100m] [get_bd_pins proc_sys_reset_dpu0/slowest_sync_clk]
+# connect_bd_net [get_bd_pins clk_wiz_dpu/clk_100m] [get_bd_pins dpu_eu_0/s_axi_aclk]
+# connect_bd_net [get_bd_pins proc_sys_reset_dpu0/peripheral_aresetn] [get_bd_pins dpu_eu_0/s_axi_aresetn]
+# connect_bd_net [get_bd_pins proc_sys_reset_dpu1/peripheral_aresetn] [get_bd_pins dpu_eu_0/dpu_2x_resetn]
+# connect_bd_net [get_bd_pins proc_sys_reset_dpu2/peripheral_aresetn] [get_bd_pins dpu_eu_0/m_axi_dpu_aresetn]
+# connect_bd_net [get_bd_pins dpu_eu_0/dpu_interrupt] [get_bd_pins PLPS_INT_HDMI_DPU/In3]
+# connect_bd_net [get_bd_pins zynq_ultra_ps_e_0/pl_resetn0] [get_bd_pins proc_sys_reset_dpu0/ext_reset_in]
+# connect_bd_net [get_bd_pins zynq_ultra_ps_e_0/pl_resetn0] [get_bd_pins proc_sys_reset_dpu1/ext_reset_in]
+# connect_bd_net [get_bd_pins zynq_ultra_ps_e_0/pl_resetn0] [get_bd_pins proc_sys_reset_dpu2/ext_reset_in]
+# connect_bd_net [get_bd_pins proc_sys_reset_dpu0/peripheral_aresetn] [get_bd_pins axi_interconnect_dpu/M00_ARESETN]
+# connect_bd_net [get_bd_pins proc_sys_reset_dpu2/peripheral_aresetn] [get_bd_pins axi_interconnect_dpu/S00_ARESETN]
+# connect_bd_net [get_bd_pins proc_sys_reset_dpu2/interconnect_aresetn] [get_bd_pins axi_interconnect_dpu/ARESETN]
+# connect_bd_net [get_bd_pins clk_wiz_dpu/clk_333m] [get_bd_pins axi_interconnect_dpu/ACLK]
+# connect_bd_net [get_bd_pins clk_wiz_dpu/clk_333m] [get_bd_pins axi_interconnect_dpu/S00_ACLK]
+# connect_bd_net [get_bd_pins clk_wiz_dpu/clk_100m] [get_bd_pins axi_interconnect_dpu/M00_ACLK]
+# connect_bd_net [get_bd_pins clk_wiz_dpu/clk_100m] [get_bd_pins zynq_ultra_ps_e_0/maxihpm1_fpd_aclk]
+# connect_bd_net [get_bd_pins clk_wiz_dpu/clk_333m] [get_bd_pins zynq_ultra_ps_e_0/saxihp1_fpd_aclk]
+# connect_bd_net [get_bd_pins clk_wiz_dpu/clk_333m] [get_bd_pins zynq_ultra_ps_e_0/saxihp2_fpd_aclk]
+# connect_bd_net [get_bd_pins clk_wiz_dpu/clk_100m] [get_bd_pins zynq_ultra_ps_e_0/saxi_lpd_aclk]
+# connect_bd_intf_net -boundary_type upper [get_bd_intf_pins axi_interconnect_dpu/S00_AXI] [get_bd_intf_pins dpu_eu_0/DPU0_M_AXI_INSTR]
+# assign_bd_address
+</zynq_ultra_ps_e_0/SAXIGP3/HP1_DDR_LOW> is being mapped into </dpu_eu_0/DPU0_M_AXI_DATA0> at <0x00000000 [ 2G ]>
+</zynq_ultra_ps_e_0/SAXIGP4/HP2_DDR_LOW> is being mapped into </dpu_eu_0/DPU0_M_AXI_DATA1> at <0x00000000 [ 2G ]>
+</zynq_ultra_ps_e_0/SAXIGP6/LPD_DDR_LOW> is being mapped into </dpu_eu_0/DPU0_M_AXI_INSTR> at <0x00000000 [ 2G ]>
+</zynq_ultra_ps_e_0/SAXIGP3/HP1_QSPI> is being mapped into </dpu_eu_0/DPU0_M_AXI_DATA0> at <0xC0000000 [ 512M ]>
+</zynq_ultra_ps_e_0/SAXIGP4/HP2_QSPI> is being mapped into </dpu_eu_0/DPU0_M_AXI_DATA1> at <0xC0000000 [ 512M ]>
+</zynq_ultra_ps_e_0/SAXIGP6/LPD_QSPI> is being mapped into </dpu_eu_0/DPU0_M_AXI_INSTR> at <0xC0000000 [ 512M ]>
+</dpu_eu_0/S_AXI/reg0> is being mapped into </zynq_ultra_ps_e_0/Data> at <0xBF000000 [ 16M ]>
+</zynq_ultra_ps_e_0/SAXIGP3/HP1_LPS_OCM> is being mapped into </dpu_eu_0/DPU0_M_AXI_DATA0> at <0xFF000000 [ 16M ]>
+</zynq_ultra_ps_e_0/SAXIGP4/HP2_LPS_OCM> is being mapped into </dpu_eu_0/DPU0_M_AXI_DATA1> at <0xFF000000 [ 16M ]>
+</zynq_ultra_ps_e_0/SAXIGP6/LPD_LPS_OCM> is being mapped into </dpu_eu_0/DPU0_M_AXI_INSTR> at <0xFF000000 [ 16M ]>
+# regenerate_bd_layout
+# regenerate_bd_layout -routing
+# make_wrapper -files [get_files $script_path/FM191_ZU3EG/FM191_ZU3EG.srcs/sources_1/bd/design_1/design_1.bd] -top
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /zynq_ultra_ps_e_0/pl_ps_irq0
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /zynq_ultra_ps_e_0/pl_ps_irq1
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /zynq_ultra_ps_e_0/pl_ps_irq0
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /zynq_ultra_ps_e_0/pl_ps_irq1
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /zynq_ultra_ps_e_0/pl_ps_irq0
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /zynq_ultra_ps_e_0/pl_ps_irq1
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /zynq_ultra_ps_e_0/pl_ps_irq0
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /zynq_ultra_ps_e_0/pl_ps_irq1
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /zynq_ultra_ps_e_0/pl_ps_irq0
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /zynq_ultra_ps_e_0/pl_ps_irq1
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /zynq_ultra_ps_e_0/pl_ps_irq0
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /zynq_ultra_ps_e_0/pl_ps_irq1
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /zynq_ultra_ps_e_0/pl_ps_irq0
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /zynq_ultra_ps_e_0/pl_ps_irq1
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /zynq_ultra_ps_e_0/pl_ps_irq0
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /zynq_ultra_ps_e_0/pl_ps_irq1
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /zynq_ultra_ps_e_0/pl_ps_irq0
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /zynq_ultra_ps_e_0/pl_ps_irq1
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /zynq_ultra_ps_e_0/pl_ps_irq0
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /zynq_ultra_ps_e_0/pl_ps_irq1
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /zynq_ultra_ps_e_0/pl_ps_irq0
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /zynq_ultra_ps_e_0/pl_ps_irq1
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /zynq_ultra_ps_e_0/pl_ps_irq0
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /zynq_ultra_ps_e_0/pl_ps_irq1
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /zynq_ultra_ps_e_0/pl_ps_irq0
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /zynq_ultra_ps_e_0/pl_ps_irq1
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /zynq_ultra_ps_e_0/pl_ps_irq0
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /zynq_ultra_ps_e_0/pl_ps_irq1
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /zynq_ultra_ps_e_0/pl_ps_irq0
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /zynq_ultra_ps_e_0/pl_ps_irq1
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /zynq_ultra_ps_e_0/pl_ps_irq0
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /zynq_ultra_ps_e_0/pl_ps_irq1
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /zynq_ultra_ps_e_0/pl_ps_irq0
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /zynq_ultra_ps_e_0/pl_ps_irq1
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /zynq_ultra_ps_e_0/pl_ps_irq0
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /zynq_ultra_ps_e_0/pl_ps_irq1
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /zynq_ultra_ps_e_0/pl_ps_irq0
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /zynq_ultra_ps_e_0/pl_ps_irq1
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /zynq_ultra_ps_e_0/pl_ps_irq0
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /zynq_ultra_ps_e_0/pl_ps_irq1
+INFO: [xilinx.com:ip:axi_vdma:6.3-16] /axi_vdma_0 
+                    All clocks connected to AXI VDMA are not identical, therefore configuring AXI-VDMA in ASYNC mode.
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ps8_0_axi_periph/s01_couplers/auto_ds/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_FPD(16)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ps8_0_axi_periph/s01_couplers/auto_ds/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_FPD(16)
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_pc/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_LPD(16)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_pc/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_LPD(16)
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /axi_interconnect_dpu/s00_couplers/auto_us/S_AXI(0) and /dpu_eu_0/DPU0_M_AXI_INSTR(1)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /axi_interconnect_dpu/s00_couplers/auto_us/S_AXI(0) and /dpu_eu_0/DPU0_M_AXI_INSTR(1)
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HP0_FPD(1) and /axi_interconnect_mem/s00_couplers/auto_us/M_AXI(0)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HP0_FPD(1) and /axi_interconnect_mem/s00_couplers/auto_us/M_AXI(0)
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_LPD(1) and /axi_interconnect_dpu/s00_couplers/auto_cc/M_AXI(0)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_LPD(1) and /axi_interconnect_dpu/s00_couplers/auto_cc/M_AXI(0)
+WARNING: [BD 41-927] Following properties on pin /video_io_to_hdmi_0/vid_io_in_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+        CLK_DOMAIN=design_1_zynq_ultra_ps_e_0_0_pl_clk1 
+WARNING: [BD 41-1771] Block interface /ADC_UART_1/UART has associated board param 'UARTLITE_BOARD_INTERFACE', which is set to board part interface 'fmc_lpc_connector_adc_uart_1'. This interface is connected to an external interface /UART_1, whose name 'UART_1' does not match with the board interface name 'fmc_lpc_connector_adc_uart_1'.
+This is a visual-only issue - this interface /ADC_UART_1/UART will be connected to board interface 'fmc_lpc_connector_adc_uart_1'. If desired, please change the name of this port /UART_1 manually.
+WARNING: [BD 41-1771] Block interface /ADC_UART_2/UART has associated board param 'UARTLITE_BOARD_INTERFACE', which is set to board part interface 'fmc_lpc_connector_adc_uart_2'. This interface is connected to an external interface /UART_2, whose name 'UART_2' does not match with the board interface name 'fmc_lpc_connector_adc_uart_2'.
+This is a visual-only issue - this interface /ADC_UART_2/UART will be connected to board interface 'fmc_lpc_connector_adc_uart_2'. If desired, please change the name of this port /UART_2 manually.
+WARNING: [BD 41-1771] Block interface /ADC_UART_3/UART has associated board param 'UARTLITE_BOARD_INTERFACE', which is set to board part interface 'fmc_lpc_connector_adc_uart_3'. This interface is connected to an external interface /UART_3, whose name 'UART_3' does not match with the board interface name 'fmc_lpc_connector_adc_uart_3'.
+This is a visual-only issue - this interface /ADC_UART_3/UART will be connected to board interface 'fmc_lpc_connector_adc_uart_3'. If desired, please change the name of this port /UART_3 manually.
+WARNING: [BD 41-1771] Block interface /ADC_UART_RQs/GPIO has associated board param 'GPIO_BOARD_INTERFACE', which is set to board part interface 'fmc_lpc_connector_adc_uart_rq'. This interface is connected to an external interface /UART_RQ, whose name 'UART_RQ' does not match with the board interface name 'fmc_lpc_connector_adc_uart_rq'.
+This is a visual-only issue - this interface /ADC_UART_RQs/GPIO will be connected to board interface 'fmc_lpc_connector_adc_uart_rq'. If desired, please change the name of this port /UART_RQ manually.
+WARNING: [BD 41-1771] Block interface /C_LEDs/GPIO has associated board param 'GPIO_BOARD_INTERFACE', which is set to board part interface 'onboardleds'. This interface is connected to an external interface /C_Board_LEDs, whose name 'C_Board_LEDs' does not match with the board interface name 'onboardleds'.
+This is a visual-only issue - this interface /C_LEDs/GPIO will be connected to board interface 'onboardleds'. If desired, please change the name of this port /C_Board_LEDs manually.
+WARNING: [BD 41-1771] Block interface /FMC_I2C/IIC has associated board param 'IIC_BOARD_INTERFACE', which is set to board part interface 'fmc_lpc_connector_i2c_fmcbus'. This interface is connected to an external interface /I2C, whose name 'I2C' does not match with the board interface name 'fmc_lpc_connector_i2c_fmcbus'.
+This is a visual-only issue - this interface /FMC_I2C/IIC will be connected to board interface 'fmc_lpc_connector_i2c_fmcbus'. If desired, please change the name of this port /I2C manually.
+WARNING: [BD 41-1771] Block interface /IOs/GPIO has associated board param 'GPIO_BOARD_INTERFACE', which is set to board part interface 'fmc_lpc_connector_dios'. This interface is connected to an external interface /DIO, whose name 'DIO' does not match with the board interface name 'fmc_lpc_connector_dios'.
+This is a visual-only issue - this interface /IOs/GPIO will be connected to board interface 'fmc_lpc_connector_dios'. If desired, please change the name of this port /DIO manually.
+WARNING: [BD 41-1771] Block interface /IOs/GPIO2 has associated board param 'GPIO2_BOARD_INTERFACE', which is set to board part interface 'fmc_lpc_connector_onboardgpios'. This interface is connected to an external interface /GPIO, whose name 'GPIO' does not match with the board interface name 'fmc_lpc_connector_onboardgpios'.
+This is a visual-only issue - this interface /IOs/GPIO2 will be connected to board interface 'fmc_lpc_connector_onboardgpios'. If desired, please change the name of this port /GPIO manually.
+WARNING: [BD 41-1771] Block interface /M_LEDs/GPIO has associated board param 'GPIO_BOARD_INTERFACE', which is set to board part interface 'fmc_lpc_connector_onboardleds'. This interface is connected to an external interface /M_Board_LEDs, whose name 'M_Board_LEDs' does not match with the board interface name 'fmc_lpc_connector_onboardleds'.
+This is a visual-only issue - this interface /M_LEDs/GPIO will be connected to board interface 'fmc_lpc_connector_onboardleds'. If desired, please change the name of this port /M_Board_LEDs manually.
+Wrote  : </home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.srcs/sources_1/bd/design_1/design_1.bd> 
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e_0/saxigp3_awid'(6) to net 'dpu_eu_0_DPU0_M_AXI_DATA0_AWID'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e_0/saxigp3_arid'(6) to net 'dpu_eu_0_DPU0_M_AXI_DATA0_ARID'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e_0/saxigp4_awid'(6) to net 'dpu_eu_0_DPU0_M_AXI_DATA1_AWID'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e_0/saxigp4_arid'(6) to net 'dpu_eu_0_DPU0_M_AXI_DATA1_ARID'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/dpu_eu_0/dpu0_m_axi_instr_bid'(6) to net 'S00_AXI_1_BID'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/dpu_eu_0/dpu0_m_axi_instr_rid'(6) to net 'S00_AXI_1_RID'(2) - Only lower order bits will be connected.
+VHDL Output written to : /home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.srcs/sources_1/bd/design_1/synth/design_1.vhd
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e_0/saxigp3_awid'(6) to net 'dpu_eu_0_DPU0_M_AXI_DATA0_AWID'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e_0/saxigp3_arid'(6) to net 'dpu_eu_0_DPU0_M_AXI_DATA0_ARID'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e_0/saxigp4_awid'(6) to net 'dpu_eu_0_DPU0_M_AXI_DATA1_AWID'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e_0/saxigp4_arid'(6) to net 'dpu_eu_0_DPU0_M_AXI_DATA1_ARID'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/dpu_eu_0/dpu0_m_axi_instr_bid'(6) to net 'S00_AXI_1_BID'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/dpu_eu_0/dpu0_m_axi_instr_rid'(6) to net 'S00_AXI_1_RID'(2) - Only lower order bits will be connected.
+VHDL Output written to : /home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.srcs/sources_1/bd/design_1/sim/design_1.vhd
+VHDL Output written to : /home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+make_wrapper: Time (s): cpu = 00:00:07 ; elapsed = 00:00:12 . Memory (MB): peak = 2583.445 ; gain = 108.168 ; free physical = 137 ; free virtual = 8383
+# add_files -norecurse $script_path/FM191_ZU3EG/FM191_ZU3EG.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+# add_files -fileset constrs_1 -norecurse $script_path/FM191_ZU3EG.xdc
+# launch_runs impl_1 -to_step write_bitstream -jobs 2
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+WARNING: [BD 41-1771] Block interface /ADC_UART_1/UART has associated board param 'UARTLITE_BOARD_INTERFACE', which is set to board part interface 'fmc_lpc_connector_adc_uart_1'. This interface is connected to an external interface /UART_1, whose name 'UART_1' does not match with the board interface name 'fmc_lpc_connector_adc_uart_1'.
+This is a visual-only issue - this interface /ADC_UART_1/UART will be connected to board interface 'fmc_lpc_connector_adc_uart_1'. If desired, please change the name of this port /UART_1 manually.
+WARNING: [BD 41-1771] Block interface /ADC_UART_2/UART has associated board param 'UARTLITE_BOARD_INTERFACE', which is set to board part interface 'fmc_lpc_connector_adc_uart_2'. This interface is connected to an external interface /UART_2, whose name 'UART_2' does not match with the board interface name 'fmc_lpc_connector_adc_uart_2'.
+This is a visual-only issue - this interface /ADC_UART_2/UART will be connected to board interface 'fmc_lpc_connector_adc_uart_2'. If desired, please change the name of this port /UART_2 manually.
+WARNING: [BD 41-1771] Block interface /ADC_UART_3/UART has associated board param 'UARTLITE_BOARD_INTERFACE', which is set to board part interface 'fmc_lpc_connector_adc_uart_3'. This interface is connected to an external interface /UART_3, whose name 'UART_3' does not match with the board interface name 'fmc_lpc_connector_adc_uart_3'.
+This is a visual-only issue - this interface /ADC_UART_3/UART will be connected to board interface 'fmc_lpc_connector_adc_uart_3'. If desired, please change the name of this port /UART_3 manually.
+WARNING: [BD 41-1771] Block interface /ADC_UART_RQs/GPIO has associated board param 'GPIO_BOARD_INTERFACE', which is set to board part interface 'fmc_lpc_connector_adc_uart_rq'. This interface is connected to an external interface /UART_RQ, whose name 'UART_RQ' does not match with the board interface name 'fmc_lpc_connector_adc_uart_rq'.
+This is a visual-only issue - this interface /ADC_UART_RQs/GPIO will be connected to board interface 'fmc_lpc_connector_adc_uart_rq'. If desired, please change the name of this port /UART_RQ manually.
+WARNING: [BD 41-1771] Block interface /C_LEDs/GPIO has associated board param 'GPIO_BOARD_INTERFACE', which is set to board part interface 'onboardleds'. This interface is connected to an external interface /C_Board_LEDs, whose name 'C_Board_LEDs' does not match with the board interface name 'onboardleds'.
+This is a visual-only issue - this interface /C_LEDs/GPIO will be connected to board interface 'onboardleds'. If desired, please change the name of this port /C_Board_LEDs manually.
+WARNING: [BD 41-1771] Block interface /FMC_I2C/IIC has associated board param 'IIC_BOARD_INTERFACE', which is set to board part interface 'fmc_lpc_connector_i2c_fmcbus'. This interface is connected to an external interface /I2C, whose name 'I2C' does not match with the board interface name 'fmc_lpc_connector_i2c_fmcbus'.
+This is a visual-only issue - this interface /FMC_I2C/IIC will be connected to board interface 'fmc_lpc_connector_i2c_fmcbus'. If desired, please change the name of this port /I2C manually.
+WARNING: [BD 41-1771] Block interface /IOs/GPIO has associated board param 'GPIO_BOARD_INTERFACE', which is set to board part interface 'fmc_lpc_connector_dios'. This interface is connected to an external interface /DIO, whose name 'DIO' does not match with the board interface name 'fmc_lpc_connector_dios'.
+This is a visual-only issue - this interface /IOs/GPIO will be connected to board interface 'fmc_lpc_connector_dios'. If desired, please change the name of this port /DIO manually.
+WARNING: [BD 41-1771] Block interface /IOs/GPIO2 has associated board param 'GPIO2_BOARD_INTERFACE', which is set to board part interface 'fmc_lpc_connector_onboardgpios'. This interface is connected to an external interface /GPIO, whose name 'GPIO' does not match with the board interface name 'fmc_lpc_connector_onboardgpios'.
+This is a visual-only issue - this interface /IOs/GPIO2 will be connected to board interface 'fmc_lpc_connector_onboardgpios'. If desired, please change the name of this port /GPIO manually.
+WARNING: [BD 41-1771] Block interface /M_LEDs/GPIO has associated board param 'GPIO_BOARD_INTERFACE', which is set to board part interface 'fmc_lpc_connector_onboardleds'. This interface is connected to an external interface /M_Board_LEDs, whose name 'M_Board_LEDs' does not match with the board interface name 'fmc_lpc_connector_onboardleds'.
+This is a visual-only issue - this interface /M_LEDs/GPIO will be connected to board interface 'fmc_lpc_connector_onboardleds'. If desired, please change the name of this port /M_Board_LEDs manually.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e_0/saxigp3_awid'(6) to net 'dpu_eu_0_DPU0_M_AXI_DATA0_AWID'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e_0/saxigp3_arid'(6) to net 'dpu_eu_0_DPU0_M_AXI_DATA0_ARID'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e_0/saxigp4_awid'(6) to net 'dpu_eu_0_DPU0_M_AXI_DATA1_AWID'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e_0/saxigp4_arid'(6) to net 'dpu_eu_0_DPU0_M_AXI_DATA1_ARID'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/dpu_eu_0/dpu0_m_axi_instr_bid'(6) to net 'S00_AXI_1_BID'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/dpu_eu_0/dpu0_m_axi_instr_rid'(6) to net 'S00_AXI_1_RID'(2) - Only lower order bits will be connected.
+VHDL Output written to : /home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.srcs/sources_1/bd/design_1/synth/design_1.vhd
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e_0/saxigp3_awid'(6) to net 'dpu_eu_0_DPU0_M_AXI_DATA0_AWID'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e_0/saxigp3_arid'(6) to net 'dpu_eu_0_DPU0_M_AXI_DATA0_ARID'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e_0/saxigp4_awid'(6) to net 'dpu_eu_0_DPU0_M_AXI_DATA1_AWID'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e_0/saxigp4_arid'(6) to net 'dpu_eu_0_DPU0_M_AXI_DATA1_ARID'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/dpu_eu_0/dpu0_m_axi_instr_bid'(6) to net 'S00_AXI_1_BID'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/dpu_eu_0/dpu0_m_axi_instr_rid'(6) to net 'S00_AXI_1_RID'(2) - Only lower order bits will be connected.
+VHDL Output written to : /home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.srcs/sources_1/bd/design_1/sim/design_1.vhd
+VHDL Output written to : /home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+INFO: [xilinx.com:ip:zynq_ultra_ps_e:3.2-0] design_1_zynq_ultra_ps_e_0_0: 
+Changes in your design (including the PCW configuration settings) are not automatically exported from Vivado to Xilinx's SDK, Petalinux or Yocto.
+This is by design to avoid disrupting existing embedded development efforts. To have any changes of your design taking effect in the embedded software flow please export your
+design by going through Vivado's main menu, click on File, then Export finally select Export Hardware, please ensure you click on the Include BitStream option.
+The auto-generated HDF file is all you need to import in Xilinx's SDK, Petalinux or Yocto for your changes to be reflected in the Embedded Software Flow.
+For more information, please consult PG201, section: Exporting PCW Settings to Embedded Software Flows
+INFO: [PSU-0] Address Range of DDR (0x7ff00000 to 0x7fffffff) is reserved by PMU for internal purpose.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block zynq_ultra_ps_e_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Ethernet_LEDs .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block SPI_US_Buffering .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block IOs .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block M_LEDs .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block C_LEDs .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ADC_UART_RQs .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ADC_UART_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ADC_UART_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ADC_UART_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block FMC_I2C .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/xbar .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/s00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/s01_couplers/auto_ds .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/s01_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_0/design_1_auto_cc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/m10_couplers/auto_cc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps8_0_99M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block PLPS_INT .
+WARNING: [IP_Flow 19-1971] File named "sim/design_1_v_tpg_0_0.v" already exists in file group "xilinx_verilogsimulationwrapper", cannot add it again.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block v_tpg_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block v_axi4s_vid_out_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block video_io_to_hdmi_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block v_tc_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_fb_conv_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_vdma_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.srcs/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_mem/s00_couplers/auto_us .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps8_0_75M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block GND .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block VCC .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block PLPS_INT_HDMI_DPU .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block dpu_eu_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_dpu .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.srcs/sources_1/bd/design_1/ip/design_1_auto_us_1/design_1_auto_us_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_dpu/s00_couplers/auto_us .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_1/design_1_auto_cc_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_dpu/s00_couplers/auto_cc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block proc_sys_reset_dpu0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block proc_sys_reset_dpu1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block proc_sys_reset_dpu2 .
+Exporting to file /home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file /home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File /home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+[Mon Jul  1 10:23:33 2019] Launched design_1_axi_gpio_0_1_synth_1, design_1_axi_gpio_0_0_synth_1, design_1_zynq_ultra_ps_e_0_0_synth_1, design_1_util_vector_logic_0_0_synth_1, design_1_SPI_US_Buffering_0_0_synth_1, design_1_axi_gpio_0_2_synth_1, design_1_axi_gpio_0_3_synth_1, design_1_axi_uartlite_0_0_synth_1, design_1_axi_uartlite_0_1_synth_1, design_1_axi_uartlite_0_2_synth_1, design_1_axi_iic_0_0_synth_1, design_1_xbar_0_synth_1, design_1_auto_pc_0_synth_1, design_1_v_tc_0_0_synth_1, design_1_axis_fb_conv_0_0_synth_1, design_1_axi_vdma_0_0_synth_1, design_1_auto_us_0_synth_1, design_1_proc_sys_reset_0_0_synth_1, design_1_dpu_eu_0_0_synth_1, design_1_clk_wiz_0_0_synth_1, design_1_auto_us_1_synth_1, design_1_auto_cc_1_synth_1, design_1_proc_sys_reset_0_1_synth_1, design_1_proc_sys_reset_0_2_synth_1, design_1_proc_sys_reset_0_3_synth_1, design_1_auto_ds_0_synth_1, design_1_auto_pc_1_synth_1, design_1_auto_cc_0_synth_1, design_1_rst_ps8_0_99M_0_synth_1, design_1_v_tpg_0_0_synth_1, design_1_v_axi4s_vid_out_0_0_synth_1, design_1_video_io_to_hdmi_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_axi_gpio_0_1_synth_1: /home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.runs/design_1_axi_gpio_0_1_synth_1/runme.log
+design_1_axi_gpio_0_0_synth_1: /home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.runs/design_1_axi_gpio_0_0_synth_1/runme.log
+design_1_zynq_ultra_ps_e_0_0_synth_1: /home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.runs/design_1_zynq_ultra_ps_e_0_0_synth_1/runme.log
+design_1_util_vector_logic_0_0_synth_1: /home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.runs/design_1_util_vector_logic_0_0_synth_1/runme.log
+design_1_SPI_US_Buffering_0_0_synth_1: /home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.runs/design_1_SPI_US_Buffering_0_0_synth_1/runme.log
+design_1_axi_gpio_0_2_synth_1: /home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.runs/design_1_axi_gpio_0_2_synth_1/runme.log
+design_1_axi_gpio_0_3_synth_1: /home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.runs/design_1_axi_gpio_0_3_synth_1/runme.log
+design_1_axi_uartlite_0_0_synth_1: /home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.runs/design_1_axi_uartlite_0_0_synth_1/runme.log
+design_1_axi_uartlite_0_1_synth_1: /home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.runs/design_1_axi_uartlite_0_1_synth_1/runme.log
+design_1_axi_uartlite_0_2_synth_1: /home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.runs/design_1_axi_uartlite_0_2_synth_1/runme.log
+design_1_axi_iic_0_0_synth_1: /home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.runs/design_1_axi_iic_0_0_synth_1/runme.log
+design_1_xbar_0_synth_1: /home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.runs/design_1_xbar_0_synth_1/runme.log
+design_1_auto_pc_0_synth_1: /home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.runs/design_1_auto_pc_0_synth_1/runme.log
+design_1_v_tc_0_0_synth_1: /home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.runs/design_1_v_tc_0_0_synth_1/runme.log
+design_1_axis_fb_conv_0_0_synth_1: /home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.runs/design_1_axis_fb_conv_0_0_synth_1/runme.log
+design_1_axi_vdma_0_0_synth_1: /home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.runs/design_1_axi_vdma_0_0_synth_1/runme.log
+design_1_auto_us_0_synth_1: /home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.runs/design_1_auto_us_0_synth_1/runme.log
+design_1_proc_sys_reset_0_0_synth_1: /home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.runs/design_1_proc_sys_reset_0_0_synth_1/runme.log
+design_1_dpu_eu_0_0_synth_1: /home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.runs/design_1_dpu_eu_0_0_synth_1/runme.log
+design_1_clk_wiz_0_0_synth_1: /home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.runs/design_1_clk_wiz_0_0_synth_1/runme.log
+design_1_auto_us_1_synth_1: /home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.runs/design_1_auto_us_1_synth_1/runme.log
+design_1_auto_cc_1_synth_1: /home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.runs/design_1_auto_cc_1_synth_1/runme.log
+design_1_proc_sys_reset_0_1_synth_1: /home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.runs/design_1_proc_sys_reset_0_1_synth_1/runme.log
+design_1_proc_sys_reset_0_2_synth_1: /home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.runs/design_1_proc_sys_reset_0_2_synth_1/runme.log
+design_1_proc_sys_reset_0_3_synth_1: /home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.runs/design_1_proc_sys_reset_0_3_synth_1/runme.log
+design_1_auto_ds_0_synth_1: /home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.runs/design_1_auto_ds_0_synth_1/runme.log
+design_1_auto_pc_1_synth_1: /home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.runs/design_1_auto_pc_1_synth_1/runme.log
+design_1_auto_cc_0_synth_1: /home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.runs/design_1_auto_cc_0_synth_1/runme.log
+design_1_rst_ps8_0_99M_0_synth_1: /home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.runs/design_1_rst_ps8_0_99M_0_synth_1/runme.log
+design_1_v_tpg_0_0_synth_1: /home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.runs/design_1_v_tpg_0_0_synth_1/runme.log
+design_1_v_axi4s_vid_out_0_0_synth_1: /home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.runs/design_1_v_axi4s_vid_out_0_0_synth_1/runme.log
+design_1_video_io_to_hdmi_0_0_synth_1: /home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.runs/design_1_video_io_to_hdmi_0_0_synth_1/runme.log
+synth_1: /home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.runs/synth_1/runme.log
+[Mon Jul  1 10:23:33 2019] Launched impl_1...
+Run output will be captured here: /home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:01:14 ; elapsed = 00:01:36 . Memory (MB): peak = 3274.910 ; gain = 691.465 ; free physical = 160 ; free virtual = 8323
+# wait_on_run impl_1
+[Mon Jul  1 10:23:33 2019] Waiting for impl_1 to finish...

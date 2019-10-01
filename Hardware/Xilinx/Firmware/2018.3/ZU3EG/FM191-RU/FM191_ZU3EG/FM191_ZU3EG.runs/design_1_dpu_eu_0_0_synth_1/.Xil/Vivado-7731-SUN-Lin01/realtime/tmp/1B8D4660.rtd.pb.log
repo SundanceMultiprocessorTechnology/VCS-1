@@ -1,0 +1,139 @@
+xilinx rtfpga
+INFO: [Synth 8-4471] merging register 's_549a5976_reg[1:0]' into 's_549a5976_reg[1:0]' [/home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.srcs/sources_1/bd/design_1/ipshared/a344/hdl/dpu_eu_v0_0_53_vl_rfs.v:25533]
+INFO: [Synth 8-5544] ROM "s_549a5976" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "s_9a445bcd" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-4471] merging register 'u_377327d6/u_25af8faa/s_770f69c4_reg' into 'u_377327d6/s_1684ef14_reg' [/home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.srcs/sources_1/bd/design_1/ipshared/a344/hdl/dpu_eu_v0_0_53_vl_rfs.v:18121]
+INFO: [Synth 8-5544] ROM "u_377327d6/" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "s_e0ed0311" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_e0ed0311" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_e0ed0311" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_e0ed0311" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_e0ed0311" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_e0ed0311" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_e0ed0311" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_e0ed0311" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_e0ed0311" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_e0ed0311" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_e0ed0311" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_e0ed0311" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-4471] merging register 'u_b1b62c97/s_6ceecc88_reg[7:0]' into 'u_e6853563/s_733e780e_reg[7:0]' [/home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.srcs/sources_1/bd/design_1/ipshared/a344/hdl/dpu_eu_v0_0_53_vl_rfs.v:16975]
+INFO: [Synth 8-4471] merging register 'u_b1b62c97/s_6a7bd6f6_reg[10:0]' into 'u_e6853563/s_d9227515_reg[10:0]' [/home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.srcs/sources_1/bd/design_1/ipshared/a344/hdl/dpu_eu_v0_0_53_vl_rfs.v:16973]
+INFO: [Synth 8-4471] merging register 'u_b1b62c97/s_e85de717_reg[2:0]' into 'u_e6853563/s_6534e36a_reg[2:0]' [/home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.srcs/sources_1/bd/design_1/ipshared/a344/hdl/dpu_eu_v0_0_53_vl_rfs.v:16974]
+WARNING: [Synth 8-3936] Found unconnected internal register 'u_b1b62c97/s_f3554471_reg' and it is trimmed from '3' to '2' bits. [/home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.srcs/sources_1/bd/design_1/ipshared/a344/hdl/dpu_eu_v0_0_53_vl_rfs.v:17003]
+WARNING: [Synth 8-3936] Found unconnected internal register 'u_e6853563/s_b3832859_reg' and it is trimmed from '3' to '2' bits. [/home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.srcs/sources_1/bd/design_1/ipshared/a344/hdl/dpu_eu_v0_0_53_vl_rfs.v:17403]
+WARNING: [Synth 8-3936] Found unconnected internal register 'u_721515b6/s_6bc9117c_reg' and it is trimmed from '52' to '49' bits. [/home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.srcs/sources_1/bd/design_1/ipshared/a344/hdl/dpu_eu_v0_0_53_vl_rfs.v:17283]
+WARNING: [Synth 8-3936] Found unconnected internal register 'u_721515b6/s_1be16950_reg' and it is trimmed from '52' to '49' bits. [/home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.srcs/sources_1/bd/design_1/ipshared/a344/hdl/dpu_eu_v0_0_53_vl_rfs.v:17179]
+WARNING: [Synth 8-3936] Found unconnected internal register 'u_721515b6/s_41c1d27a_reg' and it is trimmed from '52' to '49' bits. [/home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.srcs/sources_1/bd/design_1/ipshared/a344/hdl/dpu_eu_v0_0_53_vl_rfs.v:17178]
+WARNING: [Synth 8-3936] Found unconnected internal register 'u_721515b6/s_736e1b4a_reg' and it is trimmed from '52' to '49' bits. [/home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.srcs/sources_1/bd/design_1/ipshared/a344/hdl/dpu_eu_v0_0_53_vl_rfs.v:17177]
+INFO: [Synth 8-4471] merging register 'u_d9174ead/s_acba0a71_reg' into 'u_d9174ead/s_ea0397a7_reg' [/home/pedro/Development/VCS-1/Hardware/Xilinx/Firmware/2018.3/ZU3EG/FM191-RU/FM191_ZU3EG/FM191_ZU3EG.srcs/sources_1/bd/design_1/ipshared/a344/hdl/dpu_eu_v0_0_53_vl_rfs.v:883]
+WARNING: [Synth 8-3331] design m_5cc5dc34 has unconnected port s_aa2fd383
+WARNING: [Synth 8-3331] design m_5cc5dc34 has unconnected port s_7c0b2fbc
+WARNING: [Synth 8-3331] design m_f30f13eb has unconnected port s_bb3d7f01
+WARNING: [Synth 8-3331] design m_ae2ccda5 has unconnected port s_4891adb2[95]
+WARNING: [Synth 8-3331] design m_ae2ccda5 has unconnected port s_4891adb2[94]
+WARNING: [Synth 8-3331] design m_ae2ccda5 has unconnected port s_4891adb2[75]
+WARNING: [Synth 8-3331] design m_ae2ccda5 has unconnected port s_4891adb2[63]
+WARNING: [Synth 8-3331] design m_ae2ccda5 has unconnected port s_4891adb2[62]
+WARNING: [Synth 8-3331] design m_ae2ccda5 has unconnected port s_4891adb2[61]
+WARNING: [Synth 8-3331] design m_ae2ccda5 has unconnected port s_4891adb2[57]
+WARNING: [Synth 8-3331] design m_ae2ccda5 has unconnected port s_4891adb2[56]
+WARNING: [Synth 8-3331] design m_ae2ccda5 has unconnected port s_4891adb2[55]
+WARNING: [Synth 8-3331] design m_ae2ccda5 has unconnected port s_4891adb2[43]
+WARNING: [Synth 8-3331] design m_ae2ccda5 has unconnected port s_4891adb2[27]
+WARNING: [Synth 8-3331] design m_ae2ccda5 has unconnected port s_4891adb2[26]
+WARNING: [Synth 8-3331] design m_ae2ccda5 has unconnected port s_4891adb2[25]
+WARNING: [Synth 8-3331] design m_ae2ccda5 has unconnected port s_4891adb2[24]
+WARNING: [Synth 8-3331] design m_ae2ccda5 has unconnected port s_4891adb2[23]
+WARNING: [Synth 8-3331] design m_ae2ccda5 has unconnected port s_4891adb2[22]
+WARNING: [Synth 8-3331] design m_ae2ccda5 has unconnected port s_4891adb2[21]
+WARNING: [Synth 8-3331] design m_ae2ccda5 has unconnected port s_4891adb2[20]
+WARNING: [Synth 8-3331] design m_ae2ccda5 has unconnected port s_4891adb2[17]
+WARNING: [Synth 8-3331] design m_ae2ccda5 has unconnected port s_4891adb2[16]
+WARNING: [Synth 8-3331] design m_ae2ccda5 has unconnected port s_4891adb2[15]
+WARNING: [Synth 8-3331] design m_ae2ccda5 has unconnected port s_4891adb2[14]
+WARNING: [Synth 8-3331] design m_ae2ccda5 has unconnected port s_4891adb2[11]
+WARNING: [Synth 8-3331] design m_79ab63fe has unconnected port s_27fc2680[0]
+WARNING: [Synth 8-3331] design m_79ab63fe has unconnected port s_015e894e[1]
+WARNING: [Synth 8-3331] design m_79ab63fe has unconnected port s_46d13cb4[2]
+WARNING: [Synth 8-3331] design m_79ab63fe has unconnected port s_1cd42948[3]
+WARNING: [Synth 8-3331] design m_5ff78ca2 has unconnected port s_1591156a[5]
+WARNING: [Synth 8-3331] design m_5ff78ca2 has unconnected port s_1591156a[4]
+WARNING: [Synth 8-3331] design m_5ff78ca2 has unconnected port s_1591156a[3]
+WARNING: [Synth 8-3331] design m_5ff78ca2 has unconnected port s_1591156a[2]
+WARNING: [Synth 8-3331] design m_5ff78ca2 has unconnected port s_1591156a[1]
+WARNING: [Synth 8-3331] design m_5ff78ca2 has unconnected port s_1591156a[0]
+WARNING: [Synth 8-3331] design m_5ff78ca2 has unconnected port s_e814ed35[1]
+WARNING: [Synth 8-3331] design m_5ff78ca2 has unconnected port s_e814ed35[0]
+WARNING: [Synth 8-3331] design m_e331f719 has unconnected port s_a0839c93[5]
+WARNING: [Synth 8-3331] design m_e331f719 has unconnected port s_a0839c93[4]
+WARNING: [Synth 8-3331] design m_e331f719 has unconnected port s_a0839c93[3]
+WARNING: [Synth 8-3331] design m_e331f719 has unconnected port s_a0839c93[2]
+WARNING: [Synth 8-3331] design m_e331f719 has unconnected port s_a0839c93[1]
+WARNING: [Synth 8-3331] design m_e331f719 has unconnected port s_a0839c93[0]
+WARNING: [Synth 8-3331] design m_e331f719 has unconnected port s_048892f8[1]
+WARNING: [Synth 8-3331] design m_e331f719 has unconnected port s_048892f8[0]
+INFO: [Synth 8-3886] merging instance 'u_a592b6ed/u_58e8dba8/u_93f27f3d/s_affe6b11_reg[2]' (FDRE) to 'u_a592b6ed/u_58e8dba8/u_93f27f3d/s_b5d65391_reg[2]'
+INFO: [Synth 8-3886] merging instance 'u_a592b6ed/u_58e8dba8/u_93f27f3d/s_affe6b11_reg[3]' (FDRE) to 'u_a592b6ed/u_58e8dba8/u_93f27f3d/s_b5d65391_reg[2]'
+INFO: [Synth 8-3886] merging instance 'u_a592b6ed/u_58e8dba8/u_93f27f3d/s_b5d65391_reg[2]' (FDRE) to 'u_a592b6ed/u_58e8dba8/u_93f27f3d/s_b5d65391_reg[3]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_a592b6ed/u_58e8dba8/\u_93f27f3d/s_b5d65391_reg[3] )
+INFO: [Synth 8-3886] merging instance 'u_a592b6ed/u_58e8dba8/u_377327d6/u_25af8faa/s_12fbf12a_reg[2]' (FDRE) to 'u_a592b6ed/u_58e8dba8/u_377327d6/u_25af8faa/s_12fbf12a_reg[3]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_a592b6ed/u_f9ace543/\s_84dfbf9b_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_a592b6ed/u_58e8dba8/\u_93f27f3d/s_2c02dc42_reg[10] )
+INFO: [Synth 8-3886] merging instance 'u_a592b6ed/u_f9ace543/u_d9174ead/s_bcf3660d_reg[8]' (FDE) to 'u_a592b6ed/u_f9ace543/u_d9174ead/s_fc958781_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_a592b6ed/u_f9ace543/u_d9174ead/s_bcf3660d_reg[9]' (FDE) to 'u_a592b6ed/u_f9ace543/u_d9174ead/s_fc958781_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_a592b6ed/u_f9ace543/u_d9174ead/s_fc958781_reg[8]' (FDE) to 'u_a592b6ed/u_f9ace543/u_d9174ead/s_fc958781_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_a592b6ed/u_f9ace543/u_d9174ead/s_fc958781_reg[9]' (FDE) to 'u_a592b6ed/u_f9ace543/u_d9174ead/s_fc958781_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_a592b6ed/u_f9ace543/u_d9174ead/s_fc958781_reg[10]' (FDE) to 'u_a592b6ed/u_f9ace543/u_d9174ead/s_fc958781_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_a592b6ed/u_f9ace543/u_d9174ead/s_bcf3660d_reg[10]' (FDE) to 'u_a592b6ed/u_f9ace543/u_d9174ead/s_fc958781_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_a592b6ed/u_f9ace543/u_d9174ead/s_bcf3660d_reg[0]' (FDE) to 'u_a592b6ed/u_f9ace543/u_d9174ead/s_fc958781_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_a592b6ed/u_f9ace543/u_d9174ead/s_bcf3660d_reg[1]' (FDE) to 'u_a592b6ed/u_f9ace543/u_d9174ead/s_fc958781_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_a592b6ed/u_f9ace543/u_d9174ead/s_bcf3660d_reg[2]' (FDE) to 'u_a592b6ed/u_f9ace543/u_d9174ead/s_fc958781_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_a592b6ed/u_f9ace543/u_d9174ead/s_bcf3660d_reg[3]' (FDE) to 'u_a592b6ed/u_f9ace543/u_d9174ead/s_fc958781_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_a592b6ed/u_f9ace543/u_d9174ead/s_bcf3660d_reg[4]' (FDE) to 'u_a592b6ed/u_f9ace543/u_d9174ead/s_fc958781_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_a592b6ed/u_f9ace543/u_d9174ead/s_bcf3660d_reg[5]' (FDE) to 'u_a592b6ed/u_f9ace543/u_d9174ead/s_fc958781_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_a592b6ed/u_f9ace543/u_d9174ead/s_bcf3660d_reg[6]' (FDE) to 'u_a592b6ed/u_f9ace543/u_d9174ead/s_fc958781_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_a592b6ed/u_f9ace543/u_d9174ead/s_fc958781_reg[0]' (FDE) to 'u_a592b6ed/u_f9ace543/u_d9174ead/s_fc958781_reg[1]'
+INFO: [Synth 8-3886] merging instance 'u_a592b6ed/u_f9ace543/u_d9174ead/s_fc958781_reg[1]' (FDE) to 'u_a592b6ed/u_f9ace543/u_d9174ead/s_fc958781_reg[2]'
+INFO: [Synth 8-3886] merging instance 'u_a592b6ed/u_f9ace543/u_d9174ead/s_fc958781_reg[2]' (FDE) to 'u_a592b6ed/u_f9ace543/u_d9174ead/s_fc958781_reg[3]'
+INFO: [Synth 8-3886] merging instance 'u_a592b6ed/u_f9ace543/u_d9174ead/s_fc958781_reg[3]' (FDE) to 'u_a592b6ed/u_f9ace543/u_d9174ead/s_fc958781_reg[4]'
+INFO: [Synth 8-3886] merging instance 'u_a592b6ed/u_f9ace543/u_d9174ead/s_fc958781_reg[4]' (FDE) to 'u_a592b6ed/u_f9ace543/u_d9174ead/s_fc958781_reg[5]'
+INFO: [Synth 8-3886] merging instance 'u_a592b6ed/u_f9ace543/u_d9174ead/s_fc958781_reg[5]' (FDE) to 'u_a592b6ed/u_f9ace543/u_d9174ead/s_fc958781_reg[6]'
+INFO: [Synth 8-3886] merging instance 'u_a592b6ed/u_f9ace543/u_d9174ead/s_fc958781_reg[6]' (FDE) to 'u_a592b6ed/u_f9ace543/u_d9174ead/s_fc958781_reg[7]'
+INFO: [Synth 8-3886] merging instance 'u_a592b6ed/u_f9ace543/u_d9174ead/s_fc958781_reg[7]' (FDE) to 'u_a592b6ed/u_f9ace543/u_d9174ead/s_bcf3660d_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_a592b6ed/u_f9ace543/\u_d9174ead/s_bcf3660d_reg[7] )
+INFO: [Synth 8-3886] merging instance 'u_a592b6ed/u_58e8dba8/u_377327d6/s_dfa01bb9_reg[2]' (FDE) to 'u_a592b6ed/u_58e8dba8/u_377327d6/s_887c3fbb_reg[2]'
+INFO: [Synth 8-3886] merging instance 'u_a592b6ed/u_d27ea8fb/u_e6853563/s_b3832859_reg[0]' (FD) to 'u_a592b6ed/u_d27ea8fb/u_b1b62c97/s_f3554471_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ffc84c97/u_0d75e8f2/s_7b804496_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ffc84c97/u_d6e7dcb3 /u_8bfe824f/s_6216f37e_reg)
+INFO: [Synth 8-3886] merging instance 's_3aabfa84_reg[24]' (FD) to 's_3aabfa84_reg[27]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_3aabfa84_reg[27] )
+INFO: [Synth 8-3886] merging instance 'u_a592b6ed/u_58e8dba8/u_9bc28cc3/s_d60881a9_reg[1]' (FDSE) to 'u_a592b6ed/u_58e8dba8/u_9bc28cc3/s_d60881a9_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ffc84c97/u_d6e7dcb3 /u_8b39744b/\s_37557fa2_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ffc84c97/u_d6e7dcb3 /u_8b39744b/\s_37557fa2_reg[147] )
+INFO: [Synth 8-3886] merging instance 'u_ffc84c97/u_d6e7dcb3/u_3472cc66/s_6d08bf2c_reg[0]' (FDRE) to 'u_ffc84c97/u_d6e7dcb3/u_3472cc66/s_9bc42f79_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_ffc84c97/u_d6e7dcb3/u_3472cc66/s_6d08bf2c_reg[1]' (FDRE) to 'u_ffc84c97/u_d6e7dcb3/u_3472cc66/s_9bc42f79_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_ffc84c97/u_d6e7dcb3/u_3472cc66/s_6d08bf2c_reg[2]' (FDRE) to 'u_ffc84c97/u_d6e7dcb3/u_3472cc66/s_9bc42f79_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_ffc84c97/u_d6e7dcb3/u_3472cc66/s_9bc42f79_reg[0]' (FDRE) to 'u_ffc84c97/u_d6e7dcb3/u_3472cc66/s_9bc42f79_reg[1]'
+INFO: [Synth 8-3886] merging instance 'u_ffc84c97/u_d6e7dcb3/u_3472cc66/s_9bc42f79_reg[1]' (FDRE) to 'u_ffc84c97/u_d6e7dcb3/u_3472cc66/s_9bc42f79_reg[2]'
+INFO: [Synth 8-3886] merging instance 'u_ffc84c97/u_d6e7dcb3/u_3472cc66/s_9bc42f79_reg[2]' (FDRE) to 'u_ffc84c97/u_d6e7dcb3/u_3472cc66/s_9bc42f79_reg[3]'
+INFO: [Synth 8-3886] merging instance 'u_ffc84c97/u_d6e7dcb3/u_3472cc66/s_9bc42f79_reg[3]' (FDRE) to 'u_ffc84c97/u_d6e7dcb3/u_3472cc66/s_60069358_reg[1]'
+INFO: [Synth 8-3886] merging instance 'u_ffc84c97/u_d6e7dcb3/u_3472cc66/s_4fb3a7a8_reg[0]' (FDRE) to 'u_ffc84c97/u_d6e7dcb3/u_3472cc66/s_60069358_reg[1]'
+INFO: [Synth 8-3886] merging instance 'u_ffc84c97/u_d6e7dcb3/u_3472cc66/s_4fb3a7a8_reg[1]' (FDRE) to 'u_ffc84c97/u_d6e7dcb3/u_3472cc66/s_60069358_reg[1]'
+INFO: [Synth 8-3886] merging instance 'u_ffc84c97/u_d6e7dcb3/u_3472cc66/s_60069358_reg[0]' (FDSE) to 'u_ffc84c97/u_d6e7dcb3/u_3472cc66/s_12f943c6_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_ffc84c97/u_d6e7dcb3/u_3472cc66/s_60069358_reg[1]' (FDRE) to 'u_ffc84c97/u_d6e7dcb3/u_3472cc66/s_12f943c6_reg[2]'
+INFO: [Synth 8-3886] merging instance 'u_ffc84c97/u_d6e7dcb3/u_3472cc66/s_aad085e5_reg[0]' (FDRE) to 'u_ffc84c97/u_d6e7dcb3/u_3472cc66/s_12f943c6_reg[2]'
+INFO: [Synth 8-3886] merging instance 'u_ffc84c97/u_d6e7dcb3/u_3472cc66/s_aad085e5_reg[1]' (FDSE) to 'u_ffc84c97/u_d6e7dcb3/u_3472cc66/s_12f943c6_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_ffc84c97/u_d6e7dcb3/u_3472cc66/s_aad085e5_reg[2]' (FDRE) to 'u_ffc84c97/u_d6e7dcb3/u_3472cc66/s_12f943c6_reg[2]'
+INFO: [Synth 8-3886] merging instance 'u_ffc84c97/u_d6e7dcb3/u_3472cc66/s_12f943c6_reg[0]' (FDSE) to 'u_ffc84c97/u_d6e7dcb3/u_3472cc66/s_12f943c6_reg[1]'
+INFO: [Synth 8-3886] merging instance 'u_ffc84c97/u_d6e7dcb3/u_3472cc66/s_12f943c6_reg[1]' (FDSE) to 'u_ffc84c97/u_d6e7dcb3/u_3472cc66/s_12cea3ca_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_ffc84c97/u_d6e7dcb3/u_3472cc66/s_12f943c6_reg[2]' (FDRE) to 'u_ffc84c97/u_d6e7dcb3/u_3472cc66/s_12f943c6_reg[3]'
+INFO: [Synth 8-3886] merging instance 'u_ffc84c97/u_d6e7dcb3/u_3472cc66/s_12f943c6_reg[3]' (FDRE) to 'u_ffc84c97/u_d6e7dcb3/u_3472cc66/s_12cea3ca_reg[2]'
+INFO: [Synth 8-3886] merging instance 'u_ffc84c97/u_d6e7dcb3/u_3472cc66/s_12cea3ca_reg[0]' (FDSE) to 'u_ffc84c97/u_d6e7dcb3/u_3472cc66/s_12cea3ca_reg[1]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\u_ffc84c97/u_d6e7dcb3 /u_3472cc66/\s_12cea3ca_reg[1] )
+INFO: [Synth 8-3886] merging instance 'u_ffc84c97/u_d6e7dcb3/u_3472cc66/s_12cea3ca_reg[2]' (FDRE) to 'u_ffc84c97/u_d6e7dcb3/u_3472cc66/s_12cea3ca_reg[3]'
+INFO: [Synth 8-3886] merging instance 'u_ffc84c97/u_d6e7dcb3/u_3472cc66/s_12cea3ca_reg[3]' (FDRE) to 'u_ffc84c97/u_d6e7dcb3/u_3472cc66/s_12cea3ca_reg[4]'
+INFO: [Synth 8-3886] merging instance 'u_ffc84c97/u_d6e7dcb3/u_3472cc66/s_12cea3ca_reg[4]' (FDRE) to 'u_ffc84c97/u_d6e7dcb3/u_3472cc66/s_12cea3ca_reg[5]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ffc84c97/u_d6e7dcb3 /u_3472cc66/\s_12cea3ca_reg[5] )
+INFO: [Synth 8-3886] merging instance 'u_a592b6ed/u_f9ace543/s_84dfbf9b_reg[10]' (FDE) to 'u_a592b6ed/u_f9ace543/s_90b625b3_reg[10]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_a592b6ed/u_f9ace543/\s_90b625b3_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ffc84c97/u_d6e7dcb3 /u_8b39744b/\s_37557fa2_reg[18] )
