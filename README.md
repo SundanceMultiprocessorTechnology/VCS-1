@@ -1,8 +1,8 @@
 # VCS-1
 This repository stores the VCS-1 source code and documentation.
-<div style="text-align: right">
-![](https://www.sundance.com/wp-content/uploads/docs/sundance_logo_105.png)
-</div>
+
+<img align="right" src=https://www.sundance.com/wp-content/uploads/docs/sundance_logo_105.png>
+
 # Directory structure
 [See the repository structure](https://github.com/SundanceMultiprocessorTechnology/VCS-1/blob/master/directorySctructure.md)
 
