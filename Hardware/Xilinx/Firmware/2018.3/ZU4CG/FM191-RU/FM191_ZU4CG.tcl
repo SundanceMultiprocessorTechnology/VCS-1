@@ -17,7 +17,7 @@ set_property board_part sundance.com:emc2-dp_te0820_4cg_1ea:part0:1.0 [current_p
 set_property board_connections {fmc_lpc_connector sundance:fm191-ru:fmc_lpc_connector:1.0} [current_project]
 
 #Add repositories at IP Catalog
-set_property  ip_repo_paths  $script_path/../IP_Repo_ZU [current_project]
+set_property  ip_repo_paths  $script_path/../../IP_Repo_ZU [current_project]
 update_ip_catalog
 
 #Set target to VHDL
