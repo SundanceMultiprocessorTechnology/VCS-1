@@ -42,103 +42,8 @@
 │   │   │   │   ├── boot_files_zu4cg.zip
 │   │   │   │   └── README.md
 │   │   │   └── TE820_4EV
-│   │   │       ├── BOOT
-│   │   │       │   ├── BOOT.BIN
-│   │   │       │   └── image.ub
 │   │   │       ├── boot_files_zu4ev.zip
-│   │   │       ├── README.md
-│   │   │       └── rootfs
-│   │   │           └── lib
-│   │   │               └── modules
-│   │   │                   └── 4.14.0-xilinx-v2018.3
-│   │   │                       ├── kernel
-│   │   │                       │   ├── drivers
-│   │   │                       │   │   ├── block
-│   │   │                       │   │   │   └── xen-blkback
-│   │   │                       │   │   │       └── xen-blkback.ko
-│   │   │                       │   │   ├── media
-│   │   │                       │   │   │   └── usb
-│   │   │                       │   │   │       └── gspca
-│   │   │                       │   │   │           └── gspca_main.ko
-│   │   │                       │   │   ├── mtd
-│   │   │                       │   │   │   └── tests
-│   │   │                       │   │   │       ├── mtd_nandbiterrs.ko
-│   │   │                       │   │   │       ├── mtd_nandecctest.ko
-│   │   │                       │   │   │       ├── mtd_oobtest.ko
-│   │   │                       │   │   │       ├── mtd_pagetest.ko
-│   │   │                       │   │   │       ├── mtd_readtest.ko
-│   │   │                       │   │   │       ├── mtd_speedtest.ko
-│   │   │                       │   │   │       ├── mtd_stresstest.ko
-│   │   │                       │   │   │       ├── mtd_subpagetest.ko
-│   │   │                       │   │   │       └── mtd_torturetest.ko
-│   │   │                       │   │   ├── net
-│   │   │                       │   │   │   └── xen-netback
-│   │   │                       │   │   │       └── xen-netback.ko
-│   │   │                       │   │   ├── remoteproc
-│   │   │                       │   │   │   └── zynqmp_r5_remoteproc.ko
-│   │   │                       │   │   ├── rpmsg
-│   │   │                       │   │   │   ├── rpmsg_core.ko
-│   │   │                       │   │   │   └── virtio_rpmsg_bus.ko
-│   │   │                       │   │   ├── scsi
-│   │   │                       │   │   │   └── xen-scsifront.ko
-│   │   │                       │   │   ├── soc
-│   │   │                       │   │   │   └── xilinx
-│   │   │                       │   │   │       ├── xlnx_vcu_clk.ko
-│   │   │                       │   │   │       ├── xlnx_vcu_core.ko
-│   │   │                       │   │   │       └── xlnx_vcu.ko
-│   │   │                       │   │   ├── uio
-│   │   │                       │   │   │   ├── uio_dmem_genirq.ko
-│   │   │                       │   │   │   └── uio_pdrv_genirq.ko
-│   │   │                       │   │   ├── usb
-│   │   │                       │   │   │   └── gadget
-│   │   │                       │   │   │       ├── function
-│   │   │                       │   │   │       │   ├── usb_f_ecm.ko
-│   │   │                       │   │   │       │   ├── usb_f_ecm_subset.ko
-│   │   │                       │   │   │       │   └── usb_f_rndis.ko
-│   │   │                       │   │   │       └── legacy
-│   │   │                       │   │   │           ├── g_ether.ko
-│   │   │                       │   │   │           └── g_mass_storage.ko
-│   │   │                       │   │   ├── video
-│   │   │                       │   │   │   └── backlight
-│   │   │                       │   │   │       └── lcd.ko
-│   │   │                       │   │   ├── watchdog
-│   │   │                       │   │   │   └── xen_wdt.ko
-│   │   │                       │   │   └── xen
-│   │   │                       │   │       ├── xen-gntalloc.ko
-│   │   │                       │   │       └── xen-gntdev.ko
-│   │   │                       │   ├── fs
-│   │   │                       │   │   ├── efivarfs
-│   │   │                       │   │   │   └── efivarfs.ko
-│   │   │                       │   │   └── nfs
-│   │   │                       │   │       └── flexfilelayout
-│   │   │                       │   │           └── nfs_layout_flexfiles.ko
-│   │   │                       │   └── net
-│   │   │                       │       ├── 802
-│   │   │                       │       │   ├── p8022.ko
-│   │   │                       │       │   ├── psnap.ko
-│   │   │                       │       │   └── stp.ko
-│   │   │                       │       ├── bridge
-│   │   │                       │       │   ├── bridge.ko
-│   │   │                       │       │   ├── br_netfilter.ko
-│   │   │                       │       │   └── netfilter
-│   │   │                       │       │       ├── ebtable_filter.ko
-│   │   │                       │       │       ├── ebtable_nat.ko
-│   │   │                       │       │       ├── ebtables.ko
-│   │   │                       │       │       └── ebt_mark.ko
-│   │   │                       │       ├── ipv6
-│   │   │                       │       │   └── netfilter
-│   │   │                       │       │       ├── nf_conntrack_ipv6.ko
-│   │   │                       │       │       ├── nf_defrag_ipv6.ko
-│   │   │                       │       │       └── nf_nat_ipv6.ko
-│   │   │                       │       ├── llc
-│   │   │                       │       │   └── llc.ko
-│   │   │                       │       └── netfilter
-│   │   │                       │           ├── nf_conntrack_netlink.ko
-│   │   │                       │           ├── xt_connmark.ko
-│   │   │                       │           ├── xt_conntrack.ko
-│   │   │                       │           └── xt_state.ko
-│   │   │                       ├── modules.builtin
-│   │   │                       └── modules.order
+│   │   │       └── README.md
 │   │   └── 2019.1
 │   │       ├── TE820_4CG
 │   │       │   ├── boot_files_zu4cg.zip
@@ -2015,5 +1920,5 @@
             ├── FM191.hpp
             └── Makefile
 
-494 directories, 1519 files
+452 directories, 1466 files
 ```
