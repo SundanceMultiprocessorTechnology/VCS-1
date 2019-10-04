@@ -43,7 +43,8 @@
 │   │   │   │   └── README.md
 │   │   │   └── TE820_4EV
 │   │   │       ├── boot_files_zu4ev.zip
-│   │   │       └── README.md
+│   │   │       ├── README.md
+│   │   │       └── zu4ev_boot_files_2018-3.zip
 │   │   └── 2019.1
 │   │       ├── TE820_4CG
 │   │       │   ├── boot_files_zu4cg.zip
@@ -445,6 +446,7 @@
 │       │   │   │   │   │   │       └── synthesis.wdf
 │       │   │   │   │   │   ├── FM191_ZU3EG.hw
 │       │   │   │   │   │   │   └── FM191_ZU3EG.lpr
+│       │   │   │   │   │   ├── FM191_ZU3EG.ip_user_files
 │       │   │   │   │   │   ├── FM191_ZU3EG.runs
 │       │   │   │   │   │   │   ├── design_1_auto_cc_0_synth_1
 │       │   │   │   │   │   │   │   ├── design_1_auto_cc_0.tcl
@@ -1920,5 +1922,5 @@
             ├── FM191.hpp
             └── Makefile
 
-452 directories, 1466 files
+453 directories, 1467 files
 ```
