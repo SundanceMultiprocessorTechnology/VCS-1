@@ -42,9 +42,9 @@
 │   │   │   │   ├── boot_files_zu4cg.zip
 │   │   │   │   └── README.md
 │   │   │   └── TE820_4EV
+│   │   │       ├── boot_files_zu4cg.zip
 │   │   │       ├── boot_files_zu4ev.zip
-│   │   │       ├── README.md
-│   │   │       └── zu4ev_boot_files_2018-3.zip
+│   │   │       └── README.md
 │   │   └── 2019.1
 │   │       ├── TE820_4CG
 │   │       │   ├── boot_files_zu4cg.zip
