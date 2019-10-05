@@ -42,7 +42,6 @@
 │   │   │   │   ├── boot_files_zu4cg.zip
 │   │   │   │   └── README.md
 │   │   │   └── TE820_4EV
-│   │   │       ├── boot_files_zu4cg.zip
 │   │   │       ├── boot_files_zu4ev.zip
 │   │   │       └── README.md
 │   │   └── 2019.1
@@ -1922,5 +1921,5 @@
             ├── FM191.hpp
             └── Makefile
 
-453 directories, 1467 files
+453 directories, 1466 files
 ```
