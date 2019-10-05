@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sat Oct  5 22:04:37 2019
+# Process ID: 25312
+# Current directory: /home/pedro/Development/VCS-1
+# Command line: vivado
+# Log file: /home/pedro/Development/VCS-1/vivado.log
+# Journal file: /home/pedro/Development/VCS-1/vivado.jou
+#-----------------------------------------------------------
+start_gui
+source /home/pedro/Development/Xilinx/Builds/2018.3/ZU4EV_dpu/pl/scripts/trd_prj.tcl
+update_compile_order -fileset sources_1

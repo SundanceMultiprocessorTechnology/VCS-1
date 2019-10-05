@@ -1,0 +1,301 @@
+/*
+
+Xilinx Vivado v2019.1 (64-bit) [Major: 2019, Minor: 1]
+SW Build: 2552052 on Fri May 24 14:47:09 MDT 2019
+IP Build: 2548770 on Fri May 24 18:01:18 MDT 2019
+
+Process ID (PID): 25312
+License: Customer
+
+Current time: 	Sat Oct 05 22:05:44 BST 2019
+Time zone: 	Greenwich Mean Time (Europe/London)
+
+OS: Ubuntu
+OS Version: 4.15.0-64-generic
+OS Architecture: amd64
+Available processors (cores): 4
+
+Display: localhost:11.0
+Screen size: 1920x1080
+Screen resolution (DPI): 100
+Available screens: 2
+Available disk space: 68 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	9.0.4 64-bit
+Java home: 	/home/pedro/Xilinx/Vivado/2019.1/tps/lnx64/jre9.0.4
+Java executable location: 	/home/pedro/Xilinx/Vivado/2019.1/tps/lnx64/jre9.0.4/bin/java
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	pedro
+User home directory: /home/pedro
+User working directory: /home/pedro/Development/VCS-1
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /home/pedro/Xilinx/Vivado
+HDI_APPROOT: /home/pedro/Xilinx/Vivado/2019.1
+RDI_DATADIR: /home/pedro/Xilinx/Vivado/2019.1/data
+RDI_BINDIR: /home/pedro/Xilinx/Vivado/2019.1/bin
+
+Vivado preferences file location: /home/pedro/.Xilinx/Vivado/2019.1/vivado.xml
+Vivado preferences directory: /home/pedro/.Xilinx/Vivado/2019.1/
+Vivado layouts directory: /home/pedro/.Xilinx/Vivado/2019.1/layouts
+PlanAhead jar file location: 	/home/pedro/Xilinx/Vivado/2019.1/lib/classes/planAhead.jar
+Vivado log file location: 	/home/pedro/Development/VCS-1/vivado.log
+Vivado journal file location: 	/home/pedro/Development/VCS-1/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-25312-SUN-Lin01
+
+Xilinx Environment Variables
+----------------------------
+SRC_SDK: /home/pedro/Xilinx/SDK/2019.1/settings64.sh
+SRC_VIVADO: /home/pedro/Xilinx/Vivado/2019.1/settings64.sh
+VIVADO_PROJ_HOME: /home/pedro/Development/Xilinx/Builds/2019.1
+XILINX: /home/pedro/Xilinx/Vivado/2019.1/ids_lite/ISE
+XILINX_DSP: /home/pedro/Xilinx/Vivado/2019.1/ids_lite/ISE
+XILINX_PLANAHEAD: /home/pedro/Xilinx/Vivado/2019.1
+XILINX_SCOUT: /home/pedro/Xilinx/Scout/2019.1
+XILINX_SDK: /home/pedro/Xilinx/SDK/2019.1
+XILINX_SDX: /home/pedro/Xilinx/SDx/2018.3
+XILINX_VER: 2019.1
+XILINX_VIVADO: /home/pedro/Xilinx/Vivado/2019.1
+XILINX_VIVADO_HLS: /home/pedro/Xilinx/Vivado/2019.1
+
+
+GUI allocated memory:	128 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 770 MB
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// HMemoryUtils.trashcanNow. Engine heap size: 775 MB. GUI used memory: 47 MB. Current time: 10/5/19, 10:05:46 PM BST
+// HMemoryUtils.trashcanNow. Engine heap size: 791 MB. GUI used memory: 47 MB. Current time: 10/5/19, 10:07:31 PM BST
+// WARNING: HEventQueue.dispatchEvent() is taking  2048 ms.
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // Z (q, cl)
+selectMenuItem(RDIResourceCommand.RDICommands_RUN_SCRIPT, "Run Tcl Script..."); // ah (cl, Popup.HeavyWeightWindow)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // Z (q, cl)
+// Run Command: RDIResourceCommand.RDICommands_RUN_SCRIPT
+// WARNING: HEventQueue.dispatchEvent() is taking  3562 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1465 ms.
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// Elapsed time: 30 seconds
+setFileChooser("/home/pedro/Development/Xilinx/Builds/2018.3/ZU4EV_dpu/pl/scripts/trd_prj.tcl");
+// Source Tcl File: '/home/pedro/Development/Xilinx/Builds/2018.3/ZU4EV_dpu/pl/scripts/trd_prj.tcl'
+// Tcl Command: 'source /home/pedro/Development/Xilinx/Builds/2018.3/ZU4EV_dpu/pl/scripts/trd_prj.tcl'
+// by (cl):  Source Tcl Script : addNotify
+// WARNING: HEventQueue.dispatchEvent() is taking  1067 ms.
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: source /home/pedro/Development/Xilinx/Builds/2018.3/ZU4EV_dpu/pl/scripts/trd_prj.tcl 
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 883 MB. GUI used memory: 50 MB. Current time: 10/5/19, 10:19:51 PM BST
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 101 MB (+103708kb) [00:14:37]
+// [Engine Memory]: 908 MB (+800868kb) [00:14:37]
+// WARNING: HEventQueue.dispatchEvent() is taking  3909 ms.
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/pedro/Xilinx/Vivado/2019.1/data/ip'. 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// [GUI Memory]: 110 MB (+4222kb) [00:14:41]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: LOAD_FEATURE
+// Tcl Message: create_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 6581.812 ; gain = 132.008 ; free physical = 262 ; free virtual = 12145 
+// Tcl Message: [PRJ] Successfully created project ZU4EV_dpu! [BLK] Creating block design top... 
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: RSB_OPEN_DIAGRAM
+// [Engine Memory]: 968 MB (+14947kb) [00:14:46]
+// TclEventType: FILE_SET_CHANGE
+// WARNING: HEventQueue.dispatchEvent() is taking  2659 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 973 MB. GUI used memory: 55 MB. Current time: 10/5/19, 10:20:07 PM BST
+// Elapsed time: 22 seconds
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJ_DESIGN_MODE_SET
+// TclEventType: PROJECT_CHANGE
+// TclEventType: CREATE_IP_CATALOG
+// Tcl Message: [BLK] Successfully created block design top! [BLK] Loading ip repository... 
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: [BLK] Successfully loaded ip repositories in ./../Xilinx/Builds/2018.3/ZU4EV_dpu/pl/srcs/dpu_ip! [ADD] Adding files... 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: LOAD_FEATURE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// [Engine Memory]: 1,098 MB (+85718kb) [00:14:55]
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change  
+// HMemoryUtils.trashcanNow. Engine heap size: 1,258 MB. GUI used memory: 57 MB. Current time: 10/5/19, 10:20:26 PM BST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,002 MB. GUI used memory: 56 MB. Current time: 10/5/19, 10:21:06 PM BST
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// [Engine Memory]: 2,008 MB (+896377kb) [00:15:58]
+// Tcl Message: create_bd_cell: Time (s): cpu = 00:00:35 ; elapsed = 00:01:02 . Memory (MB): peak = 7658.965 ; gain = 908.648 ; free physical = 661 ; free virtual = 11150 
+// Tcl Message: [BLK] +----------------------------+------------+ [BLK] | PROPERTY                   | VALUE      | [BLK] +----------------------------+------------+ [BLK] | RESET_TYPE                 | ACTIVE_LOW | [BLK] | USE_LOCKED                 | true       | [BLK] | USE_RESET                  | true       | [BLK] | CLK_OUT1_PORT              | clk_dsp    | [BLK] | CLKOUT1_REQUESTED_OUT_FREQ | 666        | [BLK] | CLKOUT2_USED               | true       | [BLK] | CLK_OUT2_PORT              | clk_dpu    | [BLK] | CLKOUT2_REQUESTED_OUT_FREQ | 333        | [BLK] | PRIMITIVE                  | Auto       | [BLK] | CLKOUT1_MATCHED_ROUTING    | true       | [BLK] | CLKOUT2_MATCHED_ROUTING    | true       | 
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: [BLK] +----------------------------+------------+ [BLK] Successfully Created ip hier_dpu/hier_dpu_clk/dpu_clk_wiz! [BLK] +----------+-------+ [BLK] | PROPERTY | VALUE | [BLK] +----------+-------+ [BLK] +----------+-------+ [BLK] Successfully Created ip hier_dpu/hier_dpu_clk/rst_gen_clk! [BLK] +----------+-------+ [BLK] | PROPERTY | VALUE | [BLK] +----------+-------+ [BLK] +----------+-------+ [BLK] Successfully Created ip hier_dpu/hier_dpu_clk/rst_gen_clk_dsp! 
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: [BLK] +----------+-------+ [BLK] | PROPERTY | VALUE | [BLK] +----------+-------+ [BLK] | NUM_SI   | 2     | [BLK] | NUM_MI   | 1     | [BLK] +----------+-------+ [BLK] Successfully Created ip hier_dpu/hier_dpu_ghp/dpu_intc_M_AXI_LPD! [BLK] +---------------------+-------+ [BLK] | PROPERTY            | VALUE | [BLK] +---------------------+-------+ [BLK] | NUM_PORTS           | 6     | [BLK] | IN2_WIDTH.VALUE_SRC | USER  | [BLK] | IN2_WIDTH           | 2     | [BLK] +---------------------+-------+ [BLK] Successfully Created ip hier_dpu/hier_dpu_irq/dpu_concat_irq_inner! 
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: [BLK] +-------------+-------+ [BLK] | PROPERTY    | VALUE | [BLK] +-------------+-------+ [BLK] | CONST_WIDTH | 1     | [BLK] | CONST_VAL   | 0     | [BLK] +-------------+-------+ [BLK] Successfully Created ip hier_dpu/hier_dpu_irq/dpu_const_1b0! 
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_REGENERATE_LAYOUT
+// Tcl Message: [PRJ] Successfully Mapped all axi HP addresses automatically! 
+// TclEventType: RSB_REGENERATE_LAYOUT
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_REGENERATE_LAYOUT
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_REGENERATE_LAYOUT
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_REGENERATE_LAYOUT
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_REGENERATE_LAYOUT
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,058 MB. GUI used memory: 57 MB. Current time: 10/5/19, 10:21:26 PM BST
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: Wrote  : </home/pedro/Development/Xilinx/Builds/2018.3/ZU4EV_dpu/pl/srcs/top/top.bd>  Wrote  : </home/pedro/Development/Xilinx/Builds/2018.3/ZU4EV_dpu/pl/srcs/top/ui/bd_2ae56375.ui>  
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: Wrote  : </home/pedro/Development/Xilinx/Builds/2018.3/ZU4EV_dpu/pl/srcs/top/top.bd>  
+// Tcl Message: VHDL Output written to : /home/pedro/Development/Xilinx/Builds/2018.3/ZU4EV_dpu/pl/srcs/top/synth/top.v 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// [Engine Memory]: 2,134 MB (+26771kb) [00:16:18]
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: VHDL Output written to : /home/pedro/Development/Xilinx/Builds/2018.3/ZU4EV_dpu/pl/srcs/top/sim/top.v VHDL Output written to : /home/pedro/Development/Xilinx/Builds/2018.3/ZU4EV_dpu/pl/srcs/top/hdl/top_wrapper.v 
+// Tcl Message: make_wrapper: Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 7783.594 ; gain = 72.680 ; free physical = 450 ; free virtual = 10977 
+// Tcl Message: [PRJ] Successfully made at ./../Xilinx/Builds/2018.3/ZU4EV_dpu/pl/srcs/top/hdl/top_wrapper.v! [BLK] Upgrading IPs... 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: [BLK] Successfully upgraded all IPs... [FLW] Successfully created prj and bd! 
+// 'cK' command handler elapsed time: 146 seconds
+// Elapsed time: 94 seconds
+dismissDialog("Source Tcl Script"); // by (cl)
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking 737ms to process. Increasing delay to 3000 ms.
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking 796ms to process. Increasing delay to 4000 ms.
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: update_compile_order -fileset sources_1 
