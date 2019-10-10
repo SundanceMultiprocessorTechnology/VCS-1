@@ -488,3 +488,66 @@ WARNING: [Coretcl 2-1042] No IP was identified for upgrade.
 [BLK] Successfully upgraded all IPs...
 [FLW] Successfully created prj and bd!
 update_compile_order -fileset sources_1
+startgroup
+set_property -dict [list CONFIG.VER_DPU_NUM {1} CONFIG.PP {4} CONFIG.CP {12} CONFIG.ARCH {1152} CONFIG.CONV_DSP_NUM {192} CONFIG.DWCV_DSP_NUM {18} CONFIG.DSP_NUM {232} CONFIG.BANK_IMG_N {8} CONFIG.BANK_WGT_N {13} CONFIG.BBANK_IMG_N {8} CONFIG.BBANK_WGT_N {13} CONFIG.BRAM_N {127.5} CONFIG.IRQ_SUM {9}] [get_bd_cells hier_dpu/dpu]
+delete_bd_objs [get_bd_intf_nets hier_dpu/dpu_DPU1_M_AXI_DATA0] [get_bd_intf_nets hier_dpu/dpu_DPU1_M_AXI_DATA1] [get_bd_intf_nets hier_dpu/dpu_DPU1_M_AXI_INSTR]
+endgroup
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/hier_dpu/hier_dpu_clk/dpu_clk_wiz/clk_dpu (332 MHz)} Clk_slave {/hier_dpu/hier_dpu_clk/dpu_clk_wiz/clk_dpu (332 MHz)} Clk_xbar {/hier_dpu/hier_dpu_clk/dpu_clk_wiz/clk_dpu (332 MHz)} Master {/hier_dpu/dpu/DPU0_M_AXI_INSTR} Slave {/hier_dpu/hier_dpu_ghp/DPU1_M_AXI_DATA0} intc_ip {/hier_dpu/hier_dpu_ghp/dpu_intc_M_AXI_LPD} master_apm {0}}  [get_bd_intf_pins hier_dpu/hier_dpu_ghp/DPU1_M_AXI_DATA0]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/hier_dpu/hier_dpu_clk/dpu_clk_wiz/clk_dpu (332 MHz)} Clk_slave {/hier_dpu/hier_dpu_clk/dpu_clk_wiz/clk_dpu (332 MHz)} Clk_xbar {/hier_dpu/hier_dpu_clk/dpu_clk_wiz/clk_dpu (332 MHz)} Master {/hier_dpu/dpu/DPU0_M_AXI_INSTR} Slave {/hier_dpu/hier_dpu_ghp/DPU1_M_AXI_DATA1} intc_ip {/hier_dpu/hier_dpu_ghp/dpu_intc_M_AXI_LPD} master_apm {0}}  [get_bd_intf_pins hier_dpu/hier_dpu_ghp/DPU1_M_AXI_DATA1]
+endgroup
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/hier_dpu/hier_dpu_clk/dpu_clk_wiz/clk_dpu (332 MHz)} Clk_slave {/hier_dpu/hier_dpu_clk/dpu_clk_wiz/clk_dpu (332 MHz)} Clk_xbar {/hier_dpu/hier_dpu_clk/dpu_clk_wiz/clk_dpu (332 MHz)} Master {/hier_dpu/dpu/DPU0_M_AXI_INSTR} Slave {/hier_dpu/hier_dpu_ghp/DPU1_M_AXI_DATA0} intc_ip {/hier_dpu/hier_dpu_ghp/dpu_intc_M_AXI_LPD} master_apm {0}}  [get_bd_intf_pins hier_dpu/hier_dpu_ghp/DPU1_M_AXI_DATA0]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/hier_dpu/hier_dpu_clk/dpu_clk_wiz/clk_dpu (332 MHz)} Clk_slave {/hier_dpu/hier_dpu_clk/dpu_clk_wiz/clk_dpu (332 MHz)} Clk_xbar {/hier_dpu/hier_dpu_clk/dpu_clk_wiz/clk_dpu (332 MHz)} Master {/hier_dpu/dpu/DPU0_M_AXI_INSTR} Slave {/hier_dpu/hier_dpu_ghp/DPU1_M_AXI_DATA1} intc_ip {/hier_dpu/hier_dpu_ghp/dpu_intc_M_AXI_LPD} master_apm {0}}  [get_bd_intf_pins hier_dpu/hier_dpu_ghp/DPU1_M_AXI_DATA1]
+endgroup
+make_wrapper -files [get_files /home/pedro/Development/Xilinx/Builds/2018.3/ZU4EV_dpu/pl/srcs/top/top.bd] -top
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter In2_width(2) on '/hier_dpu/hier_dpu_irq/dpu_concat_irq_inner' with propagated value(1). Command ignored
+Wrote  : </home/pedro/Development/Xilinx/Builds/2018.3/ZU4EV_dpu/pl/srcs/top/top.bd> 
+Wrote  : </home/pedro/Development/Xilinx/Builds/2018.3/ZU4EV_dpu/pl/srcs/top/ui/bd_2ae56375.ui> 
+Wrote  : </home/pedro/Development/Xilinx/Builds/2018.3/ZU4EV_dpu/pl/srcs/top/ui/bd_1b698f8d.ui> 
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/hier_dpu/hier_dpu_ghp/dpu_intc_M_AXI_LPD/xbar/s_axi_awid'(3) to net 's00_couplers_to_xbar_AWID'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/hier_dpu/hier_dpu_ghp/dpu_intc_M_AXI_LPD/xbar/s_axi_arid'(3) to net 's00_couplers_to_xbar_ARID'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/hier_dpu/hier_dpu_ghp/dpu_intc_M_AXI_LPD/xbar/m_axi_bid'(3) to net 'xbar_to_m00_couplers_BID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/hier_dpu/hier_dpu_ghp/dpu_intc_M_AXI_LPD/xbar/m_axi_rid'(3) to net 'xbar_to_m00_couplers_RID'(6) - Only lower order bits will be connected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/hier_dpu/hier_dpu_irq/dpu_concat_irq_inner/In2'(2) to net 'In2_1'(1) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/hier_dpu/dpu/dpu0_m_axi_instr_bid'(6) to net 'dpu_DPU0_M_AXI_INSTR_BID'(3) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/hier_dpu/dpu/dpu0_m_axi_instr_rid'(6) to net 'dpu_DPU0_M_AXI_INSTR_RID'(3) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp0_awid'(6) to net 'hier_dpu_M_AXI_HPC0_FPD_AWID'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp0_arid'(6) to net 'hier_dpu_M_AXI_HPC0_FPD_ARID'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp2_awid'(6) to net 'hier_dpu_M_AXI_HP0_FPD_AWID'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp2_arid'(6) to net 'hier_dpu_M_AXI_HP0_FPD_ARID'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp3_awid'(6) to net 'hier_dpu_M_AXI_HP1_FPD_AWID'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp3_arid'(6) to net 'hier_dpu_M_AXI_HP1_FPD_ARID'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp4_awid'(6) to net 'hier_dpu_M_AXI_HP2_FPD_AWID'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp4_arid'(6) to net 'hier_dpu_M_AXI_HP2_FPD_ARID'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp5_awid'(6) to net 'hier_dpu_M_AXI_HP3_FPD_AWID'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp5_arid'(6) to net 'hier_dpu_M_AXI_HP3_FPD_ARID'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp6_awid'(6) to net 'hier_dpu_M_AXI_LPD_AWID'(3) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp6_arid'(6) to net 'hier_dpu_M_AXI_LPD_ARID'(3) - Only lower order bits will be connected.
+VHDL Output written to : /home/pedro/Development/Xilinx/Builds/2018.3/ZU4EV_dpu/pl/srcs/top/synth/top.v
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/hier_dpu/hier_dpu_ghp/dpu_intc_M_AXI_LPD/xbar/s_axi_awid'(3) to net 's00_couplers_to_xbar_AWID'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/hier_dpu/hier_dpu_ghp/dpu_intc_M_AXI_LPD/xbar/s_axi_arid'(3) to net 's00_couplers_to_xbar_ARID'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/hier_dpu/hier_dpu_ghp/dpu_intc_M_AXI_LPD/xbar/m_axi_bid'(3) to net 'xbar_to_m00_couplers_BID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/hier_dpu/hier_dpu_ghp/dpu_intc_M_AXI_LPD/xbar/m_axi_rid'(3) to net 'xbar_to_m00_couplers_RID'(6) - Only lower order bits will be connected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/hier_dpu/hier_dpu_irq/dpu_concat_irq_inner/In2'(2) to net 'In2_1'(1) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/hier_dpu/dpu/dpu0_m_axi_instr_bid'(6) to net 'dpu_DPU0_M_AXI_INSTR_BID'(3) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/hier_dpu/dpu/dpu0_m_axi_instr_rid'(6) to net 'dpu_DPU0_M_AXI_INSTR_RID'(3) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp0_awid'(6) to net 'hier_dpu_M_AXI_HPC0_FPD_AWID'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp0_arid'(6) to net 'hier_dpu_M_AXI_HPC0_FPD_ARID'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp2_awid'(6) to net 'hier_dpu_M_AXI_HP0_FPD_AWID'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp2_arid'(6) to net 'hier_dpu_M_AXI_HP0_FPD_ARID'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp3_awid'(6) to net 'hier_dpu_M_AXI_HP1_FPD_AWID'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp3_arid'(6) to net 'hier_dpu_M_AXI_HP1_FPD_ARID'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp4_awid'(6) to net 'hier_dpu_M_AXI_HP2_FPD_AWID'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp4_arid'(6) to net 'hier_dpu_M_AXI_HP2_FPD_ARID'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp5_awid'(6) to net 'hier_dpu_M_AXI_HP3_FPD_AWID'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp5_arid'(6) to net 'hier_dpu_M_AXI_HP3_FPD_ARID'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp6_awid'(6) to net 'hier_dpu_M_AXI_LPD_AWID'(3) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp6_arid'(6) to net 'hier_dpu_M_AXI_LPD_ARID'(3) - Only lower order bits will be connected.
+VHDL Output written to : /home/pedro/Development/Xilinx/Builds/2018.3/ZU4EV_dpu/pl/srcs/top/sim/top.v
+VHDL Output written to : /home/pedro/Development/Xilinx/Builds/2018.3/ZU4EV_dpu/pl/srcs/top/hdl/top_wrapper.v
+Wrote  : </home/pedro/Development/Xilinx/Builds/2018.3/ZU4EV_dpu/pl/srcs/top/ui/bd_2ae56375.ui> 
+Wrote  : </home/pedro/Development/Xilinx/Builds/2018.3/ZU4EV_dpu/pl/srcs/top/ui/bd_1b698f8d.ui> 
+make_wrapper: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 7929.379 ; gain = 0.000 ; free physical = 166 ; free virtual = 10898
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat Oct  5 22:26:58 2019...

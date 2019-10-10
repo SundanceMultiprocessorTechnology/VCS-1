@@ -1929,8 +1929,7 @@
 ├── vivado_9215.backup.jou
 ├── vivado_9215.backup.log
 ├── vivado.jou
-├── vivado.log
-└── vivado_pid25312.str
+└── vivado.log
 
-453 directories, 1477 files
+453 directories, 1476 files
 ```

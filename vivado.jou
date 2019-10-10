@@ -12,3 +12,16 @@
 start_gui
 source /home/pedro/Development/Xilinx/Builds/2018.3/ZU4EV_dpu/pl/scripts/trd_prj.tcl
 update_compile_order -fileset sources_1
+startgroup
+set_property -dict [list CONFIG.VER_DPU_NUM {1} CONFIG.PP {4} CONFIG.CP {12} CONFIG.ARCH {1152} CONFIG.CONV_DSP_NUM {192} CONFIG.DWCV_DSP_NUM {18} CONFIG.DSP_NUM {232} CONFIG.BANK_IMG_N {8} CONFIG.BANK_WGT_N {13} CONFIG.BBANK_IMG_N {8} CONFIG.BBANK_WGT_N {13} CONFIG.BRAM_N {127.5} CONFIG.IRQ_SUM {9}] [get_bd_cells hier_dpu/dpu]
+delete_bd_objs [get_bd_intf_nets hier_dpu/dpu_DPU1_M_AXI_DATA0] [get_bd_intf_nets hier_dpu/dpu_DPU1_M_AXI_DATA1] [get_bd_intf_nets hier_dpu/dpu_DPU1_M_AXI_INSTR]
+endgroup
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/hier_dpu/hier_dpu_clk/dpu_clk_wiz/clk_dpu (332 MHz)} Clk_slave {/hier_dpu/hier_dpu_clk/dpu_clk_wiz/clk_dpu (332 MHz)} Clk_xbar {/hier_dpu/hier_dpu_clk/dpu_clk_wiz/clk_dpu (332 MHz)} Master {/hier_dpu/dpu/DPU0_M_AXI_INSTR} Slave {/hier_dpu/hier_dpu_ghp/DPU1_M_AXI_DATA0} intc_ip {/hier_dpu/hier_dpu_ghp/dpu_intc_M_AXI_LPD} master_apm {0}}  [get_bd_intf_pins hier_dpu/hier_dpu_ghp/DPU1_M_AXI_DATA0]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/hier_dpu/hier_dpu_clk/dpu_clk_wiz/clk_dpu (332 MHz)} Clk_slave {/hier_dpu/hier_dpu_clk/dpu_clk_wiz/clk_dpu (332 MHz)} Clk_xbar {/hier_dpu/hier_dpu_clk/dpu_clk_wiz/clk_dpu (332 MHz)} Master {/hier_dpu/dpu/DPU0_M_AXI_INSTR} Slave {/hier_dpu/hier_dpu_ghp/DPU1_M_AXI_DATA1} intc_ip {/hier_dpu/hier_dpu_ghp/dpu_intc_M_AXI_LPD} master_apm {0}}  [get_bd_intf_pins hier_dpu/hier_dpu_ghp/DPU1_M_AXI_DATA1]
+endgroup
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/hier_dpu/hier_dpu_clk/dpu_clk_wiz/clk_dpu (332 MHz)} Clk_slave {/hier_dpu/hier_dpu_clk/dpu_clk_wiz/clk_dpu (332 MHz)} Clk_xbar {/hier_dpu/hier_dpu_clk/dpu_clk_wiz/clk_dpu (332 MHz)} Master {/hier_dpu/dpu/DPU0_M_AXI_INSTR} Slave {/hier_dpu/hier_dpu_ghp/DPU1_M_AXI_DATA0} intc_ip {/hier_dpu/hier_dpu_ghp/dpu_intc_M_AXI_LPD} master_apm {0}}  [get_bd_intf_pins hier_dpu/hier_dpu_ghp/DPU1_M_AXI_DATA0]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/hier_dpu/hier_dpu_clk/dpu_clk_wiz/clk_dpu (332 MHz)} Clk_slave {/hier_dpu/hier_dpu_clk/dpu_clk_wiz/clk_dpu (332 MHz)} Clk_xbar {/hier_dpu/hier_dpu_clk/dpu_clk_wiz/clk_dpu (332 MHz)} Master {/hier_dpu/dpu/DPU0_M_AXI_INSTR} Slave {/hier_dpu/hier_dpu_ghp/DPU1_M_AXI_DATA1} intc_ip {/hier_dpu/hier_dpu_ghp/dpu_intc_M_AXI_LPD} master_apm {0}}  [get_bd_intf_pins hier_dpu/hier_dpu_ghp/DPU1_M_AXI_DATA1]
+endgroup
+make_wrapper -files [get_files /home/pedro/Development/Xilinx/Builds/2018.3/ZU4EV_dpu/pl/srcs/top/top.bd] -top
