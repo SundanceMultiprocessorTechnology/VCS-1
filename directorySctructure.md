@@ -39,17 +39,17 @@
 │   │   │       └── image.ub
 │   │   ├── 2018.3
 │   │   │   ├── TE820_4CG
-│   │   │   │   ├── boot_files_zu4cg.zip
+│   │   │   │   ├── boot_files_ZU4CG.zip
 │   │   │   │   └── README.md
 │   │   │   └── TE820_4EV
-│   │   │       ├── boot_files_zu4ev.zip
+│   │   │       ├── boot_files_ZU4EV.zip
 │   │   │       └── README.md
 │   │   └── 2019.1
 │   │       ├── TE820_4CG
-│   │       │   ├── boot_files_zu4cg.zip
+│   │       │   ├── boot_files_ZU4CG.zip
 │   │       │   └── README.md
 │   │       └── TE820_4EV
-│   │           ├── boot_files_zu4ev.zip
+│   │           ├── boot_files_ZU4EV.zip
 │   │           └── README.md
 │   └── Xilinx
 │       ├── BoardFiles
@@ -1929,7 +1929,8 @@
 ├── vivado_9215.backup.jou
 ├── vivado_9215.backup.log
 ├── vivado.jou
-└── vivado.log
+├── vivado.log
+└── vivado_pid25312.str
 
-453 directories, 1476 files
+453 directories, 1477 files
 ```
