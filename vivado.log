@@ -2,552 +2,174 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Sat Oct  5 22:04:37 2019
-# Process ID: 25312
+# Start of session at: Sat Oct 12 12:47:26 2019
+# Process ID: 32013
 # Current directory: /home/pedro/Development/VCS-1
 # Command line: vivado
 # Log file: /home/pedro/Development/VCS-1/vivado.log
 # Journal file: /home/pedro/Development/VCS-1/vivado.jou
 #-----------------------------------------------------------
 start_gui
-source /home/pedro/Development/Xilinx/Builds/2018.3/ZU4EV_dpu/pl/scripts/trd_prj.tcl
-# set dict_prj  {}
-# dict set dict_prj dict_sys prj_name                 {ZU4EV_dpu}
-# dict set dict_prj dict_sys prj_part                 {xczu4ev-sfvc784-1-e}
-# dict set dict_prj dict_sys prj_board                {sundance.com:emc2-dp_te0820_4ev_1e:part0:2.0}
-# dict set dict_prj dict_sys bd_name                  top
-# dict set dict_prj dict_sys bd_ooc                   None
-# dict set dict_prj dict_param  REG_CLK_MHz           {100}
-# dict set dict_prj dict_param  HP_CLK_MHz            {334}
-# dict set dict_prj dict_param  DPU_CLK_MHz           {333}
-# dict set dict_prj dict_param  DPU_IP_FOLDER         {dpu}
-# dict set dict_prj dict_param  DPU_NUM               {2}
-# dict set dict_prj dict_param  DPU_ARCH              {4096}
-# dict set dict_prj dict_param  DPU_SFM_ENA           {1}
-# dict set dict_prj dict_param  DPU_SAXICLK_INDPD     {1}
-# dict set dict_prj dict_param  DPU_CONV_DSP_CASC_MAX {4}
-# dict set dict_prj dict_param  DPU_CONV_DSP_ACCU_ENA {1}
-# dict set dict_prj dict_param  DPU_URAM_N_USER       {0}
-# dict set dict_prj dict_param  DPU_TIMESTAMP_ENA     {1}
-# dict set dict_prj dict_sys work_dir                 [file dirname [file normalize [info script]]]
-# dict set dict_prj dict_sys tcl_base_dir             [dict get $dict_prj dict_sys work_dir]/base
-# source -notrace                                     [dict get $dict_prj dict_sys tcl_base_dir]/trd_bd.tcl
-# lib_flow
-[ENV] +-----------------------+--------------------------------------------------------+
-[ENV] | NAME                  | VALUE                                                  |
-[ENV] +-----------------------+--------------------------------------------------------+
-[ENV] | ver_vivado            | 2019.1                                                 |
-[ENV] | ver_date              | 2019.10.5                                              |
-[ENV] | ver_bit               | 1                                                      |
-[ENV] +-----------------------+--------------------------------------------------------+
-[ENV] | pwd_dir               | /home/pedro/Development/VCS-1                          |
-[ENV] | prj_name              | ZU4EV_dpu                                              |
-[ENV] | prj_part              | xczu4ev-sfvc784-1-e                                    |
-[ENV] +-----------------------+--------------------------------------------------------+
-[ENV] | bd_ooc                | None                                                   |
-[ENV] | bd_path               | ./../Xilinx/Builds/2018.3/ZU4EV_dpu/pl/srcs/top/top.bd |
-[ENV] | ip_ps_base            | ./../Xilinx/Builds/2018.3/ZU4EV_dpu/pl/scripts/base    |
-[ENV] +-----------------------+--------------------------------------------------------+
-[ENV] | REG_CLK_MHz           | 100                                                    |
-[ENV] | HP_CLK_MHz            | 334                                                    |
-[ENV] | DPU_CLK_MHz           | 333                                                    |
-[ENV] | DPU_IP_FOLDER         | dpu                                                    |
-[ENV] | DPU_NUM               | 2                                                      |
-[ENV] | DPU_ARCH              | 4096                                                   |
-[ENV] | DPU_SFM_ENA           | 1                                                      |
-[ENV] | DPU_SAXICLK_INDPD     | 1                                                      |
-[ENV] | DPU_CONV_DSP_CASC_MAX | 4                                                      |
-[ENV] | DPU_CONV_DSP_ACCU_ENA | 1                                                      |
-[ENV] | DPU_URAM_N_USER       | 0                                                      |
-[ENV] | DPU_TIMESTAMP_ENA     | 1                                                      |
-[ENV] | DPU_HP_CC_EN          | 0                                                      |
-[ENV] | DPU_HP_DATA_BW        | 128                                                    |
-[ENV] | PIN_CLK_REG           | zynq_ultra_ps_e/pl_clk0                                |
-[ENV] +-----------------------+--------------------------------------------------------+
-[PRJ] The old project has been deleted!
-[PRJ] Creating project ZU4EV_dpu...
+open_project /home/pedro/Development/Xilinx/Builds/2019.1/ZU4EV/FM191_ZU4EV/FM191_ZU4EV.xpr
+Scanning sources...
+Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/pedro/Development/Xilinx/Builds/2019.1/IP_Repo_ZU'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/pedro/Xilinx/Vivado/2019.1/data/ip'.
-create_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 6581.812 ; gain = 132.008 ; free physical = 262 ; free virtual = 12145
-[PRJ] Successfully created project ZU4EV_dpu!
-[BLK] Creating block design top...
-[BLK] Successfully created block design top!
-[BLK] Loading ip repository...
-[BLK] Successfully loaded ip repositories in ./../Xilinx/Builds/2018.3/ZU4EV_dpu/pl/srcs/dpu_ip!
-[ADD] Adding files...
-[ADD] +-----------------------------------------------------------+
-[ADD] | constrs_1                                                 |
-[ADD] +-----------------------------------------------------------+
-[ADD] | ./../Xilinx/Builds/2018.3/ZU4EV_dpu/pl/constrs/pin.xdc    |
-[ADD] | ./../Xilinx/Builds/2018.3/ZU4EV_dpu/pl/constrs/misc.xdc   |
-[ADD] | ./../Xilinx/Builds/2018.3/ZU4EV_dpu/pl/constrs/timing.xdc |
-[ADD] | ./../Xilinx/Builds/2018.3/ZU4EV_dpu/pl/constrs/debug.xdc  |
-[ADD] +-----------------------------------------------------------+
-[ADD] Successfully added all files into constrs_1 fileset!
-[BLK] Creating hierarchies...
-[BLK] Created hierarchy hier_dpu!
-[BLK] Created hierarchy hier_dpu/hier_dpu_clk!
-[BLK] Created hierarchy hier_dpu/hier_dpu_ghp!
-[BLK] Created hierarchy hier_dpu/hier_dpu_irq!
-[BLK] Successfully created all hierarchies!
-[BLK] Creating ips...
-[BLK] Loaded base tcl ./../Xilinx/Builds/2018.3/ZU4EV_dpu/pl/scripts/base
-[BLK] +-----------------------------------------+---------+
-[BLK] | PROPERTY                                | VALUE   |
-[BLK] +-----------------------------------------+---------+
-[BLK] | PSU__FPGA_PL0_ENABLE                    | 1       |
-[BLK] | PSU__CRL_APB__PL0_REF_CTRL__SRCSEL      | IOPLL   |
-[BLK] | PSU__CRL_APB__PL0_REF_CTRL__FREQMHZ     | 100     |
-[BLK] | PSU__FPGA_PL1_ENABLE                    | 1       |
-[BLK] | PSU__CRL_APB__PL1_REF_CTRL__SRCSEL      | RPLL    |
-[BLK] | PSU__CRL_APB__PL1_REF_CTRL__FREQMHZ     | 334     |
-[BLK] | PSU__FPGA_PL2_ENABLE                    | 0       |
-[BLK] | PSU__FPGA_PL3_ENABLE                    | 0       |
-[BLK] | PSU__USE__FABRIC__RST                   | 1       |
-[BLK] | PSU__NUM_FABRIC_RESETS                  | 1       |
-[BLK] | PSU__USE__M_AXI_GP2                     | 1       |
-[BLK] | PSU__MAXIGP2__DATA_WIDTH                | 32      |
-[BLK] | PSU__USE__S_AXI_GP2                     | 1       |
-[BLK] | PSU__SAXIGP2__DATA_WIDTH                | 128     |
-[BLK] | PSU__USE__S_AXI_GP3                     | 1       |
-[BLK] | PSU__SAXIGP3__DATA_WIDTH                | 128     |
-[BLK] | PSU__USE__S_AXI_GP4                     | 1       |
-[BLK] | PSU__SAXIGP4__DATA_WIDTH                | 128     |
-[BLK] | PSU__USE__S_AXI_GP5                     | 1       |
-[BLK] | PSU__SAXIGP5__DATA_WIDTH                | 128     |
-[BLK] | PSU__USE__S_AXI_GP0                     | 1       |
-[BLK] | PSU__SAXIGP0__DATA_WIDTH                | 128     |
-[BLK] | PSU__USE__S_AXI_GP6                     | 1       |
-[BLK] | PSU__SAXIGP6__DATA_WIDTH                | 32      |
-INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
-[BLK] +-----------------------------------------+---------+
-[BLK] | PSU__CRL_APB__PL0_REF_CTRL__ACT_FREQMHZ | 99.999985 |
-[BLK] | PSU__CRL_APB__PL1_REF_CTRL__ACT_FREQMHZ | 333.333282 |
-[BLK] | PSU__CRL_APB__PL2_REF_CTRL__ACT_FREQMHZ | 100     |
-[BLK] | PSU__CRL_APB__PL3_REF_CTRL__ACT_FREQMHZ | 100     |
-[BLK] +-----------------------------------------+---------+
-[BLK] Successfully Created ip zynq_ultra_ps_e!
-[BLK] +-----------------------+-------+
-[BLK] | PROPERTY              | VALUE |
-[BLK] +-----------------------+-------+
-[BLK] | VER_DPU_NUM           | 2     |
-[BLK] | ARCH                  | 4096  |
-[BLK] | SFM_ENA               | 1     |
-[BLK] | S_AXI_CLK_INDEPENDENT | 1     |
-[BLK] | CONV_DSP_CASC_MAX     | 4     |
-[BLK] | CONV_DSP_ACCU_ENA     | 1     |
-[BLK] | URAM_N_USER           | 0     |
-[BLK] | TIMESTAMP_ENA         | 1     |
-[BLK] +-----------------------+-------+
-[BLK] Successfully Created ip hier_dpu/dpu!
-create_bd_cell: Time (s): cpu = 00:00:35 ; elapsed = 00:01:02 . Memory (MB): peak = 7658.965 ; gain = 908.648 ; free physical = 661 ; free virtual = 11150
-[BLK] +----------------------------+------------+
-[BLK] | PROPERTY                   | VALUE      |
-[BLK] +----------------------------+------------+
-[BLK] | RESET_TYPE                 | ACTIVE_LOW |
-[BLK] | USE_LOCKED                 | true       |
-[BLK] | USE_RESET                  | true       |
-[BLK] | CLK_OUT1_PORT              | clk_dsp    |
-[BLK] | CLKOUT1_REQUESTED_OUT_FREQ | 666        |
-[BLK] | CLKOUT2_USED               | true       |
-[BLK] | CLK_OUT2_PORT              | clk_dpu    |
-[BLK] | CLKOUT2_REQUESTED_OUT_FREQ | 333        |
-[BLK] | PRIMITIVE                  | Auto       |
-[BLK] | CLKOUT1_MATCHED_ROUTING    | true       |
-[BLK] | CLKOUT2_MATCHED_ROUTING    | true       |
-[BLK] +----------------------------+------------+
-[BLK] Successfully Created ip hier_dpu/hier_dpu_clk/dpu_clk_wiz!
-[BLK] +----------+-------+
-[BLK] | PROPERTY | VALUE |
-[BLK] +----------+-------+
-[BLK] +----------+-------+
-[BLK] Successfully Created ip hier_dpu/hier_dpu_clk/rst_gen_clk!
-[BLK] +----------+-------+
-[BLK] | PROPERTY | VALUE |
-[BLK] +----------+-------+
-[BLK] +----------+-------+
-[BLK] Successfully Created ip hier_dpu/hier_dpu_clk/rst_gen_clk_dsp!
-[BLK] +----------+-------+
-[BLK] | PROPERTY | VALUE |
-[BLK] +----------+-------+
-[BLK] | NUM_SI   | 2     |
-[BLK] | NUM_MI   | 1     |
-[BLK] +----------+-------+
-[BLK] Successfully Created ip hier_dpu/hier_dpu_ghp/dpu_intc_M_AXI_LPD!
-[BLK] +---------------------+-------+
-[BLK] | PROPERTY            | VALUE |
-[BLK] +---------------------+-------+
-[BLK] | NUM_PORTS           | 6     |
-[BLK] | IN2_WIDTH.VALUE_SRC | USER  |
-[BLK] | IN2_WIDTH           | 2     |
-[BLK] +---------------------+-------+
-[BLK] Successfully Created ip hier_dpu/hier_dpu_irq/dpu_concat_irq_inner!
-[BLK] +-------------+-------+
-[BLK] | PROPERTY    | VALUE |
-[BLK] +-------------+-------+
-[BLK] | CONST_WIDTH | 1     |
-[BLK] | CONST_VAL   | 0     |
-[BLK] +-------------+-------+
-[BLK] Successfully Created ip hier_dpu/hier_dpu_irq/dpu_const_1b0!
-[BLK] +-----------+-------+
-[BLK] | PROPERTY  | VALUE |
-[BLK] +-----------+-------+
-[BLK] | NUM_PORTS | 1     |
-[BLK] +-----------+-------+
-[BLK] Successfully Created ip dpu_concat_irq!
-[BLK] +----------+-------+
-[BLK] | PROPERTY | VALUE |
-[BLK] +----------+-------+
-[BLK] +----------+-------+
-[BLK] Successfully Created ip rst_gen_reg!
-[BLK] Successfully Created all ips!
-[PIN] Creating pins...
-[PIN] +----------+----------------------------------------+
-[PIN] | CLASS    | PATH                                   |
-[PIN] +----------+----------------------------------------+
-[PIN] | INTF_PIN | hier_dpu/S_AXI                         |
-[PIN] | PIN      | hier_dpu/S_AXI_CLK                     |
-[PIN] | PIN      | hier_dpu/S_AXI_RSTn                    |
-[PIN] | PIN      | hier_dpu/hier_dpu_clk/CLK              |
-[PIN] | PIN      | hier_dpu/hier_dpu_clk/RSTn             |
-[PIN] | PIN      | hier_dpu/hier_dpu_clk/DSP_CLK          |
-[PIN] | PIN      | hier_dpu/hier_dpu_clk/RSTn_DSP         |
-[PIN] | PIN      | hier_dpu/hier_dpu_clk/DPU_CLK          |
-[PIN] | PIN      | hier_dpu/hier_dpu_clk/LOCKED           |
-[PIN] | PIN      | hier_dpu/hier_dpu_clk/RSTn_INTC        |
-[PIN] | PIN      | hier_dpu/hier_dpu_clk/RSTn_PERI        |
-[PIN] | INTF_PIN | hier_dpu/hier_dpu_ghp/DPU0_M_AXI_DATA0 |
-[PIN] | INTF_PIN | hier_dpu/hier_dpu_ghp/DPU0_M_AXI_DATA1 |
-[PIN] | INTF_PIN | hier_dpu/hier_dpu_ghp/DPU0_M_AXI_INSTR |
-[PIN] | INTF_PIN | hier_dpu/hier_dpu_ghp/DPU1_M_AXI_DATA0 |
-[PIN] | INTF_PIN | hier_dpu/hier_dpu_ghp/DPU1_M_AXI_DATA1 |
-[PIN] | INTF_PIN | hier_dpu/hier_dpu_ghp/DPU1_M_AXI_INSTR |
-[PIN] | INTF_PIN | hier_dpu/hier_dpu_ghp/SFM_M_AXI        |
-[PIN] | PIN      | hier_dpu/hier_dpu_ghp/CLK              |
-[PIN] | PIN      | hier_dpu/hier_dpu_ghp/RSTn_INTC        |
-[PIN] | PIN      | hier_dpu/hier_dpu_ghp/RSTn_PERI        |
-[PIN] | PIN      | hier_dpu/hier_dpu_ghp/GHP_CLK_I        |
-[PIN] | PIN      | hier_dpu/hier_dpu_ghp/GHP_RSTn         |
-[PIN] | PIN      | hier_dpu/hier_dpu_ghp/GHP_CLK_O        |
-[PIN] | INTF_PIN | hier_dpu/hier_dpu_ghp/M_AXI_HPC0_FPD   |
-[PIN] | INTF_PIN | hier_dpu/hier_dpu_ghp/M_AXI_HP0_FPD    |
-[PIN] | INTF_PIN | hier_dpu/hier_dpu_ghp/M_AXI_HP1_FPD    |
-[PIN] | INTF_PIN | hier_dpu/hier_dpu_ghp/M_AXI_HP2_FPD    |
-[PIN] | INTF_PIN | hier_dpu/hier_dpu_ghp/M_AXI_HP3_FPD    |
-[PIN] | INTF_PIN | hier_dpu/hier_dpu_ghp/M_AXI_LPD        |
-[PIN] | PIN      | hier_dpu/hier_dpu_irq/INTR             |
-[PIN] +----------+----------------------------------------+
-[PIN] Successfully Created all pins!
-[PIN] Connecting nets for cn_dpu...
-[PIN] +--------------------------------+---------------------------------+
-[PIN] | DST_INTF_PIN                   | SRC_INTF_PIN                    |
-[PIN] +--------------------------------+---------------------------------+
-[PIN] | hier_dpu/dpu/S_AXI             | hier_dpu/S_AXI                  |
-[PIN] +--------------------------------+---------------------------------+
-[PIN] +--------------------------------+---------------------------------+
-[PIN] | DST_PIN                        | SRC_PIN                         |
-[PIN] +--------------------------------+---------------------------------+
-[PIN] | hier_dpu/dpu/s_axi_aclk        | hier_dpu/S_AXI_CLK              |
-[PIN] | hier_dpu/dpu/s_axi_aresetn     | hier_dpu/S_AXI_RSTn             |
-[PIN] | hier_dpu/dpu/dpu_2x_clk        | hier_dpu/hier_dpu_clk/DSP_CLK   |
-[PIN] | hier_dpu/dpu/m_axi_dpu_aclk    | hier_dpu/hier_dpu_clk/DPU_CLK   |
-[PIN] | hier_dpu/dpu/dpu_2x_resetn     | hier_dpu/hier_dpu_clk/RSTn_DSP  |
-[PIN] | hier_dpu/dpu/m_axi_dpu_aresetn | hier_dpu/hier_dpu_clk/RSTn_PERI |
-[PIN] +--------------------------------+---------------------------------+
-[PIN] Successfully connected all nets for cn_dpu!
-[PIN] Connecting nets for cn_pd_clk_in...
-[PIN] +-------------------------------------------+----------------------------+
-[PIN] | DST_PIN                                   | SRC_PIN                    |
-[PIN] +-------------------------------------------+----------------------------+
-[PIN] | hier_dpu/hier_dpu_clk/dpu_clk_wiz/clk_in1 | hier_dpu/hier_dpu_clk/CLK  |
-[PIN] | hier_dpu/hier_dpu_clk/dpu_clk_wiz/resetn  | hier_dpu/hier_dpu_clk/RSTn |
-[PIN] +-------------------------------------------+----------------------------+
-[PIN] Successfully connected all nets for cn_pd_clk_in!
-[PIN] Connecting nets for cn_pd_clk_res...
-[PIN] +---------------------------------+----------------------------------------------------------+
-[PIN] | DST_PIN                         | SRC_PIN                                                  |
-[PIN] +---------------------------------+----------------------------------------------------------+
-[PIN] | hier_dpu/hier_dpu_clk/DSP_CLK   | hier_dpu/hier_dpu_clk/dpu_clk_wiz/clk_dsp                |
-[PIN] | hier_dpu/hier_dpu_clk/DPU_CLK   | hier_dpu/hier_dpu_clk/dpu_clk_wiz/clk_dpu                |
-[PIN] | hier_dpu/hier_dpu_clk/LOCKED    | hier_dpu/hier_dpu_clk/dpu_clk_wiz/locked                 |
-[PIN] | hier_dpu/hier_dpu_clk/RSTn_DSP  | hier_dpu/hier_dpu_clk/rst_gen_clk_dsp/peripheral_aresetn |
-[PIN] | hier_dpu/hier_dpu_clk/RSTn_INTC | hier_dpu/hier_dpu_clk/rst_gen_clk/interconnect_aresetn   |
-[PIN] | hier_dpu/hier_dpu_clk/RSTn_PERI | hier_dpu/hier_dpu_clk/rst_gen_clk/peripheral_aresetn     |
-[PIN] +---------------------------------+----------------------------------------------------------+
-[PIN] Successfully connected all nets for cn_pd_clk_res!
-[PIN] Connecting nets for cn_pd_clk_rst...
-[PIN] +--------------------------------------------------------+-------------------------------------------+
-[PIN] | DST_PIN                                                | SRC_PIN                                   |
-[PIN] +--------------------------------------------------------+-------------------------------------------+
-[PIN] | hier_dpu/hier_dpu_clk/rst_gen_clk/slowest_sync_clk     | hier_dpu/hier_dpu_clk/dpu_clk_wiz/clk_dpu |
-[PIN] | hier_dpu/hier_dpu_clk/rst_gen_clk/ext_reset_in         | hier_dpu/hier_dpu_clk/RSTn                |
-[PIN] | hier_dpu/hier_dpu_clk/rst_gen_clk/dcm_locked           | hier_dpu/hier_dpu_clk/dpu_clk_wiz/locked  |
-[PIN] | hier_dpu/hier_dpu_clk/rst_gen_clk_dsp/slowest_sync_clk | hier_dpu/hier_dpu_clk/dpu_clk_wiz/clk_dsp |
-[PIN] | hier_dpu/hier_dpu_clk/rst_gen_clk_dsp/ext_reset_in     | hier_dpu/hier_dpu_clk/RSTn                |
-[PIN] | hier_dpu/hier_dpu_clk/rst_gen_clk_dsp/dcm_locked       | hier_dpu/hier_dpu_clk/dpu_clk_wiz/locked  |
-[PIN] +--------------------------------------------------------+-------------------------------------------+
-[PIN] Successfully connected all nets for cn_pd_clk_rst!
-[PIN] Connecting nets for cn_dpu_ghp_in...
-[PIN] +----------------------------------------+---------------------------------+
-[PIN] | DST_INTF_PIN                           | SRC_INTF_PIN                    |
-[PIN] +----------------------------------------+---------------------------------+
-[PIN] | hier_dpu/hier_dpu_ghp/DPU0_M_AXI_INSTR | hier_dpu/dpu/DPU0_M_AXI_INSTR   |
-[PIN] | hier_dpu/hier_dpu_ghp/DPU1_M_AXI_INSTR | hier_dpu/dpu/DPU1_M_AXI_INSTR   |
-[PIN] | hier_dpu/hier_dpu_ghp/DPU0_M_AXI_DATA0 | hier_dpu/dpu/DPU0_M_AXI_DATA0   |
-[PIN] | hier_dpu/hier_dpu_ghp/DPU0_M_AXI_DATA1 | hier_dpu/dpu/DPU0_M_AXI_DATA1   |
-[PIN] | hier_dpu/hier_dpu_ghp/DPU1_M_AXI_DATA0 | hier_dpu/dpu/DPU1_M_AXI_DATA0   |
-[PIN] | hier_dpu/hier_dpu_ghp/DPU1_M_AXI_DATA1 | hier_dpu/dpu/DPU1_M_AXI_DATA1   |
-[PIN] | hier_dpu/hier_dpu_ghp/SFM_M_AXI        | hier_dpu/dpu/SFM_M_AXI          |
-[PIN] +----------------------------------------+---------------------------------+
-[PIN] +----------------------------------------+---------------------------------+
-[PIN] | DST_PIN                                | SRC_PIN                         |
-[PIN] +----------------------------------------+---------------------------------+
-[PIN] | hier_dpu/hier_dpu_ghp/CLK              | hier_dpu/hier_dpu_clk/DPU_CLK   |
-[PIN] | hier_dpu/hier_dpu_ghp/RSTn_INTC        | hier_dpu/hier_dpu_clk/RSTn_INTC |
-[PIN] | hier_dpu/hier_dpu_ghp/RSTn_PERI        | hier_dpu/hier_dpu_clk/RSTn_PERI |
-[PIN] | hier_dpu/hier_dpu_ghp/GHP_CLK_I        | hier_dpu/hier_dpu_clk/DPU_CLK   |
-[PIN] | hier_dpu/hier_dpu_ghp/GHP_RSTn         | hier_dpu/hier_dpu_clk/RSTn_PERI |
-[PIN] | hier_dpu/hier_dpu_ghp/GHP_CLK_O        | hier_dpu/hier_dpu_ghp/GHP_CLK_I |
-[PIN] +----------------------------------------+---------------------------------+
-[PIN] Successfully connected all nets for cn_dpu_ghp_in!
-[PIN] Connecting nets for cn_dpu_ghp_intc...
-[PIN] +------------------------------------------------------+----------------------------------------+
-[PIN] | DST_PIN                                              | SRC_PIN                                |
-[PIN] +------------------------------------------------------+----------------------------------------+
-[PIN] | hier_dpu/hier_dpu_ghp/dpu_intc_M_AXI_LPD/ACLK        | hier_dpu/hier_dpu_ghp/CLK              |
-[PIN] | hier_dpu/hier_dpu_ghp/dpu_intc_M_AXI_LPD/ARESETN     | hier_dpu/hier_dpu_ghp/RSTn_INTC        |
-[PIN] | hier_dpu/hier_dpu_ghp/dpu_intc_M_AXI_LPD/S00_ACLK    | hier_dpu/hier_dpu_ghp/CLK              |
-[PIN] | hier_dpu/hier_dpu_ghp/dpu_intc_M_AXI_LPD/S00_ARESETN | hier_dpu/hier_dpu_ghp/RSTn_PERI        |
-[PIN] | hier_dpu/hier_dpu_ghp/dpu_intc_M_AXI_LPD/S01_ACLK    | hier_dpu/hier_dpu_ghp/CLK              |
-[PIN] | hier_dpu/hier_dpu_ghp/dpu_intc_M_AXI_LPD/S01_ARESETN | hier_dpu/hier_dpu_ghp/RSTn_PERI        |
-[PIN] | hier_dpu/hier_dpu_ghp/dpu_intc_M_AXI_LPD/M00_ACLK    | hier_dpu/hier_dpu_ghp/GHP_CLK_I        |
-[PIN] | hier_dpu/hier_dpu_ghp/dpu_intc_M_AXI_LPD/M00_ARESETN | hier_dpu/hier_dpu_ghp/GHP_RSTn         |
-[PIN] +------------------------------------------------------+----------------------------------------+
-[PIN] +------------------------------------------------------+----------------------------------------+
-[PIN] | DST_INTF_PIN                                         | SRC_INTF_PIN                           |
-[PIN] +------------------------------------------------------+----------------------------------------+
-[PIN] | hier_dpu/hier_dpu_ghp/dpu_intc_M_AXI_LPD/S00_AXI     | hier_dpu/hier_dpu_ghp/DPU0_M_AXI_INSTR |
-[PIN] | hier_dpu/hier_dpu_ghp/dpu_intc_M_AXI_LPD/S01_AXI     | hier_dpu/hier_dpu_ghp/DPU1_M_AXI_INSTR |
-[PIN] | hier_dpu/hier_dpu_ghp/dpu_intc_M_AXI_LPD/M00_AXI     | hier_dpu/hier_dpu_ghp/M_AXI_LPD        |
-[PIN] | hier_dpu/hier_dpu_ghp/M_AXI_HP0_FPD                  | hier_dpu/hier_dpu_ghp/DPU0_M_AXI_DATA0 |
-[PIN] | hier_dpu/hier_dpu_ghp/M_AXI_HP1_FPD                  | hier_dpu/hier_dpu_ghp/DPU0_M_AXI_DATA1 |
-[PIN] | hier_dpu/hier_dpu_ghp/M_AXI_HP2_FPD                  | hier_dpu/hier_dpu_ghp/DPU1_M_AXI_DATA0 |
-[PIN] | hier_dpu/hier_dpu_ghp/M_AXI_HP3_FPD                  | hier_dpu/hier_dpu_ghp/DPU1_M_AXI_DATA1 |
-[PIN] | hier_dpu/hier_dpu_ghp/M_AXI_HPC0_FPD                 | hier_dpu/hier_dpu_ghp/SFM_M_AXI        |
-[PIN] +------------------------------------------------------+----------------------------------------+
-[PIN] Successfully connected all nets for cn_dpu_ghp_intc!
-[PIN] Connecting nets for cn_dpu_ghp_ps...
-[PIN] +-----------------------------------+--------------------------------------+
-[PIN] | DST_INTF_PIN                      | SRC_INTF_PIN                         |
-[PIN] +-----------------------------------+--------------------------------------+
-[PIN] | zynq_ultra_ps_e/S_AXI_HPC0_FPD    | hier_dpu/hier_dpu_ghp/M_AXI_HPC0_FPD |
-[PIN] | zynq_ultra_ps_e/S_AXI_HP0_FPD     | hier_dpu/hier_dpu_ghp/M_AXI_HP0_FPD  |
-[PIN] | zynq_ultra_ps_e/S_AXI_HP1_FPD     | hier_dpu/hier_dpu_ghp/M_AXI_HP1_FPD  |
-[PIN] | zynq_ultra_ps_e/S_AXI_HP2_FPD     | hier_dpu/hier_dpu_ghp/M_AXI_HP2_FPD  |
-[PIN] | zynq_ultra_ps_e/S_AXI_HP3_FPD     | hier_dpu/hier_dpu_ghp/M_AXI_HP3_FPD  |
-[PIN] | zynq_ultra_ps_e/S_AXI_LPD         | hier_dpu/hier_dpu_ghp/M_AXI_LPD      |
-[PIN] +-----------------------------------+--------------------------------------+
-[PIN] +-----------------------------------+--------------------------------------+
-[PIN] | DST_PIN                           | SRC_PIN                              |
-[PIN] +-----------------------------------+--------------------------------------+
-[PIN] | zynq_ultra_ps_e/saxihpc0_fpd_aclk | hier_dpu/hier_dpu_ghp/GHP_CLK_O      |
-[PIN] | zynq_ultra_ps_e/saxihp0_fpd_aclk  | hier_dpu/hier_dpu_ghp/GHP_CLK_O      |
-[PIN] | zynq_ultra_ps_e/saxihp1_fpd_aclk  | hier_dpu/hier_dpu_ghp/GHP_CLK_O      |
-[PIN] | zynq_ultra_ps_e/saxihp2_fpd_aclk  | hier_dpu/hier_dpu_ghp/GHP_CLK_O      |
-[PIN] | zynq_ultra_ps_e/saxihp3_fpd_aclk  | hier_dpu/hier_dpu_ghp/GHP_CLK_O      |
-[PIN] | zynq_ultra_ps_e/saxi_lpd_aclk     | hier_dpu/hier_dpu_ghp/GHP_CLK_O      |
-[PIN] +-----------------------------------+--------------------------------------+
-[PIN] Successfully connected all nets for cn_dpu_ghp_ps!
-[PIN] Connecting nets for cn_dpu_irq...
-[PIN] +------------------------------------------------+------------------------------------------+
-[PIN] | DST_PIN                                        | SRC_PIN                                  |
-[PIN] +------------------------------------------------+------------------------------------------+
-[PIN] | hier_dpu/hier_dpu_irq/dpu_concat_irq_inner/In0 | hier_dpu/hier_dpu_irq/dpu_const_1b0/dout |
-[PIN] | hier_dpu/hier_dpu_irq/dpu_concat_irq_inner/In1 | hier_dpu/hier_dpu_irq/dpu_const_1b0/dout |
-[PIN] | hier_dpu/hier_dpu_irq/dpu_concat_irq_inner/In2 | hier_dpu/dpu/dpu_interrupt               |
-[PIN] | hier_dpu/hier_dpu_irq/dpu_concat_irq_inner/In3 | hier_dpu/hier_dpu_irq/dpu_const_1b0/dout |
-[PIN] | hier_dpu/hier_dpu_irq/dpu_concat_irq_inner/In4 | hier_dpu/hier_dpu_irq/dpu_const_1b0/dout |
-[PIN] | hier_dpu/hier_dpu_irq/dpu_concat_irq_inner/In5 | hier_dpu/dpu/sfm_interrupt               |
-[PIN] +------------------------------------------------+------------------------------------------+
-[PIN] Successfully connected all nets for cn_dpu_irq!
-[PIN] Connecting nets for cp_dpu_irq...
-[PIN] +----------------------------+-------------------------------------------------+
-[PIN] | DST_PIN                    | SRC_PIN                                         |
-[PIN] +----------------------------+-------------------------------------------------+
-[PIN] | hier_dpu/hier_dpu_irq/INTR | hier_dpu/hier_dpu_irq/dpu_concat_irq_inner/dout |
-[PIN] | dpu_concat_irq/In0         | hier_dpu/hier_dpu_irq/INTR                      |
-[PIN] | zynq_ultra_ps_e/pl_ps_irq1 | dpu_concat_irq/dout                             |
-[PIN] +----------------------------+-------------------------------------------------+
-[PIN] Successfully connected all nets for cp_dpu_irq!
-[PIN] Connecting nets for ps...
-[PIN] +-----------------------------------+-------------------------+
-[PIN] | DST_PIN                           | SRC_PIN                 |
-[PIN] +-----------------------------------+-------------------------+
-[PIN] | zynq_ultra_ps_e/maxihpm0_lpd_aclk | zynq_ultra_ps_e/pl_clk0 |
-[PIN] +-----------------------------------+-------------------------+
-[PIN] Successfully connected all nets for ps!
-[PIN] Connecting nets for cn_rst_reg...
-[PIN] +------------------------------+----------------------------+
-[PIN] | DST_PIN                      | SRC_PIN                    |
-[PIN] +------------------------------+----------------------------+
-[PIN] | rst_gen_reg/slowest_sync_clk | zynq_ultra_ps_e/pl_clk0    |
-[PIN] | rst_gen_reg/ext_reset_in     | zynq_ultra_ps_e/pl_resetn0 |
-[PIN] +------------------------------+----------------------------+
-[PIN] Successfully connected all nets for cn_rst_reg!
-[PIN] Connecting nets for cn_h_dpu_clk...
-[PIN] +----------------------------+--------------------------------+
-[PIN] | DST_PIN                    | SRC_PIN                        |
-[PIN] +----------------------------+--------------------------------+
-[PIN] | hier_dpu/hier_dpu_clk/CLK  | zynq_ultra_ps_e/pl_clk0        |
-[PIN] | hier_dpu/hier_dpu_clk/RSTn | rst_gen_reg/peripheral_aresetn |
-[PIN] +----------------------------+--------------------------------+
-[PIN] Successfully connected all nets for cn_h_dpu_clk!
-[PIN] Connecting nets for cn_h_dpu...
-[PIN] +---------------------+--------------------------------+
-[PIN] | DST_INTF_PIN        | SRC_INTF_PIN                   |
-[PIN] +---------------------+--------------------------------+
-[PIN] | hier_dpu/S_AXI      | zynq_ultra_ps_e/M_AXI_HPM0_LPD |
-[PIN] +---------------------+--------------------------------+
-[PIN] +---------------------+--------------------------------+
-[PIN] | DST_PIN             | SRC_PIN                        |
-[PIN] +---------------------+--------------------------------+
-[PIN] | hier_dpu/S_AXI_CLK  | zynq_ultra_ps_e/pl_clk0        |
-[PIN] | hier_dpu/S_AXI_RSTn | rst_gen_reg/peripheral_aresetn |
-[PIN] +---------------------+--------------------------------+
-[PIN] Successfully connected all nets for cn_h_dpu!
-[PIN] Successfully connected all nets for the project!
-[PRJ] Mapping axi REG address...
-[PRJ] Mapped axi reg address hier_dpu/dpu/S_AXI/reg0 at < 0x8f000000 [16M] >
-[PRJ] Successfully Mapped all axi REG addresses!
-[PRJ] Mapping axi HP address...
-[PRJ] Successfully Mapped all axi HP addresses automatically!
-Wrote  : </home/pedro/Development/Xilinx/Builds/2018.3/ZU4EV_dpu/pl/srcs/top/top.bd> 
-Wrote  : </home/pedro/Development/Xilinx/Builds/2018.3/ZU4EV_dpu/pl/srcs/top/ui/bd_2ae56375.ui> 
-WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter In2_width(2) on '/hier_dpu/hier_dpu_irq/dpu_concat_irq_inner' with propagated value(1). Command ignored
-INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
-INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
-INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
-INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
-INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
-INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
-INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
-INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
-Wrote  : </home/pedro/Development/Xilinx/Builds/2018.3/ZU4EV_dpu/pl/srcs/top/top.bd> 
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/hier_dpu/hier_dpu_ghp/dpu_intc_M_AXI_LPD/xbar/s_axi_awid'(3) to net 's00_couplers_to_xbar_AWID'(2) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/hier_dpu/hier_dpu_ghp/dpu_intc_M_AXI_LPD/xbar/s_axi_arid'(3) to net 's00_couplers_to_xbar_ARID'(2) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/hier_dpu/hier_dpu_ghp/dpu_intc_M_AXI_LPD/xbar/s_axi_awid'(3) to net 's01_couplers_to_xbar_AWID'(2) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/hier_dpu/hier_dpu_ghp/dpu_intc_M_AXI_LPD/xbar/s_axi_arid'(3) to net 's01_couplers_to_xbar_ARID'(2) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/hier_dpu/hier_dpu_ghp/dpu_intc_M_AXI_LPD/xbar/m_axi_bid'(3) to net 'xbar_to_m00_couplers_BID'(6) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/hier_dpu/hier_dpu_ghp/dpu_intc_M_AXI_LPD/xbar/m_axi_rid'(3) to net 'xbar_to_m00_couplers_RID'(6) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/hier_dpu/dpu/dpu0_m_axi_instr_bid'(6) to net 'dpu_DPU0_M_AXI_INSTR_BID'(3) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/hier_dpu/dpu/dpu0_m_axi_instr_rid'(6) to net 'dpu_DPU0_M_AXI_INSTR_RID'(3) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/hier_dpu/dpu/dpu1_m_axi_instr_bid'(6) to net 'dpu_DPU1_M_AXI_INSTR_BID'(3) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/hier_dpu/dpu/dpu1_m_axi_instr_rid'(6) to net 'dpu_DPU1_M_AXI_INSTR_RID'(3) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp0_awid'(6) to net 'hier_dpu_M_AXI_HPC0_FPD_AWID'(2) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp0_arid'(6) to net 'hier_dpu_M_AXI_HPC0_FPD_ARID'(2) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp2_awid'(6) to net 'hier_dpu_M_AXI_HP0_FPD_AWID'(2) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp2_arid'(6) to net 'hier_dpu_M_AXI_HP0_FPD_ARID'(2) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp3_awid'(6) to net 'hier_dpu_M_AXI_HP1_FPD_AWID'(2) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp3_arid'(6) to net 'hier_dpu_M_AXI_HP1_FPD_ARID'(2) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp4_awid'(6) to net 'hier_dpu_M_AXI_HP2_FPD_AWID'(2) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp4_arid'(6) to net 'hier_dpu_M_AXI_HP2_FPD_ARID'(2) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp5_awid'(6) to net 'hier_dpu_M_AXI_HP3_FPD_AWID'(2) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp5_arid'(6) to net 'hier_dpu_M_AXI_HP3_FPD_ARID'(2) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp6_awid'(6) to net 'hier_dpu_M_AXI_LPD_AWID'(3) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp6_arid'(6) to net 'hier_dpu_M_AXI_LPD_ARID'(3) - Only lower order bits will be connected.
-VHDL Output written to : /home/pedro/Development/Xilinx/Builds/2018.3/ZU4EV_dpu/pl/srcs/top/synth/top.v
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/hier_dpu/hier_dpu_ghp/dpu_intc_M_AXI_LPD/xbar/s_axi_awid'(3) to net 's00_couplers_to_xbar_AWID'(2) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/hier_dpu/hier_dpu_ghp/dpu_intc_M_AXI_LPD/xbar/s_axi_arid'(3) to net 's00_couplers_to_xbar_ARID'(2) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/hier_dpu/hier_dpu_ghp/dpu_intc_M_AXI_LPD/xbar/s_axi_awid'(3) to net 's01_couplers_to_xbar_AWID'(2) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/hier_dpu/hier_dpu_ghp/dpu_intc_M_AXI_LPD/xbar/s_axi_arid'(3) to net 's01_couplers_to_xbar_ARID'(2) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/hier_dpu/hier_dpu_ghp/dpu_intc_M_AXI_LPD/xbar/m_axi_bid'(3) to net 'xbar_to_m00_couplers_BID'(6) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/hier_dpu/hier_dpu_ghp/dpu_intc_M_AXI_LPD/xbar/m_axi_rid'(3) to net 'xbar_to_m00_couplers_RID'(6) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/hier_dpu/dpu/dpu0_m_axi_instr_bid'(6) to net 'dpu_DPU0_M_AXI_INSTR_BID'(3) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/hier_dpu/dpu/dpu0_m_axi_instr_rid'(6) to net 'dpu_DPU0_M_AXI_INSTR_RID'(3) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/hier_dpu/dpu/dpu1_m_axi_instr_bid'(6) to net 'dpu_DPU1_M_AXI_INSTR_BID'(3) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/hier_dpu/dpu/dpu1_m_axi_instr_rid'(6) to net 'dpu_DPU1_M_AXI_INSTR_RID'(3) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp0_awid'(6) to net 'hier_dpu_M_AXI_HPC0_FPD_AWID'(2) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp0_arid'(6) to net 'hier_dpu_M_AXI_HPC0_FPD_ARID'(2) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp2_awid'(6) to net 'hier_dpu_M_AXI_HP0_FPD_AWID'(2) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp2_arid'(6) to net 'hier_dpu_M_AXI_HP0_FPD_ARID'(2) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp3_awid'(6) to net 'hier_dpu_M_AXI_HP1_FPD_AWID'(2) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp3_arid'(6) to net 'hier_dpu_M_AXI_HP1_FPD_ARID'(2) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp4_awid'(6) to net 'hier_dpu_M_AXI_HP2_FPD_AWID'(2) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp4_arid'(6) to net 'hier_dpu_M_AXI_HP2_FPD_ARID'(2) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp5_awid'(6) to net 'hier_dpu_M_AXI_HP3_FPD_AWID'(2) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp5_arid'(6) to net 'hier_dpu_M_AXI_HP3_FPD_ARID'(2) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp6_awid'(6) to net 'hier_dpu_M_AXI_LPD_AWID'(3) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp6_arid'(6) to net 'hier_dpu_M_AXI_LPD_ARID'(3) - Only lower order bits will be connected.
-VHDL Output written to : /home/pedro/Development/Xilinx/Builds/2018.3/ZU4EV_dpu/pl/srcs/top/sim/top.v
-VHDL Output written to : /home/pedro/Development/Xilinx/Builds/2018.3/ZU4EV_dpu/pl/srcs/top/hdl/top_wrapper.v
-make_wrapper: Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 7783.594 ; gain = 72.680 ; free physical = 450 ; free virtual = 10977
-[PRJ] Successfully made at ./../Xilinx/Builds/2018.3/ZU4EV_dpu/pl/srcs/top/hdl/top_wrapper.v!
-[BLK] Upgrading IPs...
-WARNING: [Coretcl 2-1042] No IP was identified for upgrade.
-[BLK] Successfully upgraded all IPs...
-[FLW] Successfully created prj and bd!
+open_project: Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 6633.441 ; gain = 260.703 ; free physical = 581 ; free virtual = 14303
+open_bd_design {/home/pedro/Development/Xilinx/Builds/2019.1/ZU4EV/FM191_ZU4EV/FM191_ZU4EV.srcs/sources_1/bd/design_1/design_1.bd}
+Adding component instance block -- xilinx.com:ip:zynq_ultra_ps_e:3.3 - zynq_ultra_ps_e_0
+WARNING: [BD 41-176] The physical port 'M_AXI_HPM0_FPD_aximm_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'M_AXI_HPM0_FPD_aximm_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'M_AXI_HPM0_LPD_aximm_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'M_AXI_HPM0_LPD_aximm_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_HP0_FPD_aximm_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_HP0_FPD_aximm_rd_socket' specified in the portmap, is not found on the block! 
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - Ethernet_LEDs
+Adding component instance block -- sundance.com:user:SPI_US_Buffering:1.0 - SPI_US_Buffering
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - IOs
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - M_LEDs
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - C_LEDs
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - ADC_UART_RQs
+Adding component instance block -- xilinx.com:ip:axi_uartlite:2.0 - ADC_UART_1
+Adding component instance block -- xilinx.com:ip:axi_uartlite:2.0 - ADC_UART_2
+Adding component instance block -- xilinx.com:ip:axi_uartlite:2.0 - ADC_UART_3
+Adding component instance block -- xilinx.com:ip:axi_iic:2.0 - FMC_I2C
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps8_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_ds
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:axi_clock_converter:2.1 - auto_cc
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps8_0_99M
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - PLPS_INT
+Adding component instance block -- xilinx.com:ip:v_tpg:8.0 - v_tpg_0
+Adding component instance block -- xilinx.com:ip:v_axi4s_vid_out:4.0 - v_axi4s_vid_out_0
+Adding component instance block -- trenz.biz:user:video_io_to_hdmi:1.0 - video_io_to_hdmi_0
+Adding component instance block -- xilinx.com:ip:v_tc:6.1 - v_tc_0
+Adding component instance block -- trenz.biz:user:axis_fb_conv:1.0 - axis_fb_conv_0
+Adding component instance block -- xilinx.com:ip:axi_vdma:6.3 - axi_vdma_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_interconnect_mem
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps8_0_75M
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - GND
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - VCC
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - PLPS_INT_HDMI
+Successfully read diagram <design_1> from BD file </home/pedro/Development/Xilinx/Builds/2019.1/ZU4EV/FM191_ZU4EV/FM191_ZU4EV.srcs/sources_1/bd/design_1/design_1.bd>
+open_bd_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 6758.887 ; gain = 50.441 ; free physical = 372 ; free virtual = 13774
 update_compile_order -fileset sources_1
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
 startgroup
-set_property -dict [list CONFIG.VER_DPU_NUM {1} CONFIG.PP {4} CONFIG.CP {12} CONFIG.ARCH {1152} CONFIG.CONV_DSP_NUM {192} CONFIG.DWCV_DSP_NUM {18} CONFIG.DSP_NUM {232} CONFIG.BANK_IMG_N {8} CONFIG.BANK_WGT_N {13} CONFIG.BBANK_IMG_N {8} CONFIG.BBANK_WGT_N {13} CONFIG.BRAM_N {127.5} CONFIG.IRQ_SUM {9}] [get_bd_cells hier_dpu/dpu]
-delete_bd_objs [get_bd_intf_nets hier_dpu/dpu_DPU1_M_AXI_DATA0] [get_bd_intf_nets hier_dpu/dpu_DPU1_M_AXI_DATA1] [get_bd_intf_nets hier_dpu/dpu_DPU1_M_AXI_INSTR]
+set_property -dict [list CONFIG.PSU_MIO_13_INPUT_TYPE {schmitt} CONFIG.PSU_MIO_13_SLEW {slow} CONFIG.PSU_MIO_14_INPUT_TYPE {schmitt} CONFIG.PSU_MIO_14_SLEW {slow} CONFIG.PSU_MIO_15_INPUT_TYPE {schmitt} CONFIG.PSU_MIO_15_SLEW {slow} CONFIG.PSU_MIO_16_INPUT_TYPE {schmitt} CONFIG.PSU_MIO_16_SLEW {slow} CONFIG.PSU_MIO_17_INPUT_TYPE {schmitt} CONFIG.PSU_MIO_17_SLEW {slow} CONFIG.PSU_MIO_18_INPUT_TYPE {schmitt} CONFIG.PSU_MIO_18_SLEW {slow} CONFIG.PSU_MIO_19_INPUT_TYPE {schmitt} CONFIG.PSU_MIO_19_SLEW {slow} CONFIG.PSU_MIO_20_INPUT_TYPE {schmitt} CONFIG.PSU_MIO_20_SLEW {slow} CONFIG.PSU_MIO_21_INPUT_TYPE {schmitt} CONFIG.PSU_MIO_21_SLEW {slow} CONFIG.PSU_MIO_22_SLEW {slow} CONFIG.PSU_MIO_23_SLEW {slow} CONFIG.PSU_MIO_46_INPUT_TYPE {schmitt} CONFIG.PSU_MIO_46_SLEW {slow} CONFIG.PSU_MIO_47_INPUT_TYPE {schmitt} CONFIG.PSU_MIO_47_SLEW {slow} CONFIG.PSU_MIO_48_INPUT_TYPE {schmitt} CONFIG.PSU_MIO_48_SLEW {slow} CONFIG.PSU_MIO_49_INPUT_TYPE {schmitt} CONFIG.PSU_MIO_49_SLEW {slow} CONFIG.PSU_MIO_50_INPUT_TYPE {schmitt} CONFIG.PSU_MIO_50_SLEW {slow} CONFIG.PSU_MIO_51_SLEW {slow}] [get_bd_cells zynq_ultra_ps_e_0]
+WARNING: [BD 41-176] The physical port 'M_AXI_HPM0_FPD_aximm_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'M_AXI_HPM0_FPD_aximm_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'M_AXI_HPM0_LPD_aximm_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'M_AXI_HPM0_LPD_aximm_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_HP0_FPD_aximm_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_HP0_FPD_aximm_rd_socket' specified in the portmap, is not found on the block! 
 endgroup
-startgroup
-apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/hier_dpu/hier_dpu_clk/dpu_clk_wiz/clk_dpu (332 MHz)} Clk_slave {/hier_dpu/hier_dpu_clk/dpu_clk_wiz/clk_dpu (332 MHz)} Clk_xbar {/hier_dpu/hier_dpu_clk/dpu_clk_wiz/clk_dpu (332 MHz)} Master {/hier_dpu/dpu/DPU0_M_AXI_INSTR} Slave {/hier_dpu/hier_dpu_ghp/DPU1_M_AXI_DATA0} intc_ip {/hier_dpu/hier_dpu_ghp/dpu_intc_M_AXI_LPD} master_apm {0}}  [get_bd_intf_pins hier_dpu/hier_dpu_ghp/DPU1_M_AXI_DATA0]
-apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/hier_dpu/hier_dpu_clk/dpu_clk_wiz/clk_dpu (332 MHz)} Clk_slave {/hier_dpu/hier_dpu_clk/dpu_clk_wiz/clk_dpu (332 MHz)} Clk_xbar {/hier_dpu/hier_dpu_clk/dpu_clk_wiz/clk_dpu (332 MHz)} Master {/hier_dpu/dpu/DPU0_M_AXI_INSTR} Slave {/hier_dpu/hier_dpu_ghp/DPU1_M_AXI_DATA1} intc_ip {/hier_dpu/hier_dpu_ghp/dpu_intc_M_AXI_LPD} master_apm {0}}  [get_bd_intf_pins hier_dpu/hier_dpu_ghp/DPU1_M_AXI_DATA1]
-endgroup
-startgroup
-apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/hier_dpu/hier_dpu_clk/dpu_clk_wiz/clk_dpu (332 MHz)} Clk_slave {/hier_dpu/hier_dpu_clk/dpu_clk_wiz/clk_dpu (332 MHz)} Clk_xbar {/hier_dpu/hier_dpu_clk/dpu_clk_wiz/clk_dpu (332 MHz)} Master {/hier_dpu/dpu/DPU0_M_AXI_INSTR} Slave {/hier_dpu/hier_dpu_ghp/DPU1_M_AXI_DATA0} intc_ip {/hier_dpu/hier_dpu_ghp/dpu_intc_M_AXI_LPD} master_apm {0}}  [get_bd_intf_pins hier_dpu/hier_dpu_ghp/DPU1_M_AXI_DATA0]
-apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/hier_dpu/hier_dpu_clk/dpu_clk_wiz/clk_dpu (332 MHz)} Clk_slave {/hier_dpu/hier_dpu_clk/dpu_clk_wiz/clk_dpu (332 MHz)} Clk_xbar {/hier_dpu/hier_dpu_clk/dpu_clk_wiz/clk_dpu (332 MHz)} Master {/hier_dpu/dpu/DPU0_M_AXI_INSTR} Slave {/hier_dpu/hier_dpu_ghp/DPU1_M_AXI_DATA1} intc_ip {/hier_dpu/hier_dpu_ghp/dpu_intc_M_AXI_LPD} master_apm {0}}  [get_bd_intf_pins hier_dpu/hier_dpu_ghp/DPU1_M_AXI_DATA1]
-endgroup
-make_wrapper -files [get_files /home/pedro/Development/Xilinx/Builds/2018.3/ZU4EV_dpu/pl/srcs/top/top.bd] -top
-WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter In2_width(2) on '/hier_dpu/hier_dpu_irq/dpu_concat_irq_inner' with propagated value(1). Command ignored
-Wrote  : </home/pedro/Development/Xilinx/Builds/2018.3/ZU4EV_dpu/pl/srcs/top/top.bd> 
-Wrote  : </home/pedro/Development/Xilinx/Builds/2018.3/ZU4EV_dpu/pl/srcs/top/ui/bd_2ae56375.ui> 
-Wrote  : </home/pedro/Development/Xilinx/Builds/2018.3/ZU4EV_dpu/pl/srcs/top/ui/bd_1b698f8d.ui> 
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/hier_dpu/hier_dpu_ghp/dpu_intc_M_AXI_LPD/xbar/s_axi_awid'(3) to net 's00_couplers_to_xbar_AWID'(2) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/hier_dpu/hier_dpu_ghp/dpu_intc_M_AXI_LPD/xbar/s_axi_arid'(3) to net 's00_couplers_to_xbar_ARID'(2) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/hier_dpu/hier_dpu_ghp/dpu_intc_M_AXI_LPD/xbar/m_axi_bid'(3) to net 'xbar_to_m00_couplers_BID'(6) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/hier_dpu/hier_dpu_ghp/dpu_intc_M_AXI_LPD/xbar/m_axi_rid'(3) to net 'xbar_to_m00_couplers_RID'(6) - Only lower order bits will be connected.
-CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/hier_dpu/hier_dpu_irq/dpu_concat_irq_inner/In2'(2) to net 'In2_1'(1) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/hier_dpu/dpu/dpu0_m_axi_instr_bid'(6) to net 'dpu_DPU0_M_AXI_INSTR_BID'(3) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/hier_dpu/dpu/dpu0_m_axi_instr_rid'(6) to net 'dpu_DPU0_M_AXI_INSTR_RID'(3) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp0_awid'(6) to net 'hier_dpu_M_AXI_HPC0_FPD_AWID'(2) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp0_arid'(6) to net 'hier_dpu_M_AXI_HPC0_FPD_ARID'(2) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp2_awid'(6) to net 'hier_dpu_M_AXI_HP0_FPD_AWID'(2) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp2_arid'(6) to net 'hier_dpu_M_AXI_HP0_FPD_ARID'(2) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp3_awid'(6) to net 'hier_dpu_M_AXI_HP1_FPD_AWID'(2) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp3_arid'(6) to net 'hier_dpu_M_AXI_HP1_FPD_ARID'(2) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp4_awid'(6) to net 'hier_dpu_M_AXI_HP2_FPD_AWID'(2) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp4_arid'(6) to net 'hier_dpu_M_AXI_HP2_FPD_ARID'(2) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp5_awid'(6) to net 'hier_dpu_M_AXI_HP3_FPD_AWID'(2) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp5_arid'(6) to net 'hier_dpu_M_AXI_HP3_FPD_ARID'(2) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp6_awid'(6) to net 'hier_dpu_M_AXI_LPD_AWID'(3) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp6_arid'(6) to net 'hier_dpu_M_AXI_LPD_ARID'(3) - Only lower order bits will be connected.
-VHDL Output written to : /home/pedro/Development/Xilinx/Builds/2018.3/ZU4EV_dpu/pl/srcs/top/synth/top.v
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/hier_dpu/hier_dpu_ghp/dpu_intc_M_AXI_LPD/xbar/s_axi_awid'(3) to net 's00_couplers_to_xbar_AWID'(2) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/hier_dpu/hier_dpu_ghp/dpu_intc_M_AXI_LPD/xbar/s_axi_arid'(3) to net 's00_couplers_to_xbar_ARID'(2) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/hier_dpu/hier_dpu_ghp/dpu_intc_M_AXI_LPD/xbar/m_axi_bid'(3) to net 'xbar_to_m00_couplers_BID'(6) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/hier_dpu/hier_dpu_ghp/dpu_intc_M_AXI_LPD/xbar/m_axi_rid'(3) to net 'xbar_to_m00_couplers_RID'(6) - Only lower order bits will be connected.
-CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/hier_dpu/hier_dpu_irq/dpu_concat_irq_inner/In2'(2) to net 'In2_1'(1) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/hier_dpu/dpu/dpu0_m_axi_instr_bid'(6) to net 'dpu_DPU0_M_AXI_INSTR_BID'(3) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/hier_dpu/dpu/dpu0_m_axi_instr_rid'(6) to net 'dpu_DPU0_M_AXI_INSTR_RID'(3) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp0_awid'(6) to net 'hier_dpu_M_AXI_HPC0_FPD_AWID'(2) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp0_arid'(6) to net 'hier_dpu_M_AXI_HPC0_FPD_ARID'(2) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp2_awid'(6) to net 'hier_dpu_M_AXI_HP0_FPD_AWID'(2) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp2_arid'(6) to net 'hier_dpu_M_AXI_HP0_FPD_ARID'(2) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp3_awid'(6) to net 'hier_dpu_M_AXI_HP1_FPD_AWID'(2) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp3_arid'(6) to net 'hier_dpu_M_AXI_HP1_FPD_ARID'(2) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp4_awid'(6) to net 'hier_dpu_M_AXI_HP2_FPD_AWID'(2) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp4_arid'(6) to net 'hier_dpu_M_AXI_HP2_FPD_ARID'(2) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp5_awid'(6) to net 'hier_dpu_M_AXI_HP3_FPD_AWID'(2) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp5_arid'(6) to net 'hier_dpu_M_AXI_HP3_FPD_ARID'(2) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp6_awid'(6) to net 'hier_dpu_M_AXI_LPD_AWID'(3) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e/saxigp6_arid'(6) to net 'hier_dpu_M_AXI_LPD_ARID'(3) - Only lower order bits will be connected.
-VHDL Output written to : /home/pedro/Development/Xilinx/Builds/2018.3/ZU4EV_dpu/pl/srcs/top/sim/top.v
-VHDL Output written to : /home/pedro/Development/Xilinx/Builds/2018.3/ZU4EV_dpu/pl/srcs/top/hdl/top_wrapper.v
-Wrote  : </home/pedro/Development/Xilinx/Builds/2018.3/ZU4EV_dpu/pl/srcs/top/ui/bd_2ae56375.ui> 
-Wrote  : </home/pedro/Development/Xilinx/Builds/2018.3/ZU4EV_dpu/pl/srcs/top/ui/bd_1b698f8d.ui> 
-make_wrapper: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 7929.379 ; gain = 0.000 ; free physical = 166 ; free virtual = 10898
+save_bd_design
+Wrote  : </home/pedro/Development/Xilinx/Builds/2019.1/ZU4EV/FM191_ZU4EV/FM191_ZU4EV.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </home/pedro/Development/Xilinx/Builds/2019.1/ZU4EV/FM191_ZU4EV/FM191_ZU4EV.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+reset_run synth_1
+INFO: [Project 1-974] Auto Incremental Compile:: New reference dcp wns is less than threshold, current reference dcp will not be replaced
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+INFO: [xilinx.com:ip:axi_vdma:6.3-16] /axi_vdma_0 
+                    All clocks connected to AXI VDMA are not identical, therefore configuring AXI-VDMA in ASYNC mode.
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ps8_0_axi_periph/s01_couplers/auto_ds/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_FPD(16)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ps8_0_axi_periph/s01_couplers/auto_ds/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_FPD(16)
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_pc/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_LPD(16)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_pc/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_LPD(16)
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HP0_FPD(1) and /axi_interconnect_mem/s00_couplers/auto_us/M_AXI(0)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HP0_FPD(1) and /axi_interconnect_mem/s00_couplers/auto_us/M_AXI(0)
+WARNING: [BD 41-927] Following properties on pin /video_io_to_hdmi_0/vid_io_in_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_zynq_ultra_ps_e_0_0_pl_clk1 
+WARNING: [BD 41-1771] Block interface /ADC_UART_1/UART has associated board param 'UARTLITE_BOARD_INTERFACE', which is set to board part interface 'fmc_lpc_connector_adc_uart_1'. This interface is connected to an external interface /UART_1, whose name 'UART_1' does not match with the board interface name 'fmc_lpc_connector_adc_uart_1'.
+This is a visual-only issue - this interface /ADC_UART_1/UART will be connected to board interface 'fmc_lpc_connector_adc_uart_1'. If desired, please change the name of this port /UART_1 manually.
+WARNING: [BD 41-1771] Block interface /ADC_UART_2/UART has associated board param 'UARTLITE_BOARD_INTERFACE', which is set to board part interface 'fmc_lpc_connector_adc_uart_2'. This interface is connected to an external interface /UART_2, whose name 'UART_2' does not match with the board interface name 'fmc_lpc_connector_adc_uart_2'.
+This is a visual-only issue - this interface /ADC_UART_2/UART will be connected to board interface 'fmc_lpc_connector_adc_uart_2'. If desired, please change the name of this port /UART_2 manually.
+WARNING: [BD 41-1771] Block interface /ADC_UART_3/UART has associated board param 'UARTLITE_BOARD_INTERFACE', which is set to board part interface 'fmc_lpc_connector_adc_uart_3'. This interface is connected to an external interface /UART_3, whose name 'UART_3' does not match with the board interface name 'fmc_lpc_connector_adc_uart_3'.
+This is a visual-only issue - this interface /ADC_UART_3/UART will be connected to board interface 'fmc_lpc_connector_adc_uart_3'. If desired, please change the name of this port /UART_3 manually.
+WARNING: [BD 41-1771] Block interface /ADC_UART_RQs/GPIO has associated board param 'GPIO_BOARD_INTERFACE', which is set to board part interface 'fmc_lpc_connector_adc_uart_rq'. This interface is connected to an external interface /UART_RQ, whose name 'UART_RQ' does not match with the board interface name 'fmc_lpc_connector_adc_uart_rq'.
+This is a visual-only issue - this interface /ADC_UART_RQs/GPIO will be connected to board interface 'fmc_lpc_connector_adc_uart_rq'. If desired, please change the name of this port /UART_RQ manually.
+WARNING: [BD 41-1771] Block interface /C_LEDs/GPIO has associated board param 'GPIO_BOARD_INTERFACE', which is set to board part interface 'onboardleds'. This interface is connected to an external interface /C_Board_LEDs, whose name 'C_Board_LEDs' does not match with the board interface name 'onboardleds'.
+This is a visual-only issue - this interface /C_LEDs/GPIO will be connected to board interface 'onboardleds'. If desired, please change the name of this port /C_Board_LEDs manually.
+WARNING: [BD 41-1771] Block interface /FMC_I2C/IIC has associated board param 'IIC_BOARD_INTERFACE', which is set to board part interface 'fmc_lpc_connector_i2c_fmcbus'. This interface is connected to an external interface /I2C, whose name 'I2C' does not match with the board interface name 'fmc_lpc_connector_i2c_fmcbus'.
+This is a visual-only issue - this interface /FMC_I2C/IIC will be connected to board interface 'fmc_lpc_connector_i2c_fmcbus'. If desired, please change the name of this port /I2C manually.
+WARNING: [BD 41-1771] Block interface /IOs/GPIO has associated board param 'GPIO_BOARD_INTERFACE', which is set to board part interface 'fmc_lpc_connector_dios'. This interface is connected to an external interface /DIO, whose name 'DIO' does not match with the board interface name 'fmc_lpc_connector_dios'.
+This is a visual-only issue - this interface /IOs/GPIO will be connected to board interface 'fmc_lpc_connector_dios'. If desired, please change the name of this port /DIO manually.
+WARNING: [BD 41-1771] Block interface /IOs/GPIO2 has associated board param 'GPIO2_BOARD_INTERFACE', which is set to board part interface 'fmc_lpc_connector_onboardgpios'. This interface is connected to an external interface /GPIO, whose name 'GPIO' does not match with the board interface name 'fmc_lpc_connector_onboardgpios'.
+This is a visual-only issue - this interface /IOs/GPIO2 will be connected to board interface 'fmc_lpc_connector_onboardgpios'. If desired, please change the name of this port /GPIO manually.
+WARNING: [BD 41-1771] Block interface /M_LEDs/GPIO has associated board param 'GPIO_BOARD_INTERFACE', which is set to board part interface 'fmc_lpc_connector_onboardleds'. This interface is connected to an external interface /M_Board_LEDs, whose name 'M_Board_LEDs' does not match with the board interface name 'fmc_lpc_connector_onboardleds'.
+This is a visual-only issue - this interface /M_LEDs/GPIO will be connected to board interface 'fmc_lpc_connector_onboardleds'. If desired, please change the name of this port /M_Board_LEDs manually.
+Wrote  : </home/pedro/Development/Xilinx/Builds/2019.1/ZU4EV/FM191_ZU4EV/FM191_ZU4EV.srcs/sources_1/bd/design_1/design_1.bd> 
+VHDL Output written to : /home/pedro/Development/Xilinx/Builds/2019.1/ZU4EV/FM191_ZU4EV/FM191_ZU4EV.srcs/sources_1/bd/design_1/synth/design_1.vhd
+VHDL Output written to : /home/pedro/Development/Xilinx/Builds/2019.1/ZU4EV/FM191_ZU4EV/FM191_ZU4EV.srcs/sources_1/bd/design_1/sim/design_1.vhd
+VHDL Output written to : /home/pedro/Development/Xilinx/Builds/2019.1/ZU4EV/FM191_ZU4EV/FM191_ZU4EV.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+INFO: [xilinx.com:ip:zynq_ultra_ps_e:3.3-0] design_1_zynq_ultra_ps_e_0_0: 
+Changes in your design (including the PCW configuration settings) are not automatically exported from Vivado to Xilinx's SDK, Petalinux or Yocto.
+This is by design to avoid disrupting existing embedded development efforts. To have any changes of your design taking effect in the embedded software flow please export your
+design by going through Vivado's main menu, click on File, then Export finally select Export Hardware, please ensure you click on the Include BitStream option.
+The auto-generated HDF file is all you need to import in Xilinx's SDK, Petalinux or Yocto for your changes to be reflected in the Embedded Software Flow.
+For more information, please consult PG201, section: Exporting PCW Settings to Embedded Software Flows
+INFO: [PSU-0] Address Range of DDR (0x7ff00000 to 0x7fffffff) is reserved by PMU for internal purpose.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI_HPM0_FPD'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI_HPM0_LPD'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI_HP0_FPD'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block zynq_ultra_ps_e_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Ethernet_LEDs .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block SPI_US_Buffering .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block IOs .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block M_LEDs .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block C_LEDs .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ADC_UART_RQs .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ADC_UART_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ADC_UART_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ADC_UART_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block FMC_I2C .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps8_0_99M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block PLPS_INT .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block v_tpg_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block v_axi4s_vid_out_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block video_io_to_hdmi_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block v_tc_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_fb_conv_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_vdma_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps8_0_75M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block GND .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block VCC .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block PLPS_INT_HDMI .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/pedro/Development/Xilinx/Builds/2019.1/ZU4EV/FM191_ZU4EV/FM191_ZU4EV.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/s00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/pedro/Development/Xilinx/Builds/2019.1/ZU4EV/FM191_ZU4EV/FM191_ZU4EV.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/s01_couplers/auto_ds .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/pedro/Development/Xilinx/Builds/2019.1/ZU4EV/FM191_ZU4EV/FM191_ZU4EV.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/s01_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/pedro/Development/Xilinx/Builds/2019.1/ZU4EV/FM191_ZU4EV/FM191_ZU4EV.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_0/design_1_auto_cc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/m10_couplers/auto_cc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/pedro/Development/Xilinx/Builds/2019.1/ZU4EV/FM191_ZU4EV/FM191_ZU4EV.srcs/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_mem/s00_couplers/auto_us .
+Exporting to file /home/pedro/Development/Xilinx/Builds/2019.1/ZU4EV/FM191_ZU4EV/FM191_ZU4EV.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file /home/pedro/Development/Xilinx/Builds/2019.1/ZU4EV/FM191_ZU4EV/FM191_ZU4EV.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File /home/pedro/Development/Xilinx/Builds/2019.1/ZU4EV/FM191_ZU4EV/FM191_ZU4EV.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_cc_0, cache-ID = 92ce6adfd5c9bd82; cache size = 29.676 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_ds_0, cache-ID = 0fad06f80b8f1868; cache size = 29.676 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = 5f828e4df49e69c9; cache size = 29.676 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_1, cache-ID = b2a84d64d574477d; cache size = 29.676 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_us_0, cache-ID = fe324a0377375d21; cache size = 29.676 MB.
+[Sat Oct 12 13:02:01 2019] Launched design_1_zynq_ultra_ps_e_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_zynq_ultra_ps_e_0_0_synth_1: /home/pedro/Development/Xilinx/Builds/2019.1/ZU4EV/FM191_ZU4EV/FM191_ZU4EV.runs/design_1_zynq_ultra_ps_e_0_0_synth_1/runme.log
+synth_1: /home/pedro/Development/Xilinx/Builds/2019.1/ZU4EV/FM191_ZU4EV/FM191_ZU4EV.runs/synth_1/runme.log
+[Sat Oct 12 13:02:01 2019] Launched impl_1...
+Run output will be captured here: /home/pedro/Development/Xilinx/Builds/2019.1/ZU4EV/FM191_ZU4EV/FM191_ZU4EV.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:01:02 ; elapsed = 00:00:57 . Memory (MB): peak = 7403.285 ; gain = 237.887 ; free physical = 671 ; free virtual = 12881
+file copy -force /home/pedro/Development/Xilinx/Builds/2019.1/ZU4EV/FM191_ZU4EV/FM191_ZU4EV.runs/impl_1/design_1_wrapper.sysdef /home/pedro/Development/Xilinx/Builds/2019.1/ZU4EV/FM191_ZU4EV/FM191_ZU4EV.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace /home/pedro/Development/Xilinx/Builds/2019.1/ZU4EV/FM191_ZU4EV/FM191_ZU4EV.sdk -hwspec /home/pedro/Development/Xilinx/Builds/2019.1/ZU4EV/FM191_ZU4EV/FM191_ZU4EV.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/pedro/Development/Xilinx/Builds/2019.1/ZU4EV/FM191_ZU4EV/FM191_ZU4EV.sdk -hwspec /home/pedro/Development/Xilinx/Builds/2019.1/ZU4EV/FM191_ZU4EV/FM191_ZU4EV.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
 exit
-INFO: [Common 17-206] Exiting Vivado at Sat Oct  5 22:26:58 2019...
+INFO: [Common 17-206] Exiting Vivado at Sat Oct 12 14:35:48 2019...

@@ -2,26 +2,24 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Sat Oct  5 22:04:37 2019
-# Process ID: 25312
+# Start of session at: Sat Oct 12 12:47:26 2019
+# Process ID: 32013
 # Current directory: /home/pedro/Development/VCS-1
 # Command line: vivado
 # Log file: /home/pedro/Development/VCS-1/vivado.log
 # Journal file: /home/pedro/Development/VCS-1/vivado.jou
 #-----------------------------------------------------------
 start_gui
-source /home/pedro/Development/Xilinx/Builds/2018.3/ZU4EV_dpu/pl/scripts/trd_prj.tcl
+open_project /home/pedro/Development/Xilinx/Builds/2019.1/ZU4EV/FM191_ZU4EV/FM191_ZU4EV.xpr
+open_bd_design {/home/pedro/Development/Xilinx/Builds/2019.1/ZU4EV/FM191_ZU4EV/FM191_ZU4EV.srcs/sources_1/bd/design_1/design_1.bd}
 update_compile_order -fileset sources_1
 startgroup
-set_property -dict [list CONFIG.VER_DPU_NUM {1} CONFIG.PP {4} CONFIG.CP {12} CONFIG.ARCH {1152} CONFIG.CONV_DSP_NUM {192} CONFIG.DWCV_DSP_NUM {18} CONFIG.DSP_NUM {232} CONFIG.BANK_IMG_N {8} CONFIG.BANK_WGT_N {13} CONFIG.BBANK_IMG_N {8} CONFIG.BBANK_WGT_N {13} CONFIG.BRAM_N {127.5} CONFIG.IRQ_SUM {9}] [get_bd_cells hier_dpu/dpu]
-delete_bd_objs [get_bd_intf_nets hier_dpu/dpu_DPU1_M_AXI_DATA0] [get_bd_intf_nets hier_dpu/dpu_DPU1_M_AXI_DATA1] [get_bd_intf_nets hier_dpu/dpu_DPU1_M_AXI_INSTR]
+set_property -dict [list CONFIG.PSU_MIO_13_INPUT_TYPE {schmitt} CONFIG.PSU_MIO_13_SLEW {slow} CONFIG.PSU_MIO_14_INPUT_TYPE {schmitt} CONFIG.PSU_MIO_14_SLEW {slow} CONFIG.PSU_MIO_15_INPUT_TYPE {schmitt} CONFIG.PSU_MIO_15_SLEW {slow} CONFIG.PSU_MIO_16_INPUT_TYPE {schmitt} CONFIG.PSU_MIO_16_SLEW {slow} CONFIG.PSU_MIO_17_INPUT_TYPE {schmitt} CONFIG.PSU_MIO_17_SLEW {slow} CONFIG.PSU_MIO_18_INPUT_TYPE {schmitt} CONFIG.PSU_MIO_18_SLEW {slow} CONFIG.PSU_MIO_19_INPUT_TYPE {schmitt} CONFIG.PSU_MIO_19_SLEW {slow} CONFIG.PSU_MIO_20_INPUT_TYPE {schmitt} CONFIG.PSU_MIO_20_SLEW {slow} CONFIG.PSU_MIO_21_INPUT_TYPE {schmitt} CONFIG.PSU_MIO_21_SLEW {slow} CONFIG.PSU_MIO_22_SLEW {slow} CONFIG.PSU_MIO_23_SLEW {slow} CONFIG.PSU_MIO_46_INPUT_TYPE {schmitt} CONFIG.PSU_MIO_46_SLEW {slow} CONFIG.PSU_MIO_47_INPUT_TYPE {schmitt} CONFIG.PSU_MIO_47_SLEW {slow} CONFIG.PSU_MIO_48_INPUT_TYPE {schmitt} CONFIG.PSU_MIO_48_SLEW {slow} CONFIG.PSU_MIO_49_INPUT_TYPE {schmitt} CONFIG.PSU_MIO_49_SLEW {slow} CONFIG.PSU_MIO_50_INPUT_TYPE {schmitt} CONFIG.PSU_MIO_50_SLEW {slow} CONFIG.PSU_MIO_51_SLEW {slow}] [get_bd_cells zynq_ultra_ps_e_0]
 endgroup
-startgroup
-apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/hier_dpu/hier_dpu_clk/dpu_clk_wiz/clk_dpu (332 MHz)} Clk_slave {/hier_dpu/hier_dpu_clk/dpu_clk_wiz/clk_dpu (332 MHz)} Clk_xbar {/hier_dpu/hier_dpu_clk/dpu_clk_wiz/clk_dpu (332 MHz)} Master {/hier_dpu/dpu/DPU0_M_AXI_INSTR} Slave {/hier_dpu/hier_dpu_ghp/DPU1_M_AXI_DATA0} intc_ip {/hier_dpu/hier_dpu_ghp/dpu_intc_M_AXI_LPD} master_apm {0}}  [get_bd_intf_pins hier_dpu/hier_dpu_ghp/DPU1_M_AXI_DATA0]
-apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/hier_dpu/hier_dpu_clk/dpu_clk_wiz/clk_dpu (332 MHz)} Clk_slave {/hier_dpu/hier_dpu_clk/dpu_clk_wiz/clk_dpu (332 MHz)} Clk_xbar {/hier_dpu/hier_dpu_clk/dpu_clk_wiz/clk_dpu (332 MHz)} Master {/hier_dpu/dpu/DPU0_M_AXI_INSTR} Slave {/hier_dpu/hier_dpu_ghp/DPU1_M_AXI_DATA1} intc_ip {/hier_dpu/hier_dpu_ghp/dpu_intc_M_AXI_LPD} master_apm {0}}  [get_bd_intf_pins hier_dpu/hier_dpu_ghp/DPU1_M_AXI_DATA1]
-endgroup
-startgroup
-apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/hier_dpu/hier_dpu_clk/dpu_clk_wiz/clk_dpu (332 MHz)} Clk_slave {/hier_dpu/hier_dpu_clk/dpu_clk_wiz/clk_dpu (332 MHz)} Clk_xbar {/hier_dpu/hier_dpu_clk/dpu_clk_wiz/clk_dpu (332 MHz)} Master {/hier_dpu/dpu/DPU0_M_AXI_INSTR} Slave {/hier_dpu/hier_dpu_ghp/DPU1_M_AXI_DATA0} intc_ip {/hier_dpu/hier_dpu_ghp/dpu_intc_M_AXI_LPD} master_apm {0}}  [get_bd_intf_pins hier_dpu/hier_dpu_ghp/DPU1_M_AXI_DATA0]
-apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/hier_dpu/hier_dpu_clk/dpu_clk_wiz/clk_dpu (332 MHz)} Clk_slave {/hier_dpu/hier_dpu_clk/dpu_clk_wiz/clk_dpu (332 MHz)} Clk_xbar {/hier_dpu/hier_dpu_clk/dpu_clk_wiz/clk_dpu (332 MHz)} Master {/hier_dpu/dpu/DPU0_M_AXI_INSTR} Slave {/hier_dpu/hier_dpu_ghp/DPU1_M_AXI_DATA1} intc_ip {/hier_dpu/hier_dpu_ghp/dpu_intc_M_AXI_LPD} master_apm {0}}  [get_bd_intf_pins hier_dpu/hier_dpu_ghp/DPU1_M_AXI_DATA1]
-endgroup
-make_wrapper -files [get_files /home/pedro/Development/Xilinx/Builds/2018.3/ZU4EV_dpu/pl/srcs/top/top.bd] -top
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+wait_on_run impl_1
+file copy -force /home/pedro/Development/Xilinx/Builds/2019.1/ZU4EV/FM191_ZU4EV/FM191_ZU4EV.runs/impl_1/design_1_wrapper.sysdef /home/pedro/Development/Xilinx/Builds/2019.1/ZU4EV/FM191_ZU4EV/FM191_ZU4EV.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace /home/pedro/Development/Xilinx/Builds/2019.1/ZU4EV/FM191_ZU4EV/FM191_ZU4EV.sdk -hwspec /home/pedro/Development/Xilinx/Builds/2019.1/ZU4EV/FM191_ZU4EV/FM191_ZU4EV.sdk/design_1_wrapper.hdf

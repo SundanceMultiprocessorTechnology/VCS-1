@@ -1924,6 +1924,8 @@
 ├── vivado_10409.backup.log
 ├── vivado_21490.backup.jou
 ├── vivado_21490.backup.log
+├── vivado_25312.backup.jou
+├── vivado_25312.backup.log
 ├── vivado_7311.backup.jou
 ├── vivado_7311.backup.log
 ├── vivado_9215.backup.jou
@@ -1932,5 +1934,5 @@
 ├── vivado.log
 └── vivado_pid25312.str
 
-453 directories, 1477 files
+453 directories, 1479 files
 ```
