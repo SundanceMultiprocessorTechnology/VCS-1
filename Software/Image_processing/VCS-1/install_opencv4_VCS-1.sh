@@ -22,8 +22,8 @@ wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/$VER
 wget https://bootstrap.pypa.io/get-pip.py
 sudo python3 get-pip.py
 sudo python2 get-pip.py
-sudo -H pip3 install numpy matplotlib imutils -U
-sudo -H pip2 install numpy matplotlib imutils -U
+sudo -H pip3 install pip numpy matplotlib imutils -U
+sudo -H pip2 install pip numpy matplotlib imutils -U
 unzip opencv.zip
 unzip opencv_contrib.zip
 rm opencv.zip
