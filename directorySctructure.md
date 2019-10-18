@@ -445,6 +445,7 @@
 │       │   │   │   │   │   │       └── synthesis.wdf
 │       │   │   │   │   │   ├── FM191_ZU3EG.hw
 │       │   │   │   │   │   │   └── FM191_ZU3EG.lpr
+│       │   │   │   │   │   ├── FM191_ZU3EG.ip_user_files
 │       │   │   │   │   │   ├── FM191_ZU3EG.runs
 │       │   │   │   │   │   │   ├── design_1_auto_cc_0_synth_1
 │       │   │   │   │   │   │   │   ├── design_1_auto_cc_0.tcl
@@ -1920,5 +1921,5 @@
             ├── FM191.hpp
             └── Makefile
 
-452 directories, 1466 files
+453 directories, 1466 files
 ```
