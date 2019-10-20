@@ -43,8 +43,8 @@ export CXX=/usr/bin/g++-6
 # export CXX=/usr/bin/arm-linux-gnueabihf-g++-7
 cmake -D CMAKE_BUILD_TYPE="Release"\
       -D FORCE_LIBUVC=ON \
-      -D BUILD_PYTHON_BINDINGS=ON \
-      -D PYTHON_EXECUTABLE=/usr/bin/python3 \
+      -D BUILD_PYTHON_BINDINGS=true \
+      -DPYTHON_EXECUTABLE=$(which python2) \
       -D BUILD_EXAMPLES=ON  ..
 echo "WARNING: Please edit CMakeCache.txt and replace O3 flags by O2 when using gcc-7 and g++-7!"
 
