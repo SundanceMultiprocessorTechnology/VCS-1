@@ -3,7 +3,7 @@ This folder contains the boot files for the VCS-1 ZU4EV tested on Ubuntu 18.04 L
 
 ## Procedure:
 
-### Step 1: Unzip file into $HOME/tmp
+### Step 1: Download and unzip file
 ```
 $ mkdir -p $HOME/tmp
 $ cd $HOME/tmp
