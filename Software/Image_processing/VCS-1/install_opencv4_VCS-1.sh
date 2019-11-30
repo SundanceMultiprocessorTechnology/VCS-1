@@ -42,16 +42,11 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 	-D ENABLE_NEON=OFF \
 	-D OPENCV_ENABLE_NONFREE=ON \
 	-D WITH_OPENMP=ON \
-	-D PYTHON_EXECUTABLE=/usr/bin/python3 \
+	-D PYTHON_EXECUTABLE=/usr/bin/python2 \
 	-D WITH_TBB=ON BUILD_TBB=ON \
 	-D ENABLE_PRECOMPILED_HEADERS=OFF\
 	-D OPENCV_GENERATE_PKGCONFIG=ON \
 	-D BUILD_opencv_python2=ON \
-	-D PYTHON2_EXECUTABLE="usr/bin/python2" \
-	-D PYTHON2_INCLUDE_DIR="/usr/include/python2.7" \
-	-D PYTHON2_LIBRARY="/usr/lib/aarch64-linux-gnu/libpython2.7.so" \
-	-D PYTHON2_NUMPY_INCLUDE_DIRS="/usr/local/lib/python2.7/dist-packages/numpy/core/include" \
-	-D PYTHON2_PACKAGES_PATH="lib/python2.7/dist-packages" \
 	-D BUILD_opencv_python3=ON \
 	-D OPENCV_PC_FILE_NAME=opencv.pc \
 	-D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib-${VERSION}/modules ..
