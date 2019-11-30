@@ -1,5 +1,5 @@
 #! /bin/bash
-VERSION="4.1.1"
+VERSION="4.1.2"
 echo "Script for installing the OpenCV $VERSION on Ubuntu 18.04 LTS (VCS-1)"
 echo "Updating the OS..."
 sudo apt update 
@@ -46,6 +46,8 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 	-D WITH_TBB=ON BUILD_TBB=ON \
 	-D ENABLE_PRECOMPILED_HEADERS=OFF\
 	-D OPENCV_GENERATE_PKGCONFIG=ON \
+	-D BUILD_opencv_python2 \
+	-D BUILD_opencv_python3 \
 	-D OPENCV_PC_FILE_NAME=opencv.pc \
 	-D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib-${VERSION}/modules ..
 echo "Compilation has started ..."
