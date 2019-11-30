@@ -46,8 +46,8 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 	-D WITH_TBB=ON BUILD_TBB=ON \
 	-D ENABLE_PRECOMPILED_HEADERS=OFF\
 	-D OPENCV_GENERATE_PKGCONFIG=ON \
-	-D BUILD_opencv_python2 \
-	-D BUILD_opencv_python3 \
+	-D BUILD_opencv_python2=ON \
+	-D BUILD_opencv_python3=ON \
 	-D OPENCV_PC_FILE_NAME=opencv.pc \
 	-D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib-${VERSION}/modules ..
 echo "Compilation has started ..."
