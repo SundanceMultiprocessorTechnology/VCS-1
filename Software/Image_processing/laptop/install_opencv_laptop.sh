@@ -41,7 +41,8 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 	-D OPENCV_ENABLE_NONFREE=ON \
 	-D ENABLE_PRECOMPILED_HEADERS=OFF \
 	-D OPENCV_EXTRA_MODULES_PATH=~/repositories/opencv_contrib-$ver/modules \
-	-D PYTHON_EXECUTABLE=/usr/bin/python3 \
+	-D OPENCV_PC_FILE_NAME=opencv4.pc \
+	-D PYTHON_EXECUTABLE=/usr/bin/python \
 	-D BUILD_EXAMPLES=ON ..
 echo "Compilation has started ..."
 make -j4
