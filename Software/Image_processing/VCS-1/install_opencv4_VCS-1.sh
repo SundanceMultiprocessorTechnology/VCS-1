@@ -49,7 +49,7 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 	-D ENABLE_PRECOMPILED_HEADERS=OFF \
 	-D BUILD_opencv_python2=ON \
 	-D BUILD_opencv_python3=ON \
-	-D OPENCV_PC_FILE_NAME=opencv.pc \
+	-D OPENCV_PC_FILE_NAME=opencv4.pc \
 	-D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib-${VERSION}/modules ..
 echo "Compilation has started ..."
 make -j4
