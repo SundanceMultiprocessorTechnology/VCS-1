@@ -1,5 +1,5 @@
 #! /bin/bash
-ver=4.1.1
+ver=4.3.0
 echo "Script for installing the OpenCV $ver on Ubuntu 18.04 LTS"
 echo "Updating the OS..."
 sudo apt update 
@@ -11,7 +11,7 @@ sudo apt install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev -y
 sudo apt install libxvidcore-dev libx264-dev -y
 sudo apt install libgtk-3-dev -y
 sudo apt install libatlas-base-dev gfortran -y
-sudo apt install python3-dev python-dev -y
+sudo apt install python3-dev python-dev python-numpy python3-numpy -y
 
 echo "Fetching and unpacking OpenCV $ver..."
 mkdir -p $HOME/repositories
