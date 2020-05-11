@@ -17,6 +17,6 @@ TBC
 ## Procedure
 1.Open a terminal and run the following commands:
 ```
-$ install_openc_laptop.sh
+$ install_opencv_laptop.sh
 ```
 2. Run the [demos](https://github.com/SundanceMultiprocessorTechnology/VCS-1/tree/master/Software/Image_processing/demos) and enjoy
