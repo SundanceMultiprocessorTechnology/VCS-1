@@ -4,7 +4,8 @@ This repository contains
 * Files for Xilinx tools, version 2018.3
 * Files for Xilinx tools, version 2019.2
 
-Sundance contact: 
-* Pedro Machado <pedro.m@sundance.com>
+## Sundance contacts: 
+* Emilie Wheatly <emilie.w@sundance.com>
+* Pedro Machado <pedro.m@sundnace.com>
 
 2020, [Sundance Multiprocessor Technologies Ltd.](http://www.sundance.technology/) (c) All rights reserved
