@@ -1,7 +1,7 @@
 # VCS-1 Board Files
 
-Sundance contact:
+## Sundance contacts: 
+* Emilie Wheatly <emilie.w@sundance.com>
+* Pedro Machado <pedro.m@sundnace.com>
 
-* Timoteo Garcia Bertoa  <timoteo.gb@sundance.com>
-
-2018, [Sundance Multiprocessor Technologies Ltd.](http://www.sundance.technology/) (c) All rights reserved
+2020, [Sundance Multiprocessor Technologies Ltd.](http://www.sundance.technology/) (c) All rights reserved
