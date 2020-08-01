@@ -6,7 +6,7 @@ This repository contains
 * Pinout - Excel file with the FPGA pin locations
 
 
-Sundance contact: 
+Sundance contacts: 
 * Emilie Wheatly <emilie.w@sundance.com>
 * Pedro Machado <pedro.m@sundnace.com>
 
