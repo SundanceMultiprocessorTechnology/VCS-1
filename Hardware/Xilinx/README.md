@@ -5,7 +5,9 @@ This repository contains
 * Petalinux 
 * Pinout - Excel file with the FPGA pin locations
 
-Sundance contact: 
-* Timoteo Garcia Bertoa timoteo.gb@sundance.com
 
-2018, [Sundance Multiprocessor Technologies Ltd.](http://www.sundance.technology/) (c) All rights reserved
+Sundance contact: 
+* Emilie Wheatly <emilie.w@sundance.com>
+* Pedro Machado <pedro.m@sundnace.com>
+
+2020, [Sundance Multiprocessor Technologies Ltd.](http://www.sundance.technology/) (c) All rights reserved
