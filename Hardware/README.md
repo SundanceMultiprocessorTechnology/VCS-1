@@ -5,6 +5,7 @@ This repository contains
 * SD_BOOT
 
 Sundance contact: 
-* Timoteo Garcia Bertoa timoteo.gb@sundance.com
+* Emilie Wheatly <emilie.w@sundance.com>
+* Pedro Machado <pedro.m@sundnace.com>
 
-2018, [Sundance Multiprocessor Technologies Ltd.](http://www.sundance.technology/) (c) All rights reserved
+2020, [Sundance Multiprocessor Technologies Ltd.](http://www.sundance.technology/) (c) All rights reserved
