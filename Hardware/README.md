@@ -4,7 +4,7 @@ This repository contains
            EMC2-DP, using FM191-RU
 * SD_BOOT
 
-Sundance contact: 
+## Sundance contacts: 
 * Emilie Wheatly <emilie.w@sundance.com>
 * Pedro Machado <pedro.m@sundnace.com>
 
