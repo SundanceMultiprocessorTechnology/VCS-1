@@ -8,4 +8,4 @@ Sundance contact:
 * Timoteo Garcia Bertoa timoteo.gb@sundance.com
 * Pedro Machado <pedro.m@sundance.com>
 
-2018, [Sundance Multiprocessor Technologies Ltd.](http://www.sundance.technology/) (c) All rights reserved
+2020, [Sundance Multiprocessor Technologies Ltd.](http://www.sundance.technology/) (c) All rights reserved
