@@ -43,14 +43,11 @@
 │   │   │   └── TE820_4EV
 │   │   │       ├── boot_files_ZU4EV.zip
 │   │   │       └── README.md
-│   │   └── 2019.1
-│   │       ├── TE820_4CG
-│   │       │   ├── boot_files_ZU4CG.zip
-│   │       │   └── README.md
-│   │       └── TE820_4EV
-│   │           ├── boot_files_ZU4EV.zip
-│   │           ├── boot.log
-│   │           └── README.md
+│   │   ├── 2019.2
+│   │   │   └── TE820_4EV
+│   │   │       ├── README.md
+│   │   │       └── ZU4EV_boot_files.zip
+│   │   └── README.md
 │   └── Xilinx
 │       ├── BoardFiles
 │       │   ├── EMC2-DP_TE0715_30_1C
@@ -1650,7 +1647,7 @@
 │       │   │       │   │   └── design_1_wrapper.hdf
 │       │   │       │   └── README.md
 │       │   │       └── README.md
-│       │   ├── 2019.1
+│       │   ├── 2019.2
 │       │   │   ├── IP_Repo_ZU
 │       │   │   │   ├── Interfaces
 │       │   │   │   │   └── spi_custom
@@ -1696,10 +1693,6 @@
 │       │   │   │           └── xgui
 │       │   │   │               └── video_io_to_hdmi_v1_0.tcl
 │       │   │   ├── README.md
-│       │   │   ├── ZU4CG
-│       │   │   │   ├── FM191_ZU4CG.tcl
-│       │   │   │   ├── FM191_ZU4CG.xdc
-│       │   │   │   └── README.md
 │       │   │   └── ZU4EV
 │       │   │       ├── FM191-RU
 │       │   │       │   ├── eeprom.h
@@ -1714,20 +1707,13 @@
 │       │   │       │   ├── FM191_RPI_ZU4EV_BIF.sh
 │       │   │       │   ├── FM191_RPI_ZU4EV.c
 │       │   │       │   ├── FM191_RPI_ZU4EV.sh
-│       │   │       │   ├── FM191_RPI_ZU4EV.TCL
+│       │   │       │   ├── FM191_RPI_ZU4EV.tcl
 │       │   │       │   ├── FM191_RPI_ZU4EV.xdc
-│       │   │       │   ├── Prebuilt
-│       │   │       │   │   ├── BOOT.bin
-│       │   │       │   │   ├── design_1_wrapper.bit
-│       │   │       │   │   └── design_1_wrapper.hdf
-│       │   │       │   ├── Prebuilt_DPU
-│       │   │       │   │   ├── design_1_wrapper.bit
-│       │   │       │   │   └── design_1_wrapper.hdf
 │       │   │       │   └── README.md
-│       │   │       ├── FM191_ZU4EV.tcl
-│       │   │       ├── FM191_ZU4EV.xdc
 │       │   │       └── README.md
-│       │   └── README.md
+│       │   ├── README.md
+│       │   ├── vivado.jou
+│       │   └── vivado.log
 │       ├── Petalinux
 │       │   ├── 2017.4
 │       │   │   ├── FM191_4EV
@@ -1741,10 +1727,13 @@
 │       │   │   │   └── zynqmp_fsbl.elf
 │       │   │   ├── FM191_HDMI_4EV.bsp
 │       │   │   └── README.md
-│       │   └── 2018.3
-│       │       ├── placeholder
-│       │       └── ZU4EV
-│       │           └── ZU4EV.bsp
+│       │   ├── 2018.3
+│       │   │   ├── placeholder
+│       │   │   └── ZU4EV
+│       │   │       └── ZU4EV.bsp
+│       │   ├── 2019.2
+│       │   │   └── vcs1.xsa
+│       │   └── README.md
 │       ├── Pinout
 │       │   ├── EMC2-DP+TE0820+FM191_Pinout.xlsx
 │       │   └── README.md
@@ -1921,5 +1910,5 @@
             ├── FM191.hpp
             └── Makefile
 
-453 directories, 1466 files
+450 directories, 1458 files
 ```
