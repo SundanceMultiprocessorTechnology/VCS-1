@@ -6,8 +6,8 @@ This repository contains
 * Pinout - Excel file with the FPGA pin locations
 
 
-Sundance contacts: 
+## Sundance contacts: 
 * Emilie Wheatly <emilie.w@sundance.com>
 * Pedro Machado <pedro.m@sundnace.com>
 
-2020, [Sundance Multiprocessor Technologies Ltd.](http://www.sundance.technology/) (c) All rights reserved
+2020, [Sundance Multiprocessor Technologies Ltd.](http://www.sundance.technology/) (c) All rights reservederved
