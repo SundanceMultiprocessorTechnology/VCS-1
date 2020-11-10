@@ -32,6 +32,11 @@ cd opencv-$VERSION
 mkdir -p build
 cd build
 
+sudo dd if=/dev/zero of=/swapfile bs=64M count=16
+sudo chmod 600 /swapfile
+sudo mkswap /swapfile
+sudo swapon /swapfile
+
 echo "Compiling OpenCV $VERSION ... this will take several minutes..."
 cmake -D CMAKE_BUILD_TYPE=RELEASE \
 	-D CMAKE_INSTALL_PREFIX=/usr/local \
@@ -55,6 +60,10 @@ echo "Compilation has started ..."
 make -j4
 echo "Installing OpenCV $VERSION ..."
 sudo make install
+
+sudo swapoff /swapfile
+sudo rm /swapfile
+
 sudo ldconfig
 source $HOME/.bashrc
 echo "Installation complete"
