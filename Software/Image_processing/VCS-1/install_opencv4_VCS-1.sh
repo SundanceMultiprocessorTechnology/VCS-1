@@ -1,5 +1,5 @@
 #! /bin/bash
-VERSION="4.1.2"
+VERSION="4.5.1"
 echo "Script for installing the OpenCV $VERSION on Ubuntu 18.04 LTS (VCS-1)"
 echo "Updating the OS..."
 sudo apt update 
