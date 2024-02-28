@@ -1,0 +1,143 @@
+/include/ "system-conf.dtsi"
+/ {
+chosen{
+ bootargs = "earlycon clk_ignore_unused console=ttyPS0,115200 earlyprintk root=/dev/mmcblk1p2 rw rootwait uio_pdrv_genirq.of_id=generic-uio";
+// If booting from the filesystem on SATA drive change root= in bootargs, ie root=/dev/sda1
+ };
+
+ memory {    // Reduce memory for framebuffers
+        device_type = "memory";
+        //reg = <0x0 0x0 0x0 0x3FC00000>;  // Reduce memory for 1GB assembly variant
+        reg = <0x0 0x0 0x0 0x7FC00000>;  // Reduce memory for 2GB assembly variant
+    };
+
+
+    //framebuffer0: framebuffer@0x3FC00000 {      // HDMI out for 1GB assembly variant
+    framebuffer0: framebuffer@0x7FC00000 {      // HDMI out for 2GB assembly variant
+        compatible = "simple-framebuffer";
+        //reg = <0x0 0x3FC00000 0x0 (1280 * 720 * 4)>;    // 720p for 1GB assembly variant
+        reg = <0x0 0x7FC00000 0x0 (1280 * 720 * 4)>;    // 720p for 2GB assembly variant
+        width = <1280>;                         // 720p
+        height = <720>;                         // 720p
+        stride = <(1280 * 4)>;                  // 720p
+        format = "a8b8g8r8";
+    };
+};
+
+&IOs {
+ compatible = "generic-uio";
+};
+
+&C_LEDs {
+ compatible = "generic-uio";
+};
+
+&M_LEDs {
+ compatible = "generic-uio";
+};
+
+&spi0 {
+ is-decoded-cs = <0>;
+ num-cs = <1>;
+ status = "okay";
+ spidev@0x00 {
+  compatible = "spidev";
+  spi-max-frequency = <1000000>;
+  reg = <0>;
+ };
+};
+
+&usb0 {
+  status = "okay";
+};
+
+&sata {
+  status = "okay";
+};
+
+&dwc3_0 {
+    status = "okay";
+    dr_mode = "host";
+};
+
+&sdhci1 {
+ disable-wp;
+ no-1-8-v;
+};
+
+&smmu {
+  status ="okay";
+};
+
+&FMC_I2C {
+  m24c04@50 {
+  compatible = "at,24c04"; 
+  reg = <0x50>;
+ };
+};
+
+&fclk0 {
+  status = "okay";
+};
+
+&fclk1 {
+  status = "okay";
+};
+
+&i2c1 {
+ status = "okay";
+ adv7511@39 {
+  compatible = "adi,adv7511"; 
+  reg = <0x39>;
+
+ adi,input-depth = <8>;
+ adi,input-colorspace = "yuv422";
+ adi,input-clock = "1x";
+ adi,input-style = <1>;
+ adi,input-justification = "evenly";
+
+};
+};
+
+/* ETH PHY */
+&gem0 {
+  status = "disabled";
+};
+
+&gem1 {
+  status = "disabled";
+};
+
+&gem2 {
+  status = "disabled";
+};
+
+&gem3 {
+  status = "okay";
+  //reg = <0x0 0xff0e0000 0x0 0x1000>;
+  //clock-names = "pclk", "hclk", "tx_clk", "rx_clk";
+  //clocks = <0x3 0x1f 0x3 0x34 0x3 0x30 0x3 0x34>;
+  phy-mode = "rgmii-id";
+  phy-handle = <&ethPhy>;
+  ethPhy:phy@1{
+    reg = <0x1>;
+    ti,rx-internal-delay = <0x8>;
+    ti,tx-internal-delay = <0xa>;
+    ti,fifo-depth = <0x1>;
+    ti,rxctrl-strap-worka;
+    marvell,reg-init = <3 16 0xff00 0x12 3 17 0xfff0 0x00>;
+  };
+
+};
+
+&v_tpg_0 {
+ status = "disabled";
+};
+
+&axi_vdma_0 {
+ status = "disabled";
+};
+
+&v_tc_0 {
+ status = "disabled";
+};

@@ -1,0 +1,5 @@
+PETALINUX_VER=2023.2
+VALIDATE_HW_CHKSUM=1
+HARDWARE_PATH=/home/sundance/Emilie_Projects/git/VCS-1/Hardware/Xilinx/Firmware/2023.2/ZU4EV/FM191-RU_RPI/FM191_RPI_ZU4EV/design_1_wrapper.xsa
+HDF_EXT=xsa
+YOCTO_SDK=0e8272633ed5009d6e138f15b1f9793d

@@ -1,0 +1,5 @@
+/Debug/*
+!/Debug/*.elf
+/Release/*
+!/Release/*.elf
+/_ide
